@@ -381,6 +381,8 @@ body.native .toast{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 .a-tabs button span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .a-tabs svg{width:22px;height:22px;padding:5px 16px;box-sizing:content-box;border-radius:999px;transition:background .2s,color .2s}
 .a-tabs button.on{color:var(--a-accent)}
+.x-upd{display:flex;flex-direction:column;align-items:center;gap:2px}
+.x-upd small{font-size:.68rem;font-weight:600;color:var(--a-muted);letter-spacing:0;text-transform:none}
 .a-tabs button.on svg{background:color-mix(in srgb,var(--a-accent) 16%,transparent)}
 .a-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--a-muted)}
 .a-h{font-size:1.9rem}
@@ -731,6 +733,7 @@ en:{
   admQuick:"Owner · Admin", adminHello:"Admin · {name}", tDash:"Dashboard", tMembers:"Members", tDesk:"Service desk", tDeskS:"Desk", tBooks:"Accounting", kSales:"Sales", kProfit:"Net profit", kActive:"Active members", kNew:"New members", vsPrev:"vs {m}", vsPrevTD:"vs {m} 1–{d}", chartTitle:"Sales by month", chartSub:"Memberships sold, before tax, last 12 months", tapBar:"Tap a bar to open that month.", mixTitle:"Members by card", renewTitle:"Renewals due in the next 30 days", renewLead:"{n} members to renew", seeList:"See list", ytdTitle:"{y} so far", memSearch:"Search name, vehicle or phone", all:"All", renewSoonF:"Renewing soon", memCount:"{n} members", renews:"Renews {d}", renewSoon:"Renews {d}", noMembers:"No members match.", showMore:"Show more", deskToday:"Today", deskIn:"Cars in", deskPick:"Pickups (14 days)", deskEmpty:"No appointments in the next 14 days.", booksExp:"Expenses", income:"Income", incNew:"New memberships", incRenew:"Renewals", incUp:"Upgrades", taxes:"Sales taxes", gst:"GST (5%)", qst:"QST (9.975%)", taxCredits:"Tax credits on expenses", taxRemit:"To remit", quarterTitle:"Q{q} {y} so far", expAuto:"Auto", perkOil:"Free oil changes", perkWash:"Free washes", perkPickup:"Pickups and courtesy cars", perkTrade:"Trade-in bonuses honored", fees:"Card processing fees (2.4%)", cat_marketing:"Marketing", cat_cards:"Card printing", cat_staff:"Staff", cat_software:"Software", cat_rent:"Rent", cat_other:"Other", addExp:"Add an expense", expCat:"Category", expAmt:"Amount before tax", expDate:"Date", expNote:"Note", expAdd:"Add expense", expAdded:"Expense added", expDeleted:"Expense deleted", expDelete:"Delete expense", expBad:"Enter an amount and a date.", earnedTitle:"Earned vs. paid up front", earned:"Earned this month", unearned:"Still owed in perks (unearned)", earnedLead:"Members pay for a full year up front, so each sale is earned 1/12 per month.", copyX:"Copy this month for Excel", copied:"Copied. Paste it into Excel or Google Sheets.", copyFail:"Couldn't copy on this device.", colType:"Type", amount:"Amount", booksNote:"Taxes, perk costs and fees are worked out automatically from sales, bookings and the expenses you add. Have an accountant check the year-end before filing.",
   calPrev:"Previous month", calNext:"Next month", todayIs:"Today: {d}", calToday:"Today", calMine:"Your appointment", calClosed:"Closed or full",
   remindEve:"Reminder: {svc} tomorrow at {time}. See you at the service desk.", remindSoon:"{svc} today at {time}. Your priority spot is waiting.",
+  updBtn:"Check for updates", updVer:"Version {v}", updChecking:"Checking for updates…", updLatest:"You have the latest version.", updFound:"New version found. Updating…", updFail:"Could not check. Try again with a connection.",
   language:"Language", openSite:"Open the website", vehicleL:"Vehicle", pickupQ:"Pickup at home"
 },
 fr:{
@@ -802,6 +805,7 @@ fr:{
   admQuick:"Direction · Admin", adminHello:"Admin · {name}", tDash:"Tableau de bord", tMembers:"Membres", tDesk:"Comptoir du service", tDeskS:"Comptoir", tBooks:"Comptabilité", kSales:"Ventes", kProfit:"Profit net", kActive:"Membres actifs", kNew:"Nouveaux membres", vsPrev:"vs {m}", vsPrevTD:"vs 1–{d} {m}", chartTitle:"Ventes par mois", chartSub:"Adhésions vendues, avant taxes, 12 derniers mois", tapBar:"Touchez une barre pour ouvrir ce mois.", mixTitle:"Membres par carte", renewTitle:"Renouvellements dans les 30 prochains jours", renewLead:"{n} membres à renouveler", seeList:"Voir la liste", ytdTitle:"{y} à ce jour", memSearch:"Chercher un nom, un véhicule ou un téléphone", all:"Tous", renewSoonF:"Renouvellement proche", memCount:"{n} membres", renews:"Renouvelle le {d}", renewSoon:"Renouvelle le {d}", noMembers:"Aucun membre trouvé.", showMore:"Voir plus", deskToday:"Aujourd'hui", deskIn:"Véhicules arrivés", deskPick:"Cueillettes (14 jours)", deskEmpty:"Aucun rendez-vous dans les 14 prochains jours.", booksExp:"Dépenses", income:"Revenus", incNew:"Nouvelles adhésions", incRenew:"Renouvellements", incUp:"Surclassements", taxes:"Taxes de vente", gst:"TPS (5 %)", qst:"TVQ (9,975 %)", taxCredits:"Crédits de taxes sur les dépenses", taxRemit:"À remettre", quarterTitle:"T{q} {y} à ce jour", expAuto:"Auto", perkOil:"Changements d'huile gratuits", perkWash:"Lavages gratuits", perkPickup:"Cueillettes et véhicules de courtoisie", perkTrade:"Bonis d'échange honorés", fees:"Frais de paiement par carte (2,4 %)", cat_marketing:"Marketing", cat_cards:"Impression des cartes", cat_staff:"Personnel", cat_software:"Logiciels", cat_rent:"Loyer", cat_other:"Autre", addExp:"Ajouter une dépense", expCat:"Catégorie", expAmt:"Montant avant taxes", expDate:"Date", expNote:"Note", expAdd:"Ajouter la dépense", expAdded:"Dépense ajoutée", expDeleted:"Dépense supprimée", expDelete:"Supprimer la dépense", expBad:"Entrez un montant et une date.", earnedTitle:"Gagné vs payé d'avance", earned:"Gagné ce mois-ci", unearned:"Encore dû en avantages (non gagné)", earnedLead:"Les membres paient l'année d'avance, donc chaque vente est gagnée à 1/12 par mois.", copyX:"Copier ce mois pour Excel", copied:"Copié. Collez-le dans Excel ou Google Sheets.", copyFail:"Impossible de copier sur cet appareil.", colType:"Type", amount:"Montant", booksNote:"Les taxes, les coûts des avantages et les frais sont calculés automatiquement à partir des ventes, des rendez-vous et des dépenses ajoutées. Faites vérifier la fin d'année par un comptable avant de produire les déclarations.",
   calPrev:"Mois précédent", calNext:"Mois suivant", todayIs:"Aujourd'hui : {d}", calToday:"Aujourd'hui", calMine:"Votre rendez-vous", calClosed:"Fermé ou complet",
   remindEve:"Rappel : {svc} demain à {time}. À bientôt au comptoir du service.", remindSoon:"{svc} aujourd'hui à {time}. Votre place prioritaire vous attend.",
+  updBtn:"Vérifier les mises à jour", updVer:"Version {v}", updChecking:"Vérification des mises à jour…", updLatest:"Vous avez la dernière version.", updFound:"Nouvelle version trouvée. Mise à jour…", updFail:"Vérification impossible. Réessayez avec une connexion.",
   language:"Langue", openSite:"Ouvrir le site web", vehicleL:"Véhicule", pickupQ:"Cueillette à domicile"
 }};
 const TIER_NAME = {en:{bronze:"Bronze",silver:"Silver",gold:"Gold"}, fr:{bronze:"Bronze",silver:"Argent",gold:"Or"}};
@@ -1362,6 +1366,7 @@ function appMe(u){
       ${APPMODE?"":`<div><span>${esc(t("openSite"))}</span><a class="a-link" href="#home">→</a></div>`}
     </div>
     ${u.tier!=="gold"?`<div class="a-upsell"><b>${esc(t("upgrade"))}</b><span>${esc(t("upgradeLead"))}</span><button data-act="a-upgrade">${esc(t("upgrade"))}</button></div>`:""}
+    ${updRow()}
     <button class="a-btn ghost" data-act="a-logout">${esc(t("logout"))}</button>`;
 }
 function viewApp(){
@@ -1578,6 +1583,7 @@ function admDash(F){
       <button class="a-btn ghost" data-act="x-renewlist">${esc(t("seeList"))}</button></div>
     <div class="a-panel"><span class="a-label">${esc(t("ytdTitle",{y:yr}))}</span>
       <dl class="x-ledger"><dt>${esc(t("kSales"))}</dt><dd>${money(ys)}</dd><dt>${esc(t("kProfit"))}</dt><dd class="${yn<0?"neg":""}">${money(yn)}</dd></dl></div>
+    ${updRow()}
     <button class="a-btn ghost" data-act="x-logout">${esc(t("logout"))}</button>`;
 }
 function admMembersList(){
@@ -1621,7 +1627,7 @@ function admDesk(){
           <div class="pills">${b.tier?`<span class="x-tier"><i style="background:${SERIES[b.tier]}"></i>${tn(b.tier)}</span>`:`<span class="pill">${esc(t("guest"))}</span>`}${extrasPills(b.extras)}${liveSyncPill(b)}</div></div>
         <select class="x-status" id="xs-${b.id}" data-act="status" data-id="${b.id}" aria-label="${esc(t("colStatus"))}">${["booked","in","done"].map(s=>`<option value="${s}" ${b.status===s?"selected":""}>${esc(t({booked:"stBooked",in:"stIn",done:"stDone"}[s]))}</option>`).join("")}</select>
       </div>`).join("")}</div></section>`).join(""):`<div class="a-panel"><p class="a-muted">${esc(t("deskEmpty"))}</p></div>`}
-    ${LIVE&&LV.role==="staff"?`<button class="a-btn ghost" data-act="x-logout">${esc(t("logout"))}</button>`:""}`;
+    ${LIVE&&LV.role==="staff"?`${updRow()}<button class="a-btn ghost" data-act="x-logout">${esc(t("logout"))}</button>`:""}`;
 }
 function admBooks(F){
   const m=A2.month,c=F.month(m),mo=Number(m.slice(5)),q=Math.floor((mo-1)/3)+1,yr=m.slice(0,4);
@@ -1738,19 +1744,23 @@ async function cancelReminders(bid){
 }
 /* Auto-update: the published site carries version.json; when it changes, the open app reloads itself.
    APP_VERSION is stamped by the build (elite-app/scripts/build-www.js); the demo/artifact copy skips this. */
-const APP_VERSION="20261123204349";
-async function checkUpdate(){
-  if(APP_VERSION.indexOf("__")===0)return;
+const APP_VERSION="20261123205129";
+async function checkUpdate(manual){
+  if(APP_VERSION.indexOf("__")===0){if(manual)toast(t("updLatest"));return}
   try{
-    const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;
+    if(manual)toast(t("updChecking"));
+    const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;
     const v=String((await r.json()).version||"");
-    if(!v||v===APP_VERSION)return;
+    if(!v||v===APP_VERSION){if(manual)toast(t("updLatest"));return}
     let tried="";try{tried=sessionStorage.getItem("elite-upd")||""}catch(_){}
-    if(tried===v)return; // already reloaded for this version (a cache may still be catching up)
+    if(tried===v&&!manual)return;
+    if(manual)toast(t("updFound")); // already reloaded for this version (a cache may still be catching up)
     try{sessionStorage.setItem("elite-upd",v)}catch(_){}
     location.replace(location.pathname+"?v="+encodeURIComponent(v)+location.hash);
-  }catch(_){}
+  }catch(_){if(manual)toast(t("updFail"))}
 }
+function verLabel(){if(APP_VERSION.indexOf("__")===0)return "demo";const V=APP_VERSION,d=new Date(Date.UTC(+V.slice(0,4),+V.slice(4,6)-1,+V.slice(6,8),+V.slice(8,10),+V.slice(10,12)));return d.toLocaleString(loc(),{year:"numeric",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}
+function updRow(){return `<button class="a-btn ghost x-upd" data-act="a-update">${esc(t("updBtn"))}<small>${esc(t("updVer",{v:verLabel()}))}</small></button>`}
 function nativeSetup(){
   if(STANDALONE)document.body.classList.add("native");
   if(!NATIVE)return;
@@ -1789,6 +1799,7 @@ document.addEventListener("click",e=>{
   const el=e.target.closest("[data-act],[data-lang]");if(!el)return;
   if(el.dataset.lang){S.lang=el.dataset.lang;save();render(true);return}
   const a=el.dataset.act;
+  if(a==="a-update"){checkUpdate(true);return}
   if(LIVE&&liveClick(a,el))return;
   if(a&&a.startsWith("x-")){adminAction(a,el);return}
   if(a&&a.startsWith("a-")){appAction(a,el);return}
