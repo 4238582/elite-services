@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
 <title>Elite Services</title>
+<meta name="theme-color" content="#050506">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,7 +12,6 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="icon-512.png">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#050506">
 <meta name="format-detection" content="telephone=no">
 <style>html,body{background:#050506}body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -376,10 +376,12 @@ body.native .toast{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 .phone h2{color:var(--a-fg)}
 .phone :focus-visible{outline-color:var(--a-accent)}
 .a-body{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:22px max(18px,env(safe-area-inset-right,0px)) 28px max(18px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:20px}
-.a-tabs{flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:#0a0a0c;border-top:1px solid var(--a-line);padding:8px 6px 10px}
-.a-tabs button{background:none;border:0;color:var(--a-muted);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.72rem;font-weight:700;cursor:pointer;padding:4px 0}
-.a-tabs svg{width:24px;height:24px}
+.a-tabs{flex:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:rgba(10,10,12,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--a-line);padding:6px 6px 8px}
+.a-tabs button{background:none;border:0;color:var(--a-muted);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.66rem;font-weight:700;letter-spacing:.01em;cursor:pointer;padding:2px 0;min-width:0;-webkit-tap-highlight-color:transparent}
+.a-tabs button span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.a-tabs svg{width:22px;height:22px;padding:5px 16px;box-sizing:content-box;border-radius:999px;transition:background .2s,color .2s}
 .a-tabs button.on{color:var(--a-accent)}
+.a-tabs button.on svg{background:color-mix(in srgb,var(--a-accent) 16%,transparent)}
 .a-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--a-muted)}
 .a-h{font-size:1.9rem}
 .a-muted{color:var(--a-muted);font-size:.88rem}
@@ -1258,7 +1260,7 @@ function appLogin(){
     </form>
     ${LIVE?"":`<div class="a-sec"><span class="a-label">${esc(t("quickTitle"))}</span>
       <div class="a-chips">${["gold","silver","bronze"].map(k=>{const u=S.users.find(x=>x.email===k+"@demo.test");return u?`<button data-act="a-quick" data-email="${esc(u.email)}"><span class="dot ${k}" style="width:18px;height:18px"></span>${esc(u.first)} · ${tn(k)}</button>`:""}).join("")}<button data-act="a-quick" data-email="${ADMIN.email}" class="x-bosschip">${XIC.dash}${esc(t("admQuick"))}</button></div></div>`}
-    <div class="a-loginfoot">${NATIVE?"<span></span>":`<a href="#join">${esc(t("joinLink"))}</a>`}${langSeg()}</div>
+    <div class="a-loginfoot">${APPMODE?"<span></span>":`<a href="#join">${esc(t("joinLink"))}</a>`}${langSeg()}</div>
   </div>`;
 }
 function appCard(u){
@@ -1357,7 +1359,7 @@ function appMe(u){
     </div>
     <div class="a-panel a-rows">
       <div><span>${esc(t("language"))}</span>${langSeg()}</div>
-      ${NATIVE?"":`<div><span>${esc(t("openSite"))}</span><a class="a-link" href="#home">→</a></div>`}
+      ${APPMODE?"":`<div><span>${esc(t("openSite"))}</span><a class="a-link" href="#home">→</a></div>`}
     </div>
     ${u.tier!=="gold"?`<div class="a-upsell"><b>${esc(t("upgrade"))}</b><span>${esc(t("upgradeLead"))}</span><button data-act="a-upgrade">${esc(t("upgrade"))}</button></div>`:""}
     <button class="a-btn ghost" data-act="a-logout">${esc(t("logout"))}</button>`;
@@ -1711,6 +1713,9 @@ function addExpense(){
 // Inside the store app, Capacitor injects window.Capacitor; the page then opens straight into the full-screen app.
 const CAP=window.Capacitor;
 const NATIVE=!!(CAP&&CAP.isNativePlatform&&CAP.isNativePlatform());
+// Opened from an iPhone/Android Home Screen icon: behave like the installed app (full screen, app only).
+const STANDALONE=!NATIVE&&(window.navigator.standalone===true||!!(window.matchMedia&&matchMedia("(display-mode: standalone)").matches));
+const APPMODE=NATIVE||STANDALONE;
 const plug=n=>NATIVE&&CAP.Plugins?CAP.Plugins[n]:null;
 function notifIds(bid){let h=7;for(const ch of String(bid))h=(h*31+ch.charCodeAt(0))|0;h=Math.abs(h)%1000000000;return [h*2%2000000000,(h*2+1)%2000000000]}
 async function scheduleReminders(b){
@@ -1731,7 +1736,23 @@ async function cancelReminders(bid){
   const LN=plug("LocalNotifications");if(!LN)return;
   try{const [i1,i2]=notifIds(bid);await LN.cancel({notifications:[{id:i1},{id:i2}]})}catch(_){}
 }
+/* Auto-update: the published site carries version.json; when it changes, the open app reloads itself.
+   APP_VERSION is stamped by the build (elite-app/scripts/build-www.js); the demo/artifact copy skips this. */
+const APP_VERSION="20261123204349";
+async function checkUpdate(){
+  if(APP_VERSION.indexOf("__")===0)return;
+  try{
+    const r=await fetch("version.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;
+    const v=String((await r.json()).version||"");
+    if(!v||v===APP_VERSION)return;
+    let tried="";try{tried=sessionStorage.getItem("elite-upd")||""}catch(_){}
+    if(tried===v)return; // already reloaded for this version (a cache may still be catching up)
+    try{sessionStorage.setItem("elite-upd",v)}catch(_){}
+    location.replace(location.pathname+"?v="+encodeURIComponent(v)+location.hash);
+  }catch(_){}
+}
 function nativeSetup(){
+  if(STANDALONE)document.body.classList.add("native");
   if(!NATIVE)return;
   document.body.classList.add("native");
   const SB=plug("StatusBar");if(SB){try{SB.setStyle({style:"DARK"});SB.setOverlaysWebView&&SB.setOverlaysWebView({overlay:true})}catch(_){}}
@@ -1741,7 +1762,7 @@ function nativeSetup(){
 
 /* ---------- Router ---------- */
 const ROUTES={home:viewHome,join:viewJoin,login:viewLogin,account:viewAccount,book:viewBook,desk:viewDesk,app:viewApp,cards:viewCards};
-function route(){if(NATIVE)return "app";const h=(location.hash||"#home").slice(1);return ROUTES[h]?h:"home"}
+function route(){if(APPMODE)return "app";const h=(location.hash||"#home").slice(1);return ROUTES[h]?h:"home"}
 function render(keepScroll){
   const r=route();
   document.documentElement.lang=S.lang;
@@ -2061,7 +2082,8 @@ ensureFinance();
 nativeSetup();
 render();
 if(LIVE)liveStart();
-if(!NATIVE){initStage();requestAnimationFrame(cxLoop)}
+if(!APPMODE){initStage();requestAnimationFrame(cxLoop)}
+checkUpdate();document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")checkUpdate()});
 </script>
 
 </body>
