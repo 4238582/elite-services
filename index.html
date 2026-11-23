@@ -944,7 +944,7 @@ function viewLogin(){
   return `<div class="split">
     <section class="panel stack"><h2>${esc(t("loginTitle"))}</h2>
     <form class="form" id="loginForm">
-      <div class="field"><label for="l-email">${esc(t("fEmail"))}</label><input id="l-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="l-email">${esc(t("fEmail"))}</label><input id="l-email" type="text" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="username"></div>
       <div class="field"><label for="l-pass">${esc(t("fPass"))}</label><input id="l-pass" type="password" autocomplete="current-password"></div>
       ${formErr?`<p class="err">${esc(formErr)}</p>`:""}
       <div><button class="btn btn-primary" type="submit">${esc(t("loginBtn"))}</button></div>
@@ -1257,7 +1257,7 @@ function appLogin(){
     <div class="a-login-cards">${cardHTML("bronze")}${cardHTML("silver")}${cardHTML("gold")}</div>
     <h2 class="a-h">${esc(t("appWelcome"))}</h2>
     <form id="appLogin" class="a-form">
-      <label class="a-field" for="al-email">${esc(t("fEmail"))}<input id="al-email" type="email" autocomplete="email" placeholder="${LIVE?"":"gold@demo.test"}"></label>
+      <label class="a-field" for="al-email">${esc(t("fEmail"))}<input id="al-email" type="text" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="username" placeholder="${LIVE?"":"gold@demo.test"}"></label>
       <label class="a-field" for="al-pass">${esc(t("fPass"))}<input id="al-pass" type="password" autocomplete="current-password" placeholder="${LIVE?"":"demo"}"></label>
       ${formErr?`<p class="a-err">${esc(formErr)}</p>`:""}
       <button class="a-btn" type="submit">${esc(t("loginBtn"))}</button>
@@ -1744,7 +1744,7 @@ async function cancelReminders(bid){
 }
 /* Auto-update: the published site carries version.json; when it changes, the open app reloads itself.
    APP_VERSION is stamped by the build (elite-app/scripts/build-www.js); the demo/artifact copy skips this. */
-const APP_VERSION="20261123205129";
+const APP_VERSION="20261123235303";
 async function checkUpdate(manual){
   if(APP_VERSION.indexOf("__")===0){if(manual)toast(t("updLatest"));return}
   try{
@@ -2028,7 +2028,7 @@ function liveAddExpense(date,cat,amount,note){liveDo(async()=>{const r=await LV.
 function liveSubmit(form){
   const id=form.id;
   if(id==="appLogin"||id==="loginForm"){
-    const pre=id==="appLogin"?"#al-":"#l-",email=$(pre+"email").value.trim().toLowerCase(),password=$(pre+"pass").value;
+    const pre=id==="appLogin"?"#al-":"#l-",password=$(pre+"pass").value;let email=$(pre+"email").value.trim().toLowerCase();if(email&&email.indexOf("@")<0)email+="@elite.test";
     LV.sb.auth.signInWithPassword({email,password}).then(async({error})=>{
       if(error){formErr=error.message&&/confirm/i.test(error.message)?t("checkEmail"):(error.status===400||/invalid/i.test(error.message||"")?t("badLogin"):t("errNet"));id==="appLogin"?renderApp():render(true);return}
       formErr="";await livePull().catch(e=>toast(liveErrText(e)));
