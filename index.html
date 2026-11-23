@@ -1,0 +1,2068 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>Elite Services</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Elite Services">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050506">
+<meta name="format-detection" content="telephone=no">
+<style>html,body{background:#050506}body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<script>window.ELITE_CONFIG={"supabaseUrl":"https://guvibnbqbgahxoqxfxga.supabase.co","supabaseKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1dmlibmJxYmdhaHhvcXhmeGdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUzODYwODgsImV4cCI6MjExMDk2MjA4OH0.vnObuem-Auz1h49AoTIEhDr25RrAFzws2YMFWQofe98"};</script>
+<title>Elite Services Club</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* Elite Services: one committed look taken from the logo. Black showroom, chrome-silver type, gold light. */
+:root{
+  color-scheme:dark;
+  --bg:#050506; --surface:#0f1013; --surface-2:#17181c; --fg:#eceef1; --muted:#959ba6; --line:#26282e;
+  --accent:#e0b04a; --accent-fg:#1a1203; --accent-soft:rgba(224,176,74,.13);
+  --gold-hi:#fbe39a; --gold-mid:#e0b04a; --gold-lo:#a87a22;
+  --chrome:linear-gradient(180deg,#ffffff 0%,#e4e7eb 38%,#8e939b 52%,#d9dde2 70%,#ffffff 100%);
+  --goldgrad:linear-gradient(180deg,#fbe39a 0%,#e0b04a 50%,#b48325 100%);
+  --ok:#5fdcae; --ok-soft:rgba(95,220,174,.12); --warn:#f0c35a; --warn-soft:rgba(240,195,90,.11);
+  --bronze-a:#7a4a22; --bronze-b:#d39a5f; --silver-a:#7f8a99; --silver-b:#e6ebf1; --gold-a:#94701a; --gold-b:#f0d27c;
+  --display:"Exo 2","Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow","Segoe UI",system-ui,sans-serif;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.05;margin:0;letter-spacing:.01em}
+h1,h2{font-style:italic;font-weight:800;text-transform:uppercase;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900}
+h2{font-size:1.75rem}
+main h2::after{content:"";display:block;width:68px;height:3px;margin-top:10px;background:var(--goldgrad);transform:skewX(-24deg);box-shadow:0 0 10px rgba(224,176,74,.5)}
+h3{font-size:1.3rem;font-weight:700}
+.gold-text{background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{margin:0}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.muted{color:var(--muted)}
+.label{font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:#000}
+.demo-bar{background:#0b0b0c;color:var(--warn);font-size:.8rem;font-weight:600;border-bottom:1px solid #1c1c1f}
+.demo-bar .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding-block:5px;flex-wrap:wrap}
+.linkbtn{background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;font-weight:600;color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-mid) 30%,var(--gold-hi) 50%,var(--gold-mid) 70%,transparent);box-shadow:0 0 12px rgba(224,176,74,.55)}
+header .wrap{display:flex;align-items:center;gap:16px;padding-block:8px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand-logo{height:52px;width:auto;mix-blend-mode:screen;display:block}
+.brand b{font-family:var(--display);font-style:italic;font-weight:900;font-size:1.25rem;text-transform:uppercase;letter-spacing:.04em;display:block;line-height:1;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+.brand small{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;font-weight:700;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:2px;flex-wrap:wrap}
+nav a{text-decoration:none;padding:7px 11px;font-family:var(--display);font-style:italic;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;color:#a9aeb7;position:relative}
+nav a:hover{color:#fff}
+nav a.on{color:#fff}
+nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;background:var(--goldgrad);transform:skewX(-24deg);box-shadow:0 0 8px rgba(224,176,74,.7)}
+.lang{display:flex;border:1px solid #33353b;overflow:hidden;transform:skewX(-14deg)}
+.lang button{border:0;background:none;padding:5px 10px;font-weight:800;font-size:.78rem;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--goldgrad);color:var(--accent-fg)}
+
+main{padding-block:40px 72px}
+.stack{display:flex;flex-direction:column;gap:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:4px;padding:11px 22px;font-family:var(--display);font-style:italic;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;text-decoration:none;font-size:.92rem}
+.btn-primary{background:var(--goldgrad);color:var(--accent-fg);box-shadow:0 0 0 1px rgba(251,227,154,.35) inset,0 6px 22px -6px rgba(224,176,74,.55)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:linear-gradient(180deg,#1b1c20,#0e0f12);color:#e9ecef;border-color:#3a3d44}
+.btn-ghost:hover{border-color:#c8ccd2}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-sm{padding:6px 12px;font-size:.85rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero > *{min-width:0}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:52ch;margin-top:14px}
+.hero .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.card-fan{position:relative;height:250px}
+.card-fan .mcard{position:absolute;width:min(330px,88%);}
+.card-fan .mcard:nth-child(1){top:0;left:0;transform:rotate(-7deg)}
+.card-fan .mcard:nth-child(2){top:34px;left:9%;transform:rotate(-2deg)}
+.card-fan .mcard:nth-child(3){top:68px;left:18%;transform:rotate(3deg)}
+
+/* membership card: brushed metal, embossed type, EMV chip, pointer-follow shine and tilt */
+.mcard{--mx:28%;--my:18%;--rx:0deg;--ry:0deg;container-type:inline-size;position:relative;isolation:isolate;aspect-ratio:1.586;width:100%;max-width:100%;border-radius:16px;padding:6% 7%;display:grid;grid-template-rows:auto 1fr auto;overflow:hidden;
+  transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 0 rgba(0,0,0,.3),0 1px 2px rgba(0,0,0,.25),0 22px 44px -14px rgba(5,8,14,.6)}
+.mcard.tilting{transition:transform .08s linear}
+.mcard::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.05) 1px 2px,transparent 2px 3px);mix-blend-mode:overlay}
+.mcard::after{content:"";position:absolute;inset:-2px;pointer-events:none;z-index:2;
+  background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.7),rgba(255,255,255,.14) 24%,transparent 50%),linear-gradient(110deg,transparent 38%,rgba(255,255,255,.5) 48%,rgba(255,255,255,.1) 52%,transparent 60%);
+  background-size:100% 100%,300% 100%;background-repeat:no-repeat;background-position:0 0,140% 0;mix-blend-mode:soft-light;animation:mc-sweep 6s ease-in-out infinite}
+@keyframes mc-sweep{0%,60%{background-position:0 0,140% 0}100%{background-position:0 0,-40% 0}}
+.mcard.bronze{color:#fff3e4;background-color:#8a5328;background-image:linear-gradient(135deg,#4f2c12 0%,#9a6030 26%,#e2a874 46%,#b97842 58%,#6a3a18 100%)}
+.mcard.silver{color:#121820;background-color:#aab3bf;background-image:linear-gradient(135deg,#6d7684 0%,#b9c1cc 26%,#f6f8fb 46%,#c2c9d3 58%,#7c8593 100%)}
+.mcard.gold{color:#2a1c00;background-color:#c49a34;background-image:linear-gradient(135deg,#6f500c 0%,#c29630 26%,#f8e199 46%,#d0a540 58%,#7a5a10 100%)}
+.mc-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mc-brand{display:flex;align-items:center;gap:.6em;font-size:clamp(.45rem,3.3cqw,.74rem);font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.92}
+.mc-brand i{width:2em;height:2em;border-radius:5px;border:1.5px solid currentColor;display:grid;place-items:center;font-style:normal;font-family:var(--display);font-weight:800;letter-spacing:0;font-size:1em}
+.mc-nfc{width:clamp(12px,6.5cqw,26px);height:auto;opacity:.8;flex:none}
+.mc-mid{display:flex;flex-direction:column;justify-content:center;gap:5cqw}
+.mc-chip{width:14cqw;aspect-ratio:1.32;border-radius:4px;position:relative;background:linear-gradient(135deg,#f6e3a1,#b98f35 45%,#efd583 70%,#a47d27);box-shadow:inset 0 0 0 1px rgba(60,40,0,.35)}
+.mc-chip::before{content:"";position:absolute;inset:30% 0;border-top:1px solid rgba(60,40,0,.4);border-bottom:1px solid rgba(60,40,0,.4)}
+.mc-chip::after{content:"";position:absolute;inset:0 36%;border-left:1px solid rgba(60,40,0,.4);border-right:1px solid rgba(60,40,0,.4)}
+.mc-tier{font-family:var(--display);font-weight:800;font-size:clamp(1.2rem,14cqw,3.2rem);line-height:.88;letter-spacing:.07em;text-transform:uppercase;text-shadow:0 1px 0 rgba(255,255,255,.5),0 -1px 0 rgba(0,0,0,.4),0 2px 6px rgba(0,0,0,.15)}
+.mc-sub{margin-top:1.5cqw;font-size:clamp(.42rem,3.2cqw,.78rem);font-weight:700;letter-spacing:.34em;text-transform:uppercase;opacity:.85}
+.mc-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;font-size:clamp(.4rem,2.6cqw,.62rem);font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.mc-bottom > div{min-width:0}
+.mc-bottom b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(.55rem,4.2cqw,1rem);letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 0 rgba(255,255,255,.35),0 -1px 0 rgba(0,0,0,.3)}
+.mc-no{font-family:var(--display);font-weight:600;font-size:clamp(.6rem,5.2cqw,1.2rem);letter-spacing:.18em;font-variant-numeric:tabular-nums;margin-bottom:2cqw;white-space:nowrap;text-shadow:0 1px 0 rgba(255,255,255,.4),0 -1px 0 rgba(0,0,0,.35)}
+.tier-card{padding:22px 22px 4px;background:radial-gradient(120% 90% at 50% 0%,var(--surface-2),var(--surface))}
+.tag.pop{background:var(--warn-soft);color:var(--warn)}
+
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;overflow:hidden}
+.tier.featured{border-color:var(--gold-mid);box-shadow:0 0 0 1px var(--gold-mid),0 0 34px -8px rgba(224,176,74,.45)}
+.tier-head{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tier-head.bronze{background:linear-gradient(135deg,var(--bronze-a),var(--bronze-b));color:#fff8f0}
+.tier-head.silver{background:linear-gradient(135deg,var(--silver-a),var(--silver-b));color:#141a22}
+.tier-head.gold{background:linear-gradient(135deg,var(--gold-a),var(--gold-b));color:#241a02}
+.tier-head h3{font-size:1.7rem;text-transform:uppercase;letter-spacing:.05em}
+.tag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:rgba(0,0,0,.18)}
+.tier-body{padding:20px;display:flex;flex-direction:column;gap:16px;flex:1}
+.price{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:1}
+.price small{font-family:var(--body);font-size:.9rem;font-weight:500;color:var(--muted)}
+.perks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1}
+.perks li{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start}
+.perks li::before{content:"";width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--ok-soft);box-shadow:inset 0 0 0 5px var(--ok)}
+.perks li.big{font-weight:700}
+.draft{font-size:.78rem;color:var(--warn);background:var(--warn-soft);border-radius:6px;padding:6px 10px}
+
+.compare{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.c{text-align:center}
+.yes{color:var(--ok);font-weight:800}
+.no-x{color:var(--muted)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{display:flex;gap:14px}
+.step .n{flex:none;width:34px;height:34px;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:800}
+
+/* forms */
+.form{display:flex;flex-direction:column;gap:14px;max-width:520px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-weight:600;font-size:.92rem}
+.field input,.field select{padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tierpick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tierpick label{border:2px solid var(--line);border-radius:10px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:2px;background:var(--surface)}
+.tierpick input{position:absolute;opacity:0;pointer-events:none}
+.tierpick label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.tierpick label:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.tierpick b{font-family:var(--display);font-size:1.2rem;text-transform:uppercase}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.split > *{min-width:0}
+.quick{display:flex;flex-direction:column;gap:10px}
+.quick button{display:flex;align-items:center;gap:12px;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer}
+.quick button:hover{border-color:var(--muted)}
+.dot{width:26px;height:26px;border-radius:50%;flex:none}
+.dot.bronze{background:linear-gradient(135deg,var(--bronze-a),var(--bronze-b))}
+.dot.silver{background:linear-gradient(135deg,var(--silver-a),var(--silver-b))}
+.dot.gold{background:linear-gradient(135deg,var(--gold-a),var(--gold-b))}
+.dot.none{background:var(--line)}
+.err{color:#ff8a96;font-weight:600;font-size:.9rem}
+
+/* account */
+.acct{display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+.acct > *{min-width:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.stat .v{font-family:var(--display);font-size:2rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.meter{height:6px;border-radius:3px;background:var(--line);margin-top:8px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ok)}
+.appt{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.appt:first-of-type{border-top:0}
+.appt .when{min-width:120px}
+.appt .when b{display:block;font-family:var(--display);font-size:1.2rem}
+.appt .what{flex:1;min-width:160px}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line);white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.pill.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.pill.red{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.pills{display:flex;gap:6px;flex-wrap:wrap}
+.cert{border:2px dashed var(--line);border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.cert code{font-family:var(--display);font-size:1.3rem;letter-spacing:.12em}
+
+/* booking */
+.book{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+.book > *{min-width:0}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.svc label{border:2px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;background:var(--surface);display:flex;justify-content:space-between;gap:8px;align-items:center}
+.svc input{position:absolute;opacity:0;pointer-events:none}
+.svc label:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.svc label:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.day{flex:none;width:68px;border:2px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center;background:var(--surface);cursor:pointer}
+.day b{display:block;font-family:var(--display);font-size:1.5rem;line-height:1}
+.day span{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.day.on{border-color:var(--accent);background:var(--accent-soft)}
+.day:disabled{opacity:.4;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px}
+.slot{border:1px solid var(--line);border-radius:8px;padding:9px 6px;background:var(--surface);cursor:pointer;font-weight:700;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:center;gap:2px}
+.slot small{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.slot.prio{border-color:var(--gold-a);background:linear-gradient(180deg,var(--surface),var(--warn-soft))}
+.slot.prio small{color:var(--warn)}
+.slot.on{outline:3px solid var(--accent);outline-offset:-1px}
+.slot:disabled{opacity:.38;cursor:not-allowed;text-decoration:line-through}
+.slot.locked{text-decoration:none}
+.toggle{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer}
+.toggle input{margin-top:4px;width:18px;height:18px;accent-color:var(--accent)}
+.summary{position:sticky;top:90px}
+.summary dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:14px 0}
+.summary dt{color:var(--muted);font-size:.9rem}
+.summary dd{margin:0;font-weight:600;text-align:right}
+.callout{border-radius:10px;padding:14px 16px;background:var(--warn-soft);color:var(--warn);font-weight:600;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.callout.ok{background:var(--ok-soft);color:var(--ok)}
+
+/* service desk */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.status{padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface-2);font-size:.85rem}
+.tierbadge{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.85rem}
+.tierbadge .dot{width:14px;height:14px}
+.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:8px;font-weight:600;z-index:20;max-width:calc(100% - 32px)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+
+/* Showroom: always-dark stage, the loyalty card floats in 3D on the right */
+.showroom{position:relative;color:#eef2f8;overflow:hidden;background:#000;background-image:radial-gradient(55% 75% at 76% 46%,rgba(224,176,74,.17) 0%,rgba(0,0,0,0) 62%),radial-gradient(40% 50% at 20% 30%,rgba(200,206,214,.06) 0%,rgba(0,0,0,0) 70%)}
+.hero-logo{display:block;width:min(380px,86%);height:auto;mix-blend-mode:screen;margin:-8px 0 -4px -10px}
+.a-logo-big{display:block;width:80%;max-width:300px;height:auto;margin:0 auto;mix-blend-mode:screen}
+.showroom .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:center;padding-block:56px;min-height:620px}
+.sr-text{display:flex;flex-direction:column;gap:20px;min-width:0}
+.sr-text .label{color:#9fb0c6}
+.sr-text h1{font-size:clamp(2rem,4.4vw,3.1rem)}
+.sr-text .lead{color:#b4c1d3;font-size:1.1rem}
+.sr-group{display:flex;flex-direction:column;gap:8px}
+.sr-tiers{display:flex;gap:6px;flex-wrap:wrap}
+.sr-tiers button{display:flex;align-items:center;padding:10px 26px;border:0;border-radius:0;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);background:linear-gradient(180deg,#1d1e22,#101114);color:#c9cdd3;font-family:var(--display);font-style:italic;font-weight:900;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:filter .2s,transform .2s}
+.sr-tiers button.bronze.on{background:linear-gradient(180deg,#f0b27a,#c77a3e 55%,#8e5426);color:#1d0c02}
+.sr-tiers button.silver.on{background:linear-gradient(180deg,#ffffff,#c9ced5 55%,#8d939c);color:#111}
+.sr-tiers button.gold.on{background:linear-gradient(180deg,#fbe39a,#e0b04a 55%,#a87a22);color:#1a1203}
+.sr-tiers button.on{box-shadow:0 0 18px rgba(224,176,74,.35)}
+.sr-tiers button:hover{filter:brightness(1.25)}
+.sr-tiers .dot{display:none}
+.sr-specs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.sr-specs div{padding:12px 0;min-width:0}
+.sr-specs div + div{padding-left:14px;border-left:1px solid rgba(255,255,255,.14)}
+.sr-specs b{display:block;font-family:var(--display);font-size:2rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:#fff}
+.sr-specs span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#9fb0c6}
+.sr-price{font-family:var(--display);font-size:1.5rem;font-weight:700;color:#fff}
+.sr-price small{font-family:var(--body);font-size:.9rem;color:#9fb0c6;font-weight:500}
+.sr-actions{display:flex;gap:10px;flex-wrap:wrap}
+.sr-actions .btn-ghost{background:transparent;color:#eef2f8;border-color:rgba(255,255,255,.3)}
+
+.stage{--glow:rgba(255,205,90,.34);position:relative;height:460px;perspective:1500px;display:grid;place-items:center;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y;min-width:0}
+.stage:active{cursor:grabbing}
+.stage:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:4px;border-radius:12px}
+.stage::before{content:"";position:absolute;width:90%;aspect-ratio:1.6;max-width:100%;border-radius:50%;background:radial-gradient(closest-side,var(--glow),transparent);transition:background .6s}
+.card3d{--edge:#a8821f;position:relative;width:min(460px,92%);aspect-ratio:1.586;transform-style:preserve-3d;will-change:transform}
+.card3d .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:22px}
+.card3d .face .mcard{width:100%;height:100%;aspect-ratio:auto;border-radius:22px;transform:none;transition:none}
+.card3d .front{transform:translateZ(3px)}
+.card3d .back{transform:rotateY(180deg) translateZ(3px)}
+.card3d .layer{position:absolute;inset:0;border-radius:22px;background:var(--edge);transition:background .6s}
+.stage-shadow{position:absolute;left:50%;bottom:26px;width:62%;height:34px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,0,0,.75),transparent);pointer-events:none}
+.stage-ui{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.flipbtn{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#eef2f8;border-radius:99px;padding:7px 14px;font-weight:700;font-size:.85rem;cursor:pointer}
+.flipbtn:hover{border-color:rgba(255,255,255,.6)}
+.sr-hint{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#7f8fa6}
+
+/* card back */
+.mc-back{padding:0;grid-template-rows:auto 1fr auto}
+.mc-stripe{height:17%;margin-top:7%;background:linear-gradient(180deg,#0c0c0e,#2b2b30 45%,#0a0a0c)}
+.mc-backbody{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;gap:3.5cqw 5cqw;padding:4.5cqw 7cqw 0;min-height:0}
+.mc-sig{grid-column:1/-1;height:9cqw;border-radius:3px;background:repeating-linear-gradient(-45deg,#f6f3ec 0 5px,#e7e1d4 5px 10px);display:flex;align-items:center;padding:0 3cqw;color:#6b665c;font-size:clamp(.4rem,2.4cqw,.6rem);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.mc-perks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.2cqw;font-size:clamp(.42rem,3cqw,.78rem);font-weight:600;line-height:1.25;min-width:0}
+.mc-perks li::before{content:"✓ ";font-weight:800}
+.mc-perks li.big{font-weight:800}
+.mc-code{width:19cqw;height:auto;border-radius:4px;align-self:start}
+.mc-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 7cqw 5cqw;font-size:clamp(.38rem,2.4cqw,.6rem);letter-spacing:.06em;opacity:.85}
+.mc-foot .mc-brand i{font-size:clamp(.4rem,3cqw,.7rem)}
+
+@media (max-width:860px){
+  .showroom .wrap{grid-template-columns:1fr;padding-block:24px 36px;gap:16px;min-height:0}
+  .stage{order:-1;height:300px}
+}
+@media (max-width:860px){
+  .hero,.split,.acct,.book{grid-template-columns:1fr}
+  .tiers,.steps{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .summary{position:static}
+  .card-fan{height:240px;max-width:420px}
+}
+@media (max-width:520px){
+  .stats,.svc,.row2{grid-template-columns:1fr}
+  .tierpick{grid-template-columns:1fr}
+  .brand small{display:none}
+}
+/* Cards page: scroll-driven 3D sequence, always dark */
+.cards-exp{background:#000;color:#eef2f8}
+.cx-track{position:relative;height:340vh}
+.cx-sticky{position:sticky;top:var(--hh,57px);height:calc(100vh - var(--hh,57px));overflow:hidden}
+.cx-glow{position:absolute;inset:0;pointer-events:none}
+.cx-g{position:absolute;inset:0;opacity:0}
+.cx-g.bronze{background:radial-gradient(55% 70% at 70% 50%,rgba(255,140,60,.26),transparent 70%)}
+.cx-g.silver{background:radial-gradient(55% 70% at 70% 50%,rgba(160,200,255,.24),transparent 70%)}
+.cx-g.gold{background:radial-gradient(55% 70% at 70% 50%,rgba(255,200,80,.28),transparent 70%)}
+.cx-grid{position:relative;height:100%;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:32px}
+.cx-texts{position:relative;height:440px;min-width:0}
+.cx-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:16px;will-change:transform,opacity}
+.cx-text .label{color:#9fb0c6}
+.cx-tier{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(3.4rem,9vw,7.2rem);line-height:.85;letter-spacing:.03em;color:transparent;-webkit-background-clip:text;background-clip:text}
+.cx-tier.bronze{background-image:linear-gradient(135deg,#9a6030,#f3bd8a 45%,#b97842 70%,#e8a96c)}
+.cx-tier.silver{background-image:linear-gradient(135deg,#8a94a2,#ffffff 45%,#aeb7c3 70%,#e9eef4)}
+.cx-tier.gold{background-image:linear-gradient(135deg,#b88a25,#fff0b8 45%,#d0a540 70%,#f6dc8c)}
+.cx-tag{font-size:1.25rem;color:#d3dce8;font-weight:600;max-width:34ch}
+.cx-perks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;color:#b4c1d3}
+.cx-perks li::before{content:"✓  ";color:var(--tc);font-weight:800}
+.cx-perks li.big{color:#fff;font-weight:700}
+.cx-stage{position:relative;height:100%;perspective:1600px;display:grid;place-items:center;min-width:0}
+.cx-card{position:absolute;width:min(460px,90%);will-change:transform,opacity}
+.cx-rail{position:absolute;top:50%;right:max(16px,env(safe-area-inset-right,0px));transform:translateY(-50%);display:flex;flex-direction:column;gap:14px}
+.cx-rail button{display:flex;align-items:center;justify-content:flex-end;gap:10px;background:none;border:0;color:#6f7d92;font-weight:700;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:2px}
+.cx-rail button i{width:10px;height:10px;border-radius:50%;border:2px solid currentColor;transition:background .2s}
+.cx-rail button.on{color:#fff}
+.cx-rail button.on i{background:currentColor}
+.cx-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7f8fa6;transition:opacity .3s;white-space:nowrap}
+@media (max-width:860px){
+  .cx-grid{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:0;padding-block:8px 44px}
+  .cx-stage{order:-1}
+  .cx-texts{height:300px}
+  .cx-text{justify-content:flex-start;gap:10px}
+  .cx-tier{font-size:3.4rem}
+  .cx-tag{font-size:1.05rem}
+  .cx-perks{font-size:.92rem;gap:4px}
+  .cx-rail{top:auto;bottom:14px;right:50%;transform:translateX(50%);flex-direction:row}
+  .cx-rail span{display:none}
+  .cx-hint{display:none}
+}
+
+/* Phone app: its own dark look; accent follows the member's card metal */
+body.in-app .demo-bar,body.in-app header,body.in-app .showroom{display:none}
+body.in-app main{padding:0;max-width:none}
+body.in-app .toast{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+.phone{--a-bg:#050506;--a-surface:#111215;--a-surface2:#1a1b1f;--a-line:#2a2c31;--a-fg:#eef0f3;--a-muted:#9aa0aa;--a-accent:#f2c94c;--a-accent-fg:#1a1400;
+  color-scheme:dark;background:var(--a-bg);color:var(--a-fg);display:flex;flex-direction:column;position:relative;overflow:hidden;margin:0 auto;max-width:480px;
+  height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}
+@media (min-width:600px){.phone{width:410px;height:min(880px,calc(100dvh - 48px));margin:24px auto;border-radius:46px;border:10px solid #0d1015;box-shadow:0 0 0 2px #2a313d,0 40px 80px -20px rgba(0,0,0,.55)}}
+/* Installed app: no phone frame, edge to edge, content clear of the notch and home bar */
+body.native{background:#050506;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+body.native input{-webkit-user-select:text;user-select:text}
+body.native .phone{width:100%;max-width:none;height:100dvh;margin:0;border:0;border-radius:0;box-shadow:none}
+body.native .a-body{padding-top:calc(18px + env(safe-area-inset-top,0px))}
+body.native .a-tabs{padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+body.native .toast{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+.phone h2{color:var(--a-fg)}
+.phone :focus-visible{outline-color:var(--a-accent)}
+.a-body{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:22px max(18px,env(safe-area-inset-right,0px)) 28px max(18px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:20px}
+.a-tabs{flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:#0a0a0c;border-top:1px solid var(--a-line);padding:8px 6px 10px}
+.a-tabs button{background:none;border:0;color:var(--a-muted);display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.72rem;font-weight:700;cursor:pointer;padding:4px 0}
+.a-tabs svg{width:24px;height:24px}
+.a-tabs button.on{color:var(--a-accent)}
+.a-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--a-muted)}
+.a-h{font-size:1.9rem}
+.a-muted{color:var(--a-muted);font-size:.88rem}
+.a-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.a-top > div{min-width:0}
+.a-avatar{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;background:var(--a-surface2);border:2px solid var(--a-accent);color:var(--a-fg)}
+.a-flip{display:block;perspective:1200px;cursor:pointer;-webkit-tap-highlight-color:transparent;border-radius:16px}
+.a-flip-in{display:block;position:relative;aspect-ratio:1.586;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.3,1.25,.4,1)}
+.a-flip.flipped .a-flip-in{transform:rotateY(180deg)}
+.a-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.a-face .mcard{height:100%}
+.a-backface{transform:rotateY(180deg)}
+.a-hint{text-align:center;font-size:.75rem;color:var(--a-muted);margin-top:-10px}
+.a-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.a-tile{background:var(--a-surface);border:1px solid var(--a-line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.a-tile b{font-family:var(--display);font-size:1.7rem;line-height:1.05;font-variant-numeric:tabular-nums}
+.a-tile small{color:var(--a-muted);font-family:var(--display);letter-spacing:.12em}
+.a-tile.row{flex-direction:row;align-items:center;gap:12px}
+.a-ring{width:46px;height:46px;flex:none}
+.a-panel{background:var(--a-surface);border:1px solid var(--a-line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.a-next-row{display:flex;gap:14px;align-items:center}
+.a-appt{flex-direction:row;align-items:center;gap:14px}
+.a-date{flex:none;width:56px;height:60px;border-radius:12px;background:var(--a-surface2);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.a-date b{font-family:var(--display);font-size:1.6rem}
+.a-date span{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;color:var(--a-muted);margin-top:3px}
+.a-appt-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.a-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.a-actions button{position:relative;background:var(--a-surface);border:1px solid var(--a-line);border-radius:16px;padding:14px;color:var(--a-fg);display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-weight:700;text-align:left;cursor:pointer}
+.a-actions button:active{transform:scale(.98)}
+.a-actions svg{width:26px;height:26px;color:var(--a-accent)}
+.a-actions em{position:absolute;top:10px;right:10px;font-style:normal;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:rgba(95,224,176,.14);color:#5fe0b0;padding:2px 7px;border-radius:99px}
+.a-btn{width:100%;border:0;border-radius:14px;padding:15px;font-weight:800;font-size:1rem;background:var(--a-accent);color:var(--a-accent-fg);cursor:pointer}
+.a-btn:disabled{opacity:.4;cursor:not-allowed}
+.a-btn.ghost{background:var(--a-surface2);color:var(--a-fg)}
+.a-link{background:none;border:0;color:var(--a-accent);font-weight:700;cursor:pointer;padding:6px;text-decoration:none;flex:none}
+.a-chips{display:flex;gap:8px;flex-wrap:wrap}
+.a-chips.scroll{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
+.a-chips button{flex:none;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;border:1px solid var(--a-line);background:var(--a-surface);color:var(--a-fg);font-weight:700;cursor:pointer}
+.a-chips button svg{width:18px;height:18px}
+.a-chips button.on{background:var(--a-accent);color:var(--a-accent-fg);border-color:var(--a-accent)}
+.a-sec{display:flex;flex-direction:column;gap:10px}
+.a-cal{background:var(--a-surface);border:1px solid var(--a-line);border-radius:18px;padding:14px 12px 12px}
+.a-cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.a-cal-head b{font-family:var(--display);font-style:italic;font-weight:800;font-size:1.2rem;letter-spacing:.02em}
+.a-cal-nav{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--a-line);background:var(--a-surface2);color:var(--a-fg);display:grid;place-items:center;cursor:pointer;padding:0}
+.a-cal-nav svg{width:18px;height:18px}
+.a-cal-nav:disabled{opacity:.3;cursor:default}
+.a-cal-today{font-size:.78rem;color:var(--a-muted);text-align:center;margin:4px 0 10px}
+.a-cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.a-cal-wd{font-size:.68rem;font-weight:700;color:var(--a-muted);text-transform:uppercase;padding:2px 0 6px}
+.a-cal-grid button{aspect-ratio:1;min-width:0;border:0;border-radius:12px;background:none;color:var(--a-fg);font-family:var(--display);font-weight:700;font-size:1rem;position:relative;cursor:pointer;font-variant-numeric:tabular-nums;padding:0}
+.a-cal-grid button:not(:disabled):not(.on):hover{background:var(--a-surface2)}
+.a-cal-grid button:disabled{color:#45484f;cursor:default}
+.a-cal-grid button.today{box-shadow:inset 0 0 0 1.5px var(--a-accent)}
+.a-cal-grid button.on{background:var(--a-accent);color:var(--a-accent-fg);box-shadow:0 6px 16px -6px var(--a-accent)}
+.a-cal-grid button.has::after{content:"";position:absolute;left:50%;bottom:12%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--a-accent)}
+.a-cal-grid button.on.has::after{background:var(--a-accent-fg)}
+.a-cal-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:10px;font-size:.72rem;color:var(--a-muted)}
+.a-cal-legend span{display:inline-flex;align-items:center;gap:6px}
+.a-cal-legend i{width:10px;height:10px;border-radius:4px;display:inline-block}
+.lg-today{box-shadow:inset 0 0 0 1.5px var(--a-accent)}
+.lg-has{background:var(--a-accent);border-radius:50%!important;width:6px!important;height:6px!important}
+.lg-off{background:#2a2c31}
+.a-days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.a-days button{flex:none;width:58px;padding:9px 0;border-radius:14px;border:1px solid var(--a-line);background:var(--a-surface);color:var(--a-fg);display:flex;flex-direction:column;align-items:center;cursor:pointer}
+.a-days b{font-family:var(--display);font-size:1.4rem;line-height:1.1}
+.a-days span{font-size:.64rem;text-transform:uppercase;color:var(--a-muted)}
+.a-days button.on{background:var(--a-accent);border-color:var(--a-accent);color:var(--a-accent-fg)}
+.a-days button.on span{color:inherit}
+.a-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.a-slots button{padding:10px 0;border-radius:12px;border:1px solid var(--a-line);background:var(--a-surface);color:var(--a-fg);font-weight:700;font-variant-numeric:tabular-nums;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px}
+.a-slots small{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;color:var(--a-accent)}
+.a-slots button.prio{border-color:var(--a-accent)}
+.a-slots button.on{background:var(--a-accent);color:var(--a-accent-fg)}
+.a-slots button.on small{color:inherit}
+.a-slots button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.a-toggle{display:flex;gap:12px;align-items:center;background:var(--a-surface);border:1px solid var(--a-line);border-radius:14px;padding:12px 14px;cursor:pointer}
+.a-toggle input{width:20px;height:20px;accent-color:var(--a-accent);flex:none}
+.a-toggle > span{display:flex;flex-direction:column;min-width:0}
+.a-summary{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;margin:0;font-size:.92rem}
+.a-summary dt{color:var(--a-muted)}
+.a-summary dd{margin:0;text-align:right;font-weight:700}
+.a-err{color:#ff7b8a;font-weight:600;font-size:.9rem}
+.a-login{display:flex;flex-direction:column;gap:22px;padding-top:6px}
+.a-logo{display:flex;align-items:center;gap:10px}
+.a-logo b{font-family:var(--display);font-size:1.2rem;text-transform:uppercase;display:block;line-height:1}
+.a-logo small{color:var(--a-muted);font-size:.78rem}
+.a-login-cards{position:relative;height:200px}
+.a-login-cards .mcard{position:absolute;left:18%;top:14px;width:64%}
+.a-login-cards .mcard:nth-child(1){transform:translateX(-27%) rotate(-12deg) scale(.86)}
+.a-login-cards .mcard:nth-child(2){transform:translateX(27%) rotate(11deg) scale(.86)}
+.a-login-cards .mcard:nth-child(3){transform:translateY(10px)}
+.a-form{display:flex;flex-direction:column;gap:12px}
+.a-field{display:flex;flex-direction:column;gap:6px;font-size:.85rem;font-weight:600;color:var(--a-muted)}
+.a-field input{padding:14px;border-radius:12px;border:1px solid var(--a-line);background:var(--a-surface);color:var(--a-fg);font-size:1rem}
+.a-loginfoot{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.a-loginfoot a{color:var(--a-accent);font-weight:700}
+.a-seg{display:flex;border:1px solid var(--a-line);border-radius:10px;overflow:hidden;flex:none}
+.a-seg button{background:none;border:0;color:var(--a-muted);padding:7px 12px;font-weight:800;cursor:pointer}
+.a-seg button.on{background:var(--a-fg);color:var(--a-bg)}
+.a-rows{gap:0;padding-block:4px}
+.a-rows > div{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--a-line)}
+.a-rows > div:first-child{border-top:0}
+.a-rows span{color:var(--a-muted);font-size:.9rem;flex:none}
+.a-rows b{text-align:right;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.a-profile{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.a-profile .a-avatar{width:84px;height:84px;font-size:1.9rem;border-width:3px}
+.a-tierpill{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:.8rem;padding:5px 11px;border-radius:99px;background:var(--a-surface2)}
+.a-upsell{border-radius:16px;padding:16px;background:linear-gradient(135deg,#6f500c,#c29630 40%,#f8e199 60%,#a8821f);color:#2a1c00;display:flex;flex-direction:column;gap:8px;font-weight:600}
+.a-upsell b{font-family:var(--display);font-size:1.35rem;text-transform:uppercase}
+.a-upsell button{background:#1a1400;color:#f8e199;border:0;border-radius:12px;padding:12px;font-weight:800;cursor:pointer;width:100%}
+.phone .pill{background:rgba(255,255,255,.08);color:var(--a-fg);border-color:transparent}
+.phone .pill.ok{background:rgba(95,224,176,.14);color:#5fe0b0}
+.phone .pill.warn{background:rgba(242,201,76,.14);color:var(--a-accent)}
+.phone .pills{display:flex;gap:6px;flex-wrap:wrap}
+
+/* ---------- Carbon Slash card design (C): carbon weave, slanted metal slash carrying the tier ---------- */
+.mcard.bronze{--m:linear-gradient(135deg,#4f2c12 0%,#9a6030 24%,#f0b682 46%,#b97842 60%,#5e3417 100%);--tc:#e3a06a;--mink:#2a1405;--glow:rgba(227,160,106,.22)}
+.mcard.silver{--m:linear-gradient(135deg,#5f6875 0%,#b9c1cc 24%,#ffffff 46%,#c2c9d3 60%,#6d7684 100%);--tc:#dfe4ea;--mink:#141a22;--glow:rgba(223,228,234,.18)}
+.mcard.gold{--m:linear-gradient(135deg,#6f500c 0%,#c29630 24%,#fbe39a 46%,#d0a540 60%,#7a5a10 100%);--tc:#f0c860;--mink:#2a1c00;--glow:rgba(240,200,96,.22)}
+.mcard.bronze,.mcard.silver,.mcard.gold{color:#eceef1;background-color:#111;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.06),transparent 40%,rgba(0,0,0,.4)),
+    repeating-linear-gradient(45deg,#1b1c20 0 .9cqw,#0c0c0e .9cqw 1.8cqw),repeating-linear-gradient(-45deg,#1b1c20 0 .9cqw,#0c0c0e .9cqw 1.8cqw);
+  background-blend-mode:normal,multiply,normal}
+.mcard::before{display:none}
+.mc-frame{display:none}
+.mc-obs{display:block;padding:0}
+.mc-obs > *{position:absolute}
+.mc-obs .mc-slash{right:-2cqw;top:0;bottom:0;width:36cqw;background:var(--m);clip-path:polygon(34% 0,100% 0,100% 100%,0 100%);z-index:-1}
+.mc-obs .mc-slash2{right:31cqw;top:0;bottom:0;width:6cqw;background:var(--m);opacity:.55;clip-path:polygon(70% 0,100% 0,30% 100%,0 100%);z-index:-1}
+.mc-obs .mc-logo{width:44cqw;left:6cqw;top:7cqw;height:auto;pointer-events:none;filter:drop-shadow(0 .4cqw .8cqw rgba(0,0,0,.6))}
+.mc-obs .mc-chip{right:10cqw;top:9cqw;width:12.5cqw}
+.mc-obs .mc-nfc{right:28cqw;top:10cqw;opacity:.6}
+.mc-obs .mc-no{left:6cqw;top:41cqw;margin:0;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.mc-obs .mc-valid{right:38cqw;bottom:5cqw;text-align:right;font-size:clamp(.34rem,2.2cqw,.55rem);font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.8;line-height:1.2}
+.mc-obs .mc-valid b{display:block;font-family:var(--display);font-size:clamp(.45rem,3.4cqw,.85rem);letter-spacing:.06em}
+.mc-obs .mc-who{left:6cqw;bottom:5cqw;max-width:34cqw;font-size:clamp(.36rem,2.5cqw,.6rem);font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.9;line-height:1.25}
+.mc-obs .mc-who b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(.5rem,4cqw,1rem);letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mc-obs .mc-tag{right:5.5cqw;bottom:6cqw;color:var(--mink);font-family:var(--display);font-style:italic;font-weight:900;
+  font-size:clamp(.6rem,6.2cqw,1.5rem);letter-spacing:.04em;text-transform:uppercase;line-height:1;text-align:right;text-shadow:0 .2cqw 0 rgba(255,255,255,.35)}
+.mc-back .mc-stripe{background:linear-gradient(180deg,#000,#1d1d21 45%,#000)}
+.mc-back .mc-perks li::before{color:var(--tc)}
+.mc-back .mc-perks li.big{color:var(--tc)}
+.mc-minilogo{width:22cqw;height:auto;pointer-events:none}
+
+/* Owner / admin app */
+.a-body > *{flex-shrink:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.x-month{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--a-surface);border:1px solid var(--a-line);border-radius:16px;padding:6px}
+.x-month b{font-family:var(--display);font-style:italic;font-weight:800;font-size:1.1rem}
+.x-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.x-kpis.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.x-kpis .a-tile{display:flex;flex-direction:column;gap:4px;min-width:0}
+.x-kpis .a-tile b{font-family:var(--display);font-size:1.45rem;line-height:1.1;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x-kpis .a-tile small{color:var(--a-muted);font-size:.72rem}
+.neg{color:#ff8a96}
+.x-delta{font-size:.72rem;font-weight:700;display:inline-flex;gap:4px;align-items:baseline}
+.x-delta small{color:var(--a-muted);font-weight:600}
+.x-delta.up{color:#5fe0b0}
+.x-delta.down{color:#ff8a96}
+.x-chartbox{display:flex;flex-direction:column;gap:8px}
+.x-chart-head p{margin:2px 0 0;font-size:.78rem}
+.x-chart{width:100%;height:auto;display:block;overflow:visible}
+.x-grid{stroke:var(--a-line);stroke-width:1}
+.x-base{stroke:#3a3d44;stroke-width:1}
+.x-axis{fill:var(--a-muted);font-size:9px;font-family:var(--body)}
+.x-axis.on{fill:var(--a-fg);font-weight:700}
+.x-hit{cursor:pointer}
+.x-bar{transition:opacity .2s}
+.x-legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:var(--a-muted)}
+.x-legend span{display:inline-flex;align-items:center;gap:6px}
+.x-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.x-legend b{color:var(--a-fg)}
+.x-tapnote{margin:0;font-size:.72rem;color:var(--a-muted)}
+.x-mix{display:flex;gap:2px;height:14px;border-radius:7px;overflow:hidden;margin:10px 0}
+.x-mix i{display:block;min-width:4px}
+.x-renew{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.x-renew p{margin:4px 0 0}
+.x-renew p b{font-family:var(--display);font-size:1.3rem}
+.x-renew .a-btn{width:auto;padding:10px 16px}
+.x-ledger{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin:8px 0 0;font-size:.92rem}
+.x-ledger dt{color:var(--a-fg);min-width:0}
+.x-ledger dt small{color:var(--a-muted);font-size:.75rem;margin-left:4px}
+.x-ledger dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.x-ledger .tot{border-top:1px solid var(--a-line);padding-top:8px;font-weight:800}
+.x-auto{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--a-accent);border:1px solid color-mix(in srgb,var(--a-accent) 50%,transparent);border-radius:6px;padding:1px 5px;margin-left:4px;vertical-align:1px}
+.x-del{background:none;border:0;color:var(--a-muted);font-size:1.1rem;line-height:1;cursor:pointer;padding:0 0 0 6px}
+.x-del:hover{color:#ff8a96}
+.x-sum{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.x-sum b{display:block;font-family:var(--display);font-size:1.2rem;font-variant-numeric:tabular-nums;margin-top:2px}
+.x-sum-net{grid-column:1/-1;border-top:1px solid var(--a-line);padding-top:10px}
+.x-sum-net b{font-size:1.8rem;color:var(--a-accent)}
+.x-sum-net b.neg{color:#ff8a96}
+.x-quarter{margin-top:14px;padding-top:12px;border-top:1px dashed var(--a-line)}
+.x-add{margin-top:14px;border-top:1px solid var(--a-line);padding-top:12px}
+.x-add summary{cursor:pointer;font-weight:700;color:var(--a-accent);list-style:none}
+.x-add summary::-webkit-details-marker{display:none}
+.x-add summary::before{content:"+ "}
+.x-add[open] summary::before{content:"− "}
+.x-add form{margin-top:12px}
+.x-add select{width:100%}
+.x-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.x-small{font-size:.76rem;margin:8px 0 0}
+.x-count{margin:0;font-size:.8rem}
+.x-search input{width:100%}
+.x-list{padding:4px 14px}
+.x-mem,.x-appt{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--a-line)}
+.x-mem:last-child,.x-appt:last-child{border-bottom:0}
+.x-mem-main{display:flex;flex-direction:column;min-width:0;flex:1;gap:2px}
+.x-mem-main b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x-mem-main .a-muted{font-size:.78rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x-mem-side{display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:.72rem;flex:none}
+.x-tier{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700}
+.x-tier i{width:8px;height:8px;border-radius:50%}
+.a-avatar.sm{width:36px;height:36px;font-size:.78rem;flex:none;color:#fff}
+.x-time{font-family:var(--display);font-size:1rem;flex:none;width:46px}
+.x-status{flex:none;background:var(--a-surface2);color:var(--a-fg);border:1px solid var(--a-line);border-radius:10px;padding:7px 8px;font:inherit;font-size:.8rem;max-width:110px}
+.phone.admin .pills{margin-top:4px}
+.x-add .a-field input,.x-add .a-field select,.x-search input{background:var(--a-surface2)}
+.a-field select{padding:14px;border-radius:12px;border:1px solid var(--a-line);background:var(--a-surface);color:var(--a-fg);font-size:1rem}
+.x-kpis .a-tile small{font-family:var(--body);letter-spacing:0}
+
+@media (prefers-reduced-motion:reduce){.mcard::after{animation:none}.a-flip-in{transition:none}}
+@media (prefers-reduced-motion:no-preference){
+  .card-fan .mcard{transition:transform .35s ease}
+  .card-fan:hover .mcard:nth-child(1){transform:rotate(-10deg) translateX(-10px)}
+  .card-fan:hover .mcard:nth-child(3){transform:rotate(6deg) translateX(12px)}
+}
+</style>
+
+<div class="demo-bar"><div class="wrap"><span id="demoText"></span><button class="linkbtn" data-act="reset" id="resetBtn"></button></div></div>
+<header><div class="wrap">
+  <a class="brand" href="#home"><img class="brand-logo" src="elite-logo.webp" alt="Elite Services"><span><b id="brandName"></b><small id="brandSub"></small></span></a>
+  <nav id="nav"></nav>
+  <div class="lang" role="group" aria-label="Language"><button data-lang="en" id="lang-en">EN</button><button data-lang="fr" id="lang-fr">FR</button></div>
+</div></header>
+<section class="showroom" id="showroom">
+  <div class="wrap">
+    <div class="sr-text" id="srText"></div>
+    <div class="stage" id="stage" tabindex="0" aria-label="3D loyalty card. Use the left and right arrow keys to flip it.">
+      <div class="card3d" id="card3d">
+        <div class="face front" id="c3front"></div>
+        <div class="face back" id="c3back"></div>
+      </div>
+      <div class="stage-shadow" id="stageShadow"></div>
+      <div class="stage-ui"><span class="sr-hint" id="srHint"></span><button class="flipbtn" id="flipBtn" data-act="flip"></button></div>
+    </div>
+  </div>
+</section>
+<section class="cards-exp" id="cardsPage" hidden>
+  <div class="cx-track" id="cxTrack">
+    <div class="cx-sticky">
+      <div class="cx-glow" id="cxGlow"></div>
+      <div class="wrap cx-grid">
+        <div class="cx-texts" id="cxTexts"></div>
+        <div class="cx-stage" id="cxStage"></div>
+      </div>
+      <div class="cx-rail" id="cxRail"></div>
+      <div class="cx-hint" id="cxHint"></div>
+    </div>
+  </div>
+</section>
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ---------- Config: edit these to match the real program ---------- */
+const TIERS = {
+  bronze:{price:199, trade:1000, oil:0, wash:false, pickup:false, courtesy:false, earlyDays:1},
+  silver:{price:399, trade:1500, oil:2, wash:true,  pickup:false, courtesy:false, earlyDays:1},
+  gold:  {price:799, trade:2000, oil:4, wash:true,  pickup:true,  courtesy:true,  earlyDays:1}
+};
+const GUEST_WAIT_DAYS = 6;      // non-members: first open day is ~a week out
+const COURTESY_FLEET = 3;       // courtesy cars available per day
+const TIMES = ["07:30","08:00","08:30","09:00","09:30","10:00","10:30","11:00","13:00","13:30","14:00","14:30","15:00","15:30"];
+const PRIORITY_TIMES = ["07:30","08:00","08:30","13:00"]; // held for members
+const SERVICES = ["oil","tires","inspection","other"];
+
+/* ---------- Text (EN / FR) ---------- */
+const L = {
+en:{
+  brand:"Elite Services", brandSub:"Loyalty program",
+  demo:"Demo with sample data. Nothing is charged or sent to the service department.", reset:"Reset demo",
+  navPlans:"Plans", navBook:"Book service", navAccount:"My account", navLogin:"Log in", navDesk:"Service desk",
+  heroEyebrow:"Loyalty card · Bronze · Silver · Gold",
+  heroTitle:"Skip the service wait. Get more for your trade.",
+  heroLead:"Members book premium service spots, get a guaranteed bonus on their next trade-in, and Gold members never have to drive in for an oil or tire change.",
+  seePlans:"See the plans", bookNow:"Book service",
+  perYear:"/ year", choose:"Choose", popular:"Most complete",
+  draftNote:"Draft: Silver perks and all prices are proposals to confirm with management.",
+  pTrade:"{amt} guaranteed extra on your trade-in",
+  pPriority:"Premium service spots, as early as tomorrow",
+  pOil:"{n} free oil changes per year",
+  pWash:"Free car wash with every visit",
+  pPickup:"We pick up and return your car",
+  pCourtesy:"Courtesy car while we work on yours",
+  compareTitle:"Compare the cards", perk:"Perk", nonMember:"No card",
+  cTrade:"Trade-in bonus", cPriority:"Next available service spot", cOil:"Free oil changes / year", cWash:"Car wash each visit", cPickup:"Pickup and delivery", cCourtesy:"Courtesy car",
+  inWeek:"About a week", tomorrow:"Tomorrow",
+  howTitle:"How it works",
+  how1t:"Buy the card", how1:"At delivery, or later at the service desk. The card is valid for 12 months.",
+  how2t:"Book from the app", how2:"Log in, pick your service, and grab a premium spot held for members.",
+  how3t:"Trade up with a bonus", how3:"Your trade-in bonus is on your account, ready for your next purchase.",
+  joinTitle:"Join the club", joinLead:"Create your account and pick a card. In the real system, payment happens here or at the dealership.",
+  fName:"First name", lName:"Last name", fEmail:"Email", fPhone:"Phone", fVehicle:"Vehicle (year and model)", fPass:"Password",
+  pickCard:"Pick your card", createAcct:"Create my account", haveAcct:"Already a member?",
+  loginTitle:"Log in", loginBtn:"Log in", noAcct:"No account yet?", joinLink:"Join the club",
+  quickTitle:"Demo shortcuts", quickLead:"Open a sample member account to see each card in action.",
+  badLogin:"We couldn't find that email and password. Try a demo shortcut, or join the club.",
+  missing:"Fill in every field to continue.", emailUsed:"That email already has an account. Log in instead.",
+  member:"Member", memberSince:"Member since", validUntil:"Valid until", cardNo:"Card no.",
+  hello:"Hello, {name}", acctLead:"Here is your {tier} card and everything it gives you.",
+  statTrade:"Trade-in bonus", statOil:"Free oil changes left", statNext:"Next appointment", none:"None booked",
+  ofYear:"{a} of {b} this year", noOil:"Not included in Bronze",
+  certTitle:"Trade-in bonus certificate", certLead:"Show this code to your salesperson when you trade in.",
+  upcoming:"Your appointments", noAppts:"No appointments yet.", cancel:"Cancel", logout:"Log out",
+  upgrade:"Upgrade to Gold", upgradeLead:"Get pickup, a courtesy car and 4 free oil changes.",
+  upgraded:"You're now a {tier} member.",
+  bookTitle:"Book service", bookLeadMember:"Premium spots marked in gold are held for members.",
+  bookLeadGuest:"You're booking without a card. Members get spots as early as tomorrow.",
+  stepSvc:"What do you need?", stepDay:"Pick a day", stepTime:"Pick a time", stepExtras:"Gold extras", stepYou:"Your details",
+  sOil:"Oil change", sTires:"Tire change", sInspection:"Inspection", sOther:"Other repair",
+  free:"Free", included:"Included",
+  prio:"Premium", membersOnly:"Members", taken:"Taken",
+  pickupT:"Pick up my car", pickupD:"We come get it and bring it back to you.",
+  courtesyT:"Courtesy car", courtesyD:"We leave a car with you while yours is in service.",
+  address:"Pickup address", noCourtesy:"No courtesy cars left that day.",
+  summary:"Summary", sumSvc:"Service", sumDate:"Day", sumTime:"Time", sumVeh:"Vehicle", sumCost:"Oil change cost", sumExtras:"Extras",
+  regular:"Regular price",
+  confirm:"Confirm appointment", pickAll:"Choose a service, a day and a time.",
+  booked:"Appointment booked. The service department sees it on the desk now.",
+  guestCta:"Members could book tomorrow.", seeCards:"See the cards",
+  deskTitle:"Service desk", deskLead:"What the service advisors see. In the real system, these bookings flow into your service scheduler.",
+  kToday:"Booked, next 7 days", kMembers:"Loyalty members", kPickups:"Pickups to schedule", kCourtesy:"Courtesy cars out",
+  colWhen:"When", colCust:"Customer", colTier:"Card", colSvc:"Service", colExtras:"Extras", colStatus:"Status",
+  stBooked:"Booked", stIn:"Car in", stDone:"Done", guest:"No card",
+  xPickup:"Pickup", xCourtesy:"Courtesy car", xFree:"Free oil", xWash:"Wash",
+  integ:"Connecting to the dealership: the app would send each booking to the service scheduling system (for example Xtime, CDK or Reynolds) and read open slots from it. This demo keeps everything on this device.",
+  statusChanged:"Status updated.", cancelled:"Appointment cancelled.",
+  loginToSee:"Log in to see your card.", resetDone:"Demo reset to sample data.",
+  dragHint:"Drag to turn the card", flip:"Flip card ↻", signature:"Authorized signature", backNote:"Show this card at the service desk to get your member perks.", specTrade:"Trade bonus", specOil:"Free oil / yr", specPickup:"Pickup",
+  loyaltyCard:"Loyalty card", yourName:"Your name",
+  navCards:"Cards", scrollHint:"Scroll to see every card", cardsCta:"Ready to pick yours?",
+  tag_bronze:"Start getting more for your trade, and skip the service wait.", tag_silver:"More free service every year, with a car wash every visit.", tag_gold:"We come to you. Pickup, a courtesy car and 4 free oil changes.",
+  navApp:"Phone app", appWelcome:"Log in to your loyalty card", tabCard:"My card", tabBook:"Book", tabVisits:"Visits", tabMe:"Profile",
+  tapFlip:"Tap the card to flip it", quickTitle2:"Book in one tap", nextAppt:"Next appointment", past:"Past visits", noPast:"No past visits yet.",
+  admQuick:"Owner · Admin", adminHello:"Admin · {name}", tDash:"Dashboard", tMembers:"Members", tDesk:"Service desk", tDeskS:"Desk", tBooks:"Accounting", kSales:"Sales", kProfit:"Net profit", kActive:"Active members", kNew:"New members", vsPrev:"vs {m}", vsPrevTD:"vs {m} 1–{d}", chartTitle:"Sales by month", chartSub:"Memberships sold, before tax, last 12 months", tapBar:"Tap a bar to open that month.", mixTitle:"Members by card", renewTitle:"Renewals due in the next 30 days", renewLead:"{n} members to renew", seeList:"See list", ytdTitle:"{y} so far", memSearch:"Search name, vehicle or phone", all:"All", renewSoonF:"Renewing soon", memCount:"{n} members", renews:"Renews {d}", renewSoon:"Renews {d}", noMembers:"No members match.", showMore:"Show more", deskToday:"Today", deskIn:"Cars in", deskPick:"Pickups (14 days)", deskEmpty:"No appointments in the next 14 days.", booksExp:"Expenses", income:"Income", incNew:"New memberships", incRenew:"Renewals", incUp:"Upgrades", taxes:"Sales taxes", gst:"GST (5%)", qst:"QST (9.975%)", taxCredits:"Tax credits on expenses", taxRemit:"To remit", quarterTitle:"Q{q} {y} so far", expAuto:"Auto", perkOil:"Free oil changes", perkWash:"Free washes", perkPickup:"Pickups and courtesy cars", perkTrade:"Trade-in bonuses honored", fees:"Card processing fees (2.4%)", cat_marketing:"Marketing", cat_cards:"Card printing", cat_staff:"Staff", cat_software:"Software", cat_rent:"Rent", cat_other:"Other", addExp:"Add an expense", expCat:"Category", expAmt:"Amount before tax", expDate:"Date", expNote:"Note", expAdd:"Add expense", expAdded:"Expense added", expDeleted:"Expense deleted", expDelete:"Delete expense", expBad:"Enter an amount and a date.", earnedTitle:"Earned vs. paid up front", earned:"Earned this month", unearned:"Still owed in perks (unearned)", earnedLead:"Members pay for a full year up front, so each sale is earned 1/12 per month.", copyX:"Copy this month for Excel", copied:"Copied. Paste it into Excel or Google Sheets.", copyFail:"Couldn't copy on this device.", colType:"Type", amount:"Amount", booksNote:"Taxes, perk costs and fees are worked out automatically from sales, bookings and the expenses you add. Have an accountant check the year-end before filing.",
+  calPrev:"Previous month", calNext:"Next month", todayIs:"Today: {d}", calToday:"Today", calMine:"Your appointment", calClosed:"Closed or full",
+  remindEve:"Reminder: {svc} tomorrow at {time}. See you at the service desk.", remindSoon:"{svc} today at {time}. Your priority spot is waiting.",
+  language:"Language", openSite:"Open the website", vehicleL:"Vehicle", pickupQ:"Pickup at home"
+},
+fr:{
+  brand:"Elite Services", brandSub:"Programme fidélité",
+  demo:"Démo avec données fictives. Rien n'est facturé ni envoyé au service.", reset:"Réinitialiser la démo",
+  navPlans:"Cartes", navBook:"Prendre rendez-vous", navAccount:"Mon compte", navLogin:"Connexion", navDesk:"Comptoir service",
+  heroEyebrow:"Carte fidélité · Bronze · Argent · Or",
+  heroTitle:"Fini l'attente au service. Plus pour votre échange.",
+  heroLead:"Les membres réservent des plages prioritaires au service, obtiennent un bonus garanti sur leur prochain échange, et les membres Or n'ont plus à se déplacer pour un changement d'huile ou de pneus.",
+  seePlans:"Voir les cartes", bookNow:"Prendre rendez-vous",
+  perYear:"/ an", choose:"Choisir", popular:"La plus complète",
+  draftNote:"Brouillon : les avantages Argent et tous les prix sont des propositions à confirmer avec la direction.",
+  pTrade:"{amt} de plus garantis sur votre échange",
+  pPriority:"Plages prioritaires au service, dès demain",
+  pOil:"{n} changements d'huile gratuits par année",
+  pWash:"Lave-auto gratuit à chaque visite",
+  pPickup:"On va chercher votre véhicule et on le ramène",
+  pCourtesy:"Véhicule de courtoisie pendant l'entretien",
+  compareTitle:"Comparer les cartes", perk:"Avantage", nonMember:"Sans carte",
+  cTrade:"Bonus à l'échange", cPriority:"Prochaine plage disponible", cOil:"Changements d'huile gratuits / an", cWash:"Lave-auto à chaque visite", cPickup:"Cueillette et livraison", cCourtesy:"Véhicule de courtoisie",
+  inWeek:"Environ une semaine", tomorrow:"Demain",
+  howTitle:"Comment ça marche",
+  how1t:"Achetez la carte", how1:"À la livraison, ou plus tard au comptoir service. La carte est valide 12 mois.",
+  how2t:"Réservez dans l'app", how2:"Connectez-vous, choisissez le service et prenez une plage réservée aux membres.",
+  how3t:"Échangez avec un bonus", how3:"Votre bonus d'échange est dans votre compte, prêt pour votre prochain achat.",
+  joinTitle:"Devenir membre", joinLead:"Créez votre compte et choisissez une carte. Dans le vrai système, le paiement se fait ici ou à la concession.",
+  fName:"Prénom", lName:"Nom", fEmail:"Courriel", fPhone:"Téléphone", fVehicle:"Véhicule (année et modèle)", fPass:"Mot de passe",
+  pickCard:"Choisissez votre carte", createAcct:"Créer mon compte", haveAcct:"Déjà membre?",
+  loginTitle:"Connexion", loginBtn:"Se connecter", noAcct:"Pas encore de compte?", joinLink:"Devenir membre",
+  quickTitle:"Raccourcis démo", quickLead:"Ouvrez un compte membre fictif pour voir chaque carte en action.",
+  badLogin:"Courriel ou mot de passe introuvable. Essayez un raccourci démo ou devenez membre.",
+  missing:"Remplissez tous les champs pour continuer.", emailUsed:"Ce courriel a déjà un compte. Connectez-vous plutôt.",
+  member:"Membre", memberSince:"Membre depuis", validUntil:"Valide jusqu'au", cardNo:"No de carte",
+  hello:"Bonjour, {name}", acctLead:"Voici votre carte {tier} et tout ce qu'elle vous donne.",
+  statTrade:"Bonus à l'échange", statOil:"Changements d'huile restants", statNext:"Prochain rendez-vous", none:"Aucun",
+  ofYear:"{a} sur {b} cette année", noOil:"Non inclus avec Bronze",
+  certTitle:"Certificat de bonus à l'échange", certLead:"Montrez ce code à votre conseiller lors de l'échange.",
+  upcoming:"Vos rendez-vous", noAppts:"Aucun rendez-vous pour l'instant.", cancel:"Annuler", logout:"Se déconnecter",
+  upgrade:"Passer à Or", upgradeLead:"Cueillette, véhicule de courtoisie et 4 changements d'huile gratuits.",
+  upgraded:"Vous êtes maintenant membre {tier}.",
+  bookTitle:"Prendre rendez-vous", bookLeadMember:"Les plages dorées sont réservées aux membres.",
+  bookLeadGuest:"Vous réservez sans carte. Les membres ont des plages dès demain.",
+  stepSvc:"De quoi avez-vous besoin?", stepDay:"Choisissez une journée", stepTime:"Choisissez l'heure", stepExtras:"Extras Or", stepYou:"Vos coordonnées",
+  sOil:"Changement d'huile", sTires:"Changement de pneus", sInspection:"Inspection", sOther:"Autre réparation",
+  free:"Gratuit", included:"Inclus",
+  prio:"Prioritaire", membersOnly:"Membres", taken:"Pris",
+  pickupT:"Venez chercher mon véhicule", pickupD:"On vient le chercher et on vous le ramène.",
+  courtesyT:"Véhicule de courtoisie", courtesyD:"On vous laisse un véhicule pendant l'entretien du vôtre.",
+  address:"Adresse de cueillette", noCourtesy:"Plus de véhicule de courtoisie ce jour-là.",
+  summary:"Résumé", sumSvc:"Service", sumDate:"Jour", sumTime:"Heure", sumVeh:"Véhicule", sumCost:"Coût du changement d'huile", sumExtras:"Extras",
+  regular:"Prix régulier",
+  confirm:"Confirmer le rendez-vous", pickAll:"Choisissez un service, une journée et une heure.",
+  booked:"Rendez-vous confirmé. Le service le voit déjà au comptoir.",
+  guestCta:"Les membres pourraient réserver demain.", seeCards:"Voir les cartes",
+  deskTitle:"Comptoir service", deskLead:"Ce que voient les conseillers. Dans le vrai système, ces rendez-vous vont directement dans votre logiciel de planification du service.",
+  kToday:"Réservés, 7 prochains jours", kMembers:"Membres fidélité", kPickups:"Cueillettes à planifier", kCourtesy:"Véhicules de courtoisie sortis",
+  colWhen:"Quand", colCust:"Client", colTier:"Carte", colSvc:"Service", colExtras:"Extras", colStatus:"Statut",
+  stBooked:"Réservé", stIn:"Véhicule arrivé", stDone:"Terminé", guest:"Sans carte",
+  xPickup:"Cueillette", xCourtesy:"Courtoisie", xFree:"Huile gratuite", xWash:"Lavage",
+  integ:"Lien avec la concession : l'app enverrait chaque rendez-vous au logiciel de planification du service (par exemple Xtime, CDK ou Reynolds) et y lirait les plages libres. Cette démo garde tout sur cet appareil.",
+  statusChanged:"Statut mis à jour.", cancelled:"Rendez-vous annulé.",
+  loginToSee:"Connectez-vous pour voir votre carte.", resetDone:"Démo réinitialisée.",
+  dragHint:"Glissez pour tourner la carte", flip:"Retourner ↻", signature:"Signature autorisée", backNote:"Présentez cette carte au comptoir service pour vos avantages membres.", specTrade:"Bonus échange", specOil:"Huile gratuite / an", specPickup:"Cueillette",
+  loyaltyCard:"Carte fidélité", yourName:"Votre nom",
+  navCards:"Cartes", scrollHint:"Faites défiler pour voir chaque carte", cardsCta:"Prêt à choisir la vôtre?",
+  tag_bronze:"Obtenez plus pour votre échange et passez l'attente au service.", tag_silver:"Plus d'entretien gratuit chaque année, et un lave-auto à chaque visite.", tag_gold:"On se déplace pour vous. Cueillette, véhicule de courtoisie et 4 changements d'huile gratuits.",
+  navApp:"App mobile", appWelcome:"Connectez-vous à votre carte fidélité", tabCard:"Ma carte", tabBook:"Réserver", tabVisits:"Visites", tabMe:"Profil",
+  tapFlip:"Touchez la carte pour la retourner", quickTitle2:"Réservez en un geste", nextAppt:"Prochain rendez-vous", past:"Visites passées", noPast:"Aucune visite passée.",
+  admQuick:"Direction · Admin", adminHello:"Admin · {name}", tDash:"Tableau de bord", tMembers:"Membres", tDesk:"Comptoir du service", tDeskS:"Comptoir", tBooks:"Comptabilité", kSales:"Ventes", kProfit:"Profit net", kActive:"Membres actifs", kNew:"Nouveaux membres", vsPrev:"vs {m}", vsPrevTD:"vs 1–{d} {m}", chartTitle:"Ventes par mois", chartSub:"Adhésions vendues, avant taxes, 12 derniers mois", tapBar:"Touchez une barre pour ouvrir ce mois.", mixTitle:"Membres par carte", renewTitle:"Renouvellements dans les 30 prochains jours", renewLead:"{n} membres à renouveler", seeList:"Voir la liste", ytdTitle:"{y} à ce jour", memSearch:"Chercher un nom, un véhicule ou un téléphone", all:"Tous", renewSoonF:"Renouvellement proche", memCount:"{n} membres", renews:"Renouvelle le {d}", renewSoon:"Renouvelle le {d}", noMembers:"Aucun membre trouvé.", showMore:"Voir plus", deskToday:"Aujourd'hui", deskIn:"Véhicules arrivés", deskPick:"Cueillettes (14 jours)", deskEmpty:"Aucun rendez-vous dans les 14 prochains jours.", booksExp:"Dépenses", income:"Revenus", incNew:"Nouvelles adhésions", incRenew:"Renouvellements", incUp:"Surclassements", taxes:"Taxes de vente", gst:"TPS (5 %)", qst:"TVQ (9,975 %)", taxCredits:"Crédits de taxes sur les dépenses", taxRemit:"À remettre", quarterTitle:"T{q} {y} à ce jour", expAuto:"Auto", perkOil:"Changements d'huile gratuits", perkWash:"Lavages gratuits", perkPickup:"Cueillettes et véhicules de courtoisie", perkTrade:"Bonis d'échange honorés", fees:"Frais de paiement par carte (2,4 %)", cat_marketing:"Marketing", cat_cards:"Impression des cartes", cat_staff:"Personnel", cat_software:"Logiciels", cat_rent:"Loyer", cat_other:"Autre", addExp:"Ajouter une dépense", expCat:"Catégorie", expAmt:"Montant avant taxes", expDate:"Date", expNote:"Note", expAdd:"Ajouter la dépense", expAdded:"Dépense ajoutée", expDeleted:"Dépense supprimée", expDelete:"Supprimer la dépense", expBad:"Entrez un montant et une date.", earnedTitle:"Gagné vs payé d'avance", earned:"Gagné ce mois-ci", unearned:"Encore dû en avantages (non gagné)", earnedLead:"Les membres paient l'année d'avance, donc chaque vente est gagnée à 1/12 par mois.", copyX:"Copier ce mois pour Excel", copied:"Copié. Collez-le dans Excel ou Google Sheets.", copyFail:"Impossible de copier sur cet appareil.", colType:"Type", amount:"Montant", booksNote:"Les taxes, les coûts des avantages et les frais sont calculés automatiquement à partir des ventes, des rendez-vous et des dépenses ajoutées. Faites vérifier la fin d'année par un comptable avant de produire les déclarations.",
+  calPrev:"Mois précédent", calNext:"Mois suivant", todayIs:"Aujourd'hui : {d}", calToday:"Aujourd'hui", calMine:"Votre rendez-vous", calClosed:"Fermé ou complet",
+  remindEve:"Rappel : {svc} demain à {time}. À bientôt au comptoir du service.", remindSoon:"{svc} aujourd'hui à {time}. Votre place prioritaire vous attend.",
+  language:"Langue", openSite:"Ouvrir le site web", vehicleL:"Véhicule", pickupQ:"Cueillette à domicile"
+}};
+const TIER_NAME = {en:{bronze:"Bronze",silver:"Silver",gold:"Gold"}, fr:{bronze:"Bronze",silver:"Argent",gold:"Or"}};
+
+/* ---------- State ---------- */
+// LIVE MODE: paste the Supabase project address and its public "anon" key (Supabase > Project Settings > API).
+// Leave both empty to run the demo with sample data on this device.
+const CONFIG=Object.assign({supabaseUrl:"",supabaseKey:""},window.ELITE_CONFIG||{});
+const LIVE=!!(CONFIG.supabaseUrl&&CONFIG.supabaseKey);
+const KEY = "loyalty-demo-v1";
+let S;
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function addDays(n){const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return d}
+function workDay(n){let d=addDays(n);while(d.getDay()===0){d.setDate(d.getDate()+1)}return iso(d)}
+function seed(){
+  const since = iso(addDays(-120));
+  const users = [
+    {email:"gold@demo.test",pass:"demo",first:"Marie",last:"Tremblay",phone:"555-0142",vehicle:"2024 RAV4 Hybrid",tier:"gold",since,no:"4417 2208 9031",oilUsed:1,cert:"GLD-7Q4K"},
+    {email:"silver@demo.test",pass:"demo",first:"Jordan",last:"Lee",phone:"555-0188",vehicle:"2022 Civic",tier:"silver",since,no:"4417 1156 2047",oilUsed:0,cert:"SLV-3M8P"},
+    {email:"bronze@demo.test",pass:"demo",first:"Alex",last:"Roy",phone:"555-0119",vehicle:"2021 F-150",tier:"bronze",since,no:"4417 0093 5512",oilUsed:0,cert:"BRZ-9T2W"}
+  ];
+  const b = (email,name,tier,svc,day,time,extras,status,vehicle)=>({id:Math.random().toString(36).slice(2,9),email,name,tier,svc,date:workDay(day),time,extras,status,vehicle});
+  const bookings = [
+    b("gold@demo.test","Marie Tremblay","gold","tires",2,"08:00",["pickup","courtesy","wash"],"booked","2024 RAV4 Hybrid"),
+    b(null,"Sam Gagnon",null,"oil",0,"10:30",[],"in","2019 Corolla"),
+    b("silver@demo.test","Jordan Lee","silver","oil",1,"07:30",["free","wash"],"booked","2022 Civic"),
+    b(null,"Chris Martin",null,"inspection",0,"14:00",[],"booked","2020 Escape"),
+    b("x1","Nadia Bouchard","gold","oil",1,"13:00",["pickup","courtesy","free","wash"],"booked","2023 Highlander"),
+    b("x2","Kevin Pelletier","bronze","tires",3,"08:30",[],"booked","2018 Tacoma"),
+    b(null,"Emma Côté",null,"other",GUEST_WAIT_DAYS,"11:00",[],"booked","2017 Rogue"),
+    b("x3","Luc Fortin","silver","inspection",0,"08:00",["wash"],"done","2021 Tucson")
+  ];
+  return {users,bookings,current:null,lang:"en"};
+}
+function load(){if(LIVE){let lang="fr";try{lang=localStorage.getItem(KEY+"-lang")||"fr"}catch(e){}S={users:[],bookings:[],expenses:[],current:null,lang,finV:1};return}try{const r=localStorage.getItem(KEY);if(r){S=JSON.parse(r);return}}catch(e){}S=seed()}
+function save(){try{if(LIVE)localStorage.setItem(KEY+"-lang",S.lang);else localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+load();
+
+/* ---------- Helpers ---------- */
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function t(k,v){let s=(L[S.lang]&&L[S.lang][k])||L.en[k]||k;if(v)for(const x in v)s=s.replace("{"+x+"}",v[x]);return s}
+const loc=()=>S.lang==="fr"?"fr-CA":"en-CA";
+const money=n=>new Intl.NumberFormat(loc(),{style:"currency",currency:"CAD",maximumFractionDigits:0}).format(n);
+const tn=k=>TIER_NAME[S.lang][k]||k;
+function fmtDate(isoStr,opts){const [y,m,d]=isoStr.split("-").map(Number);return new Date(y,m-1,d,12).toLocaleDateString(loc(),opts||{weekday:"short",month:"short",day:"numeric"})}
+function me(){return S.users.find(u=>u.email===S.current)||null}
+function svcName(k){return t({oil:"sOil",tires:"sTires",inspection:"sInspection",other:"sOther"}[k])}
+function toast(msg){const el=$("#toast");el.textContent=msg;el.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>el.hidden=true,2800)}
+function hash(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h}
+function plusYear(isoStr){const [y,m,d]=isoStr.split("-");return (Number(y)+1)+"-"+m+"-"+d}
+
+const NFC=`<svg class="mc-nfc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 8a6 6 0 0 1 0 8"/><path d="M11 5a10 10 0 0 1 0 14"/><path d="M15 2.5a13.5 13.5 0 0 1 0 19"/></svg>`;
+function cardHTML(tier,u){
+  const valid=u?(()=>{const [y,m]=plusYear(u.since).split("-");return m+"/"+y.slice(2)})():"12/27";
+  return `<div class="mcard mc-obs ${tier}" role="img" aria-label="${esc(tn(tier)+" "+t("loyaltyCard"))}">
+    <div class="mc-slash"></div><div class="mc-slash2"></div>
+    <img class="mc-logo" src="elite-word.webp" alt="" draggable="false">
+    <div class="mc-chip"></div>${NFC}
+    <div class="mc-no">${u?esc(u.no):"4417 •••• "+{bronze:"1001",silver:"2002",gold:"3003"}[tier]}</div>
+    <div class="mc-valid">${esc(t("validUntil"))}<b class="num">${valid}</b></div>
+    <div class="mc-who">${esc(t("member"))}<b>${u?esc(u.first+" "+u.last):esc(t("yourName"))}</b></div>
+    <div class="mc-tag">${tn(tier)}</div>
+    <div class="mc-frame"></div>
+  </div>`;
+}
+function perksFor(tier){
+  const c=TIERS[tier],p=[`<li class="big">${esc(t("pTrade",{amt:money(c.trade)}))}</li>`,`<li>${esc(t("pPriority"))}</li>`];
+  if(c.oil)p.push(`<li>${esc(t("pOil",{n:c.oil}))}</li>`);
+  if(c.wash)p.push(`<li>${esc(t("pWash"))}</li>`);
+  if(c.pickup)p.push(`<li>${esc(t("pPickup"))}</li>`);
+  if(c.courtesy)p.push(`<li>${esc(t("pCourtesy"))}</li>`);
+  return p.join("");
+}
+
+/* ---------- Views ---------- */
+function viewHome(){
+  const y=`<span class="yes">✓</span>`,n=`<span class="no-x">—</span>`;
+  const row=(lab,f)=>`<tr><td>${esc(t(lab))}</td>${["none","bronze","silver","gold"].map(k=>`<td class="c">${f(k)}</td>`).join("")}</tr>`;
+  return `<div class="stack" style="gap:56px">
+  <section class="stack" id="plans">
+    <div class="section-head"><h2>${esc(t("navPlans"))}</h2><div class="draft">${esc(t("draftNote"))}</div></div>
+    <div class="tiers">${["bronze","silver","gold"].map(k=>`
+      <article class="tier ${k==="gold"?"featured":""}">
+        <div class="tier-card">${cardHTML(k)}</div>
+        <div class="tier-body"><div class="section-head" style="align-items:center"><h3 style="font-size:1.6rem;text-transform:uppercase">${tn(k)}</h3>${k==="gold"?`<span class="tag pop">${esc(t("popular"))}</span>`:""}</div><div class="price num">${money(TIERS[k].price)} <small>${esc(t("perYear"))}</small></div>
+          <ul class="perks">${perksFor(k)}</ul>
+          <a class="btn ${k==="gold"?"btn-primary":"btn-ghost"}" href="#join" data-act="pick" data-tier="${k}">${esc(t("choose"))} ${tn(k)}</a></div>
+      </article>`).join("")}</div>
+  </section>
+  <section class="stack">
+    <h2>${esc(t("compareTitle"))}</h2>
+    <div class="compare"><table>
+      <thead><tr><th>${esc(t("perk"))}</th><th class="c" style="text-align:center">${esc(t("nonMember"))}</th>${["bronze","silver","gold"].map(k=>`<th style="text-align:center">${tn(k)}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${row("cTrade",k=>k==="none"?n:`<b class="num">${money(TIERS[k].trade)}</b>`)}
+        ${row("cPriority",k=>k==="none"?esc(t("inWeek")):`<b>${esc(t("tomorrow"))}</b>`)}
+        ${row("cOil",k=>k==="none"||!TIERS[k].oil?n:`<b class="num">${TIERS[k].oil}</b>`)}
+        ${row("cWash",k=>k!=="none"&&TIERS[k].wash?y:n)}
+        ${row("cPickup",k=>k!=="none"&&TIERS[k].pickup?y:n)}
+        ${row("cCourtesy",k=>k!=="none"&&TIERS[k].courtesy?y:n)}
+      </tbody></table></div>
+  </section>
+  <section class="stack">
+    <h2>${esc(t("howTitle"))}</h2>
+    <div class="steps">${[1,2,3].map(i=>`<div class="step"><span class="n">${i}</span><div><h3>${esc(t("how"+i+"t"))}</h3><p class="muted">${esc(t("how"+i))}</p></div></div>`).join("")}</div>
+  </section></div>`;
+}
+
+let pickedTier="gold", formErr="";
+function viewJoin(){
+  return `<div class="split">
+    <section class="panel stack"><div><h2>${esc(t("joinTitle"))}</h2><p class="muted" style="margin-top:6px">${esc(t("joinLead"))}</p></div>
+    <form class="form" id="joinForm" style="max-width:none">
+      <div class="field"><span class="label">${esc(t("pickCard"))}</span>
+        <div class="tierpick">${["bronze","silver","gold"].map(k=>`<label><input type="radio" name="tier" id="tier-${k}" value="${k}" ${pickedTier===k?"checked":""}><b>${tn(k)}</b><span class="muted num">${money(TIERS[k].price)} ${esc(t("perYear"))}</span><span class="num" style="font-size:.85rem">+${money(TIERS[k].trade)}</span></label>`).join("")}</div></div>
+      <div class="row2"><div class="field"><label for="j-first">${esc(t("fName"))}</label><input id="j-first" autocomplete="given-name"></div>
+      <div class="field"><label for="j-last">${esc(t("lName"))}</label><input id="j-last" autocomplete="family-name"></div></div>
+      <div class="row2"><div class="field"><label for="j-email">${esc(t("fEmail"))}</label><input id="j-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="j-phone">${esc(t("fPhone"))}</label><input id="j-phone" type="tel" autocomplete="tel"></div></div>
+      <div class="row2"><div class="field"><label for="j-veh">${esc(t("fVehicle"))}</label><input id="j-veh" placeholder="2023 CR-V"></div>
+      <div class="field"><label for="j-pass">${esc(t("fPass"))}</label><input id="j-pass" type="password" autocomplete="new-password"></div></div>
+      ${formErr?`<p class="err">${esc(formErr)}</p>`:""}
+      <div><button class="btn btn-primary" type="submit">${esc(t("createAcct"))}</button></div>
+      <p class="muted">${esc(t("haveAcct"))} <a href="#login">${esc(t("navLogin"))}</a></p>
+    </form></section>
+    ${quickPanel()}
+  </div>`;
+}
+function quickPanel(){
+  if(LIVE)return `<section class="panel stack"><h3>${esc(t("brand"))}</h3><p class="muted">${esc(t("liveBar"))}</p></section>`;
+  return `<section class="panel stack"><div><h3>${esc(t("quickTitle"))}</h3><p class="muted">${esc(t("quickLead"))}</p></div>
+    <div class="quick">${S.users.filter(u=>u.email.endsWith("@demo.test")).sort((a,b)=>["gold","silver","bronze"].indexOf(a.tier)-["gold","silver","bronze"].indexOf(b.tier)).map(u=>`<button data-act="quick" data-email="${esc(u.email)}"><span class="dot ${u.tier}"></span><span><b>${esc(u.first+" "+u.last)}</b><br><span class="muted">${tn(u.tier)} · ${esc(u.vehicle)}</span></span></button>`).join("")}</div></section>`;
+}
+function viewLogin(){
+  return `<div class="split">
+    <section class="panel stack"><h2>${esc(t("loginTitle"))}</h2>
+    <form class="form" id="loginForm">
+      <div class="field"><label for="l-email">${esc(t("fEmail"))}</label><input id="l-email" type="email" autocomplete="email"></div>
+      <div class="field"><label for="l-pass">${esc(t("fPass"))}</label><input id="l-pass" type="password" autocomplete="current-password"></div>
+      ${formErr?`<p class="err">${esc(formErr)}</p>`:""}
+      <div><button class="btn btn-primary" type="submit">${esc(t("loginBtn"))}</button></div>
+      <p class="muted">${esc(t("noAcct"))} <a href="#join">${esc(t("joinLink"))}</a></p>
+    </form></section>
+    ${quickPanel()}</div>`;
+}
+function myBookings(u){return S.bookings.filter(b=>b.email===u.email&&b.status!=="done"&&b.date>=iso(addDays(0))).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time))}
+function extrasPills(ex){return ex.map(x=>`<span class="pill ${x==="pickup"||x==="courtesy"?"warn":"ok"}">${esc(t({pickup:"xPickup",courtesy:"xCourtesy",free:"xFree",wash:"xWash"}[x]))}</span>`).join("")}
+function viewAccount(){
+  const u=me(); if(!u){location.hash="login";return ""}
+  if(LIVE&&isStaff()){location.hash="desk";return ""}
+  if(LIVE&&!u.tier)return liveNoCard(u,false);
+  const c=TIERS[u.tier], list=myBookings(u), next=list[0];
+  const oilLeft=Math.max(0,c.oil-u.oilUsed);
+  return `<div class="acct">
+    <aside class="stack">${cardHTML(u.tier,u)}
+      <div class="panel stack" style="gap:12px;padding:18px">
+        <div class="label">${esc(t("certTitle"))}</div>
+        <div class="cert"><div><div class="price num" style="font-size:2rem">${money(c.trade)}</div><span class="muted" style="font-size:.88rem">${esc(t("certLead"))}</span></div><code>${esc(u.cert)}</code></div>
+      </div>
+      ${u.tier!=="gold"?`<div class="callout"><span>${esc(t("upgradeLead"))}</span><button class="btn btn-primary btn-sm" data-act="upgrade">${esc(t("upgrade"))}</button></div>`:""}
+      <button class="btn btn-ghost" data-act="logout">${esc(t("logout"))}</button>
+    </aside>
+    <section class="stack">
+      <div><h2>${esc(t("hello",{name:u.first}))}</h2><p class="muted" style="margin-top:4px">${esc(t("acctLead",{tier:tn(u.tier)}))} ${esc(t("memberSince"))} ${fmtDate(u.since,{year:"numeric",month:"long",day:"numeric"})}.</p></div>
+      <div class="stats">
+        <div class="stat"><div class="label">${esc(t("statTrade"))}</div><div class="v">${money(c.trade)}</div></div>
+        <div class="stat"><div class="label">${esc(t("statOil"))}</div>${c.oil?`<div class="v">${oilLeft}</div><span class="muted" style="font-size:.85rem">${esc(t("ofYear",{a:oilLeft,b:c.oil}))}</span><div class="meter"><i style="width:${oilLeft/c.oil*100}%"></i></div>`:`<div class="v">—</div><span class="muted" style="font-size:.85rem">${esc(t("noOil"))}</span>`}</div>
+        <div class="stat"><div class="label">${esc(t("statNext"))}</div><div class="v" style="font-size:1.4rem">${next?fmtDate(next.date)+" · "+next.time:esc(t("none"))}</div>${next?`<span class="muted" style="font-size:.85rem">${esc(svcName(next.svc))}</span>`:""}</div>
+      </div>
+      <div class="panel"><div class="section-head" style="margin-bottom:8px"><h3>${esc(t("upcoming"))}</h3><a class="btn btn-primary btn-sm" href="#book">${esc(t("bookNow"))}</a></div>
+        ${list.length?list.map(b=>`<div class="appt"><div class="when"><b>${fmtDate(b.date)}</b><span class="muted num">${b.time}</span></div>
+          <div class="what"><div style="font-weight:600">${esc(svcName(b.svc))} · ${esc(b.vehicle)}</div><div class="pills" style="margin-top:4px">${extrasPills(b.extras)}</div></div>
+          <span class="pill">${esc(t({booked:"stBooked",in:"stIn",done:"stDone"}[b.status]))}</span>
+          ${b.status==="booked"?`<button class="btn btn-ghost btn-sm" data-act="cancel" data-id="${b.id}">${esc(t("cancel"))}</button>`:""}</div>`).join(""):`<p class="muted">${esc(t("noAppts"))}</p>`}
+      </div>
+    </section></div>`;
+}
+
+let bk={svc:"oil",date:null,time:null,pickup:false,courtesy:false,address:"",gname:"",gphone:"",gveh:""};
+function bookDays(member){
+  const out=[];let n=1;
+  while(out.length<12){const d=addDays(n);n++;if(d.getDay()===0)continue;out.push({iso:iso(d),open:member||n-1>=GUEST_WAIT_DAYS})}
+  return out;
+}
+function slotState(date,time,member){
+  if(LIVE){const s=LV.slots[date+" "+time];return s==="prio"||s==="open"||s==="locked"?s:"taken"}
+  if(S.bookings.some(b=>b.date===date&&b.time===time&&b.status!=="done"))return "taken";
+  if(hash(date+time)%3===0)return "taken";
+  if(PRIORITY_TIMES.includes(time))return member?"prio":"locked";
+  return "open";
+}
+function courtesyUsed(date){return S.bookings.filter(b=>b.date===date&&b.extras.includes("courtesy")).length}
+function viewBook(){
+  if(LIVE&&!me())return liveSignIn("signInToBook");
+  const u=me(), member=!!(u&&TIERS[u.tier]), c=u?TIERS[u.tier]:null;
+  const days=bookDays(member);
+  if(bk.date&&!days.find(d=>d.iso===bk.date&&d.open))bk.date=null;
+  if(!bk.date)bk.date=(days.find(d=>d.open)||{}).iso;
+  if(bk.time&&slotState(bk.date,bk.time,member)!=="open"&&slotState(bk.date,bk.time,member)!=="prio")bk.time=null;
+  const freeOil=bk.svc==="oil"&&c&&c.oil-u.oilUsed>0;
+  const courtesyFull=courtesyUsed(bk.date)>=COURTESY_FLEET;
+  if(courtesyFull)bk.courtesy=false;
+  const extras=[];if(c&&c.pickup&&bk.pickup)extras.push(t("xPickup"));if(c&&c.courtesy&&bk.courtesy)extras.push(t("xCourtesy"));if(c&&c.wash)extras.push(t("xWash"));
+  return `<div class="stack">
+  <div><h2>${esc(t("bookTitle"))}</h2><p class="muted" style="margin-top:4px">${esc(member?t("bookLeadMember"):t("bookLeadGuest"))}</p></div>
+  ${member?"":`<div class="callout"><span>${esc(t("guestCta"))}</span><a class="btn btn-primary btn-sm" href="#home" data-act="toplans">${esc(t("seeCards"))}</a></div>`}
+  <div class="book"><div class="stack">
+    <section class="stack" style="gap:10px"><div class="label">${esc(t("stepSvc"))}</div>
+      <div class="svc">${SERVICES.map(s=>{const isFree=s==="oil"&&c&&c.oil-u.oilUsed>0;return `<label><input type="radio" name="svc" id="svc-${s}" value="${s}" ${bk.svc===s?"checked":""}><span style="font-weight:600">${esc(svcName(s))}</span>${isFree?`<span class="pill ok">${esc(t("free"))}</span>`:""}</label>`}).join("")}</div></section>
+    <section class="stack" style="gap:10px"><div class="label">${esc(t("stepDay"))}</div>
+      <div class="days">${days.map(d=>{const [y,m,dd]=d.iso.split("-").map(Number);const dt=new Date(y,m-1,dd,12);return `<button class="day ${bk.date===d.iso?"on":""}" data-act="day" data-date="${d.iso}" ${d.open?"":"disabled"}><span>${dt.toLocaleDateString(loc(),{weekday:"short"})}</span><b>${dd}</b><span>${dt.toLocaleDateString(loc(),{month:"short"})}</span></button>`}).join("")}</div></section>
+    <section class="stack" style="gap:10px"><div class="label">${esc(t("stepTime"))} · ${fmtDate(bk.date,{weekday:"long",month:"long",day:"numeric"})}</div>
+      <div class="slots">${TIMES.map(tm=>{const st=slotState(bk.date,tm,member);const dis=st==="taken"||st==="locked";
+        const sub=st==="prio"?t("prio"):st==="locked"?"🔒 "+t("membersOnly"):st==="taken"?t("taken"):"&nbsp;";
+        return `<button class="slot ${st==="prio"||st==="locked"?"prio":""} ${st==="locked"?"locked":""} ${bk.time===tm?"on":""}" data-act="time" data-time="${tm}" ${dis?"disabled":""}>${tm}<small>${st==="locked"?esc(sub):sub==="&nbsp;"?sub:esc(sub)}</small></button>`}).join("")}</div></section>
+    ${c&&c.pickup?`<section class="stack" style="gap:10px"><div class="label">${esc(t("stepExtras"))}</div>
+      <label class="toggle"><input type="checkbox" id="x-pickup" data-act="pickup" ${bk.pickup?"checked":""}><span><b>${esc(t("pickupT"))}</b><br><span class="muted">${esc(t("pickupD"))}</span></span></label>
+      ${bk.pickup?`<div class="field"><label for="x-addr">${esc(t("address"))}</label><input id="x-addr" value="${esc(bk.address)}" placeholder="123 rue Principale"></div>`:""}
+      <label class="toggle"><input type="checkbox" id="x-courtesy" data-act="courtesy" ${bk.courtesy?"checked":""} ${courtesyFull?"disabled":""}><span><b>${esc(t("courtesyT"))}</b><br><span class="muted">${esc(courtesyFull?t("noCourtesy"):t("courtesyD"))} <span class="num">(${COURTESY_FLEET-courtesyUsed(bk.date)}/${COURTESY_FLEET})</span></span></span></label></section>`:""}
+    ${member||LIVE?"":`<section class="stack" style="gap:10px"><div class="label">${esc(t("stepYou"))}</div>
+      <div class="row2"><div class="field"><label for="g-name">${esc(t("fName"))} / ${esc(t("lName"))}</label><input id="g-name" value="${esc(bk.gname)}"></div>
+      <div class="field"><label for="g-phone">${esc(t("fPhone"))}</label><input id="g-phone" type="tel" value="${esc(bk.gphone)}"></div></div>
+      <div class="field"><label for="g-veh">${esc(t("fVehicle"))}</label><input id="g-veh" value="${esc(bk.gveh)}"></div></section>`}
+  </div>
+  <aside class="panel summary"><h3>${esc(t("summary"))}</h3>
+    ${u&&u.tier?`<div style="margin-top:10px" class="tierbadge"><span class="dot ${u.tier}"></span>${tn(u.tier)} · ${esc(u.first)}</div>`:""}
+    <dl>
+      <dt>${esc(t("sumSvc"))}</dt><dd>${esc(svcName(bk.svc))}</dd>
+      <dt>${esc(t("sumDate"))}</dt><dd>${bk.date?fmtDate(bk.date):"—"}</dd>
+      <dt>${esc(t("sumTime"))}</dt><dd class="num">${bk.time||"—"}</dd>
+      ${u?`<dt>${esc(t("sumVeh"))}</dt><dd>${esc(u.vehicle)}</dd>`:""}
+      ${bk.svc==="oil"?`<dt>${esc(t("sumCost"))}</dt><dd>${freeOil?`<span class="pill ok">${esc(t("free"))}</span>`:esc(t("regular"))}</dd>`:""}
+      ${extras.length?`<dt>${esc(t("sumExtras"))}</dt><dd>${esc(extras.join(", "))}</dd>`:""}
+    </dl>
+    ${formErr?`<p class="err" style="margin-bottom:10px">${esc(formErr)}</p>`:""}
+    <button class="btn btn-primary" style="width:100%" data-act="confirm">${esc(t("confirm"))}</button>
+  </aside></div></div>`;
+}
+
+function viewDesk(){
+  if(LIVE&&!isStaff())return liveSignIn("staffOnly");
+  const today=iso(addDays(0)), wk=iso(addDays(7));
+  const list=[...S.bookings].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+  const upcoming=list.filter(b=>b.date>=today&&b.date<=wk&&b.status!=="done");
+  const k=[
+    [t("kToday"),upcoming.length],
+    [t("kMembers"),upcoming.filter(b=>b.tier).length],
+    [t("kPickups"),upcoming.filter(b=>b.extras.includes("pickup")).length],
+    [t("kCourtesy"),upcoming.filter(b=>b.extras.includes("courtesy")).length]
+  ];
+  return `<div class="stack">
+    <div><h2>${esc(t("deskTitle"))}</h2><p class="muted" style="margin-top:4px">${esc(t("deskLead"))}</p></div>
+    <div class="kpis">${k.map(([l,v])=>`<div class="stat"><div class="label">${esc(l)}</div><div class="v">${v}</div></div>`).join("")}</div>
+    <div class="compare"><table>
+      <thead><tr><th>${esc(t("colWhen"))}</th><th>${esc(t("colCust"))}</th><th>${esc(t("colTier"))}</th><th>${esc(t("colSvc"))}</th><th>${esc(t("colExtras"))}</th><th>${esc(t("colStatus"))}</th></tr></thead>
+      <tbody>${list.map(b=>`<tr>
+        <td class="num"><b>${fmtDate(b.date)}</b><br><span class="muted">${b.time}</span></td>
+        <td><b>${esc(b.name)}</b><br><span class="muted">${esc(b.vehicle)}</span></td>
+        <td>${b.tier?`<span class="tierbadge"><span class="dot ${b.tier}"></span>${tn(b.tier)}</span>`:`<span class="muted">${esc(t("guest"))}</span>`}</td>
+        <td>${esc(svcName(b.svc))}</td>
+        <td><div class="pills">${extrasPills(b.extras)||""}</div></td>
+        <td><select class="status" id="st-${b.id}" data-act="status" data-id="${b.id}" aria-label="${esc(t("colStatus"))}">${["booked","in","done"].map(s=>`<option value="${s}" ${b.status===s?"selected":""}>${esc(t({booked:"stBooked",in:"stIn",done:"stDone"}[s]))}</option>`).join("")}</select>${liveSyncPill(b)}</td>
+      </tr>`).join("")}</tbody></table></div>
+    <p class="note">${esc(t(LIVE?"liveInteg":"integ"))}</p>
+  </div>`;
+}
+
+/* ---------- 3D card showroom ---------- */
+let showTier="gold";
+const EDGE={bronze:"#6e3f1b",silver:"#8d96a2",gold:"#a8821f"};
+const GLOWC={bronze:"rgba(255,150,80,.32)",silver:"rgba(170,205,255,.30)",gold:"rgba(255,205,90,.34)"};
+function showroomText(){
+  const c=TIERS[showTier];
+  return `<img class="hero-logo" src="elite-logo.webp" alt="Elite Services — Bronze, Argent, Or">
+    <h1>${esc(t("heroTitle"))}</h1>
+    <p class="lead">${esc(t("heroLead"))}</p>
+    <div class="sr-group"><span class="label">${esc(t("pickCard"))}</span>
+    <div class="sr-tiers" role="group" aria-label="${esc(t("pickCard"))}">${["bronze","silver","gold"].map(k=>`<button data-act="paint" data-tier="${k}" class="${k} ${showTier===k?"on":""}" aria-pressed="${showTier===k}"><span class="dot ${k}"></span>${tn(k)}</button>`).join("")}</div></div>
+    <div class="sr-specs">
+      <div><b>+${money(c.trade)}</b><span>${esc(t("specTrade"))}</span></div>
+      <div><b>${c.oil||"—"}</b><span>${esc(t("specOil"))}</span></div>
+      <div><b>${c.pickup?"✓":"—"}</b><span>${esc(t("specPickup"))}</span></div>
+    </div>
+    <div class="sr-price">${money(c.price)} <small>${esc(t("perYear"))}</small></div>
+    <div class="sr-actions"><a class="btn btn-primary" href="#join" data-act="pick" data-tier="${showTier}">${esc(t("choose"))} ${tn(showTier)}</a><a class="btn btn-ghost" href="#book">${esc(t("bookNow"))}</a></div>`;
+}
+function codeSVG(seed){
+  let h=hash(seed),cells="";const n=11;
+  const fixed=(x,y)=>(x<3&&y<3)||(x>n-4&&y<3)||(x<3&&y>n-4);
+  for(let y=0;y<n;y++)for(let x=0;x<n;x++){
+    if(fixed(x,y)){const lx=x>n-4?x-(n-3):x,ly=y>n-4?y-(n-3):y;if(lx===1&&ly===1||lx!==1||ly!==1)if(!(lx===1&&ly!==1)&&!(ly===1&&lx!==1))cells+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;continue}
+    h=(h*1103515245+12345)>>>0;if(h%100<48)cells+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;
+  }
+  return `<svg class="mc-code" viewBox="-1 -1 ${n+2} ${n+2}" aria-hidden="true"><rect x="-1" y="-1" width="${n+2}" height="${n+2}" rx="1" fill="#f7f5ef"/><g fill="#111">${cells}</g></svg>`;
+}
+function cardBackHTML(tier){
+  return `<div class="mcard ${tier} mc-back" role="img" aria-label="${esc(tn(tier)+" "+t("loyaltyCard"))}, back">
+    <div class="mc-stripe"></div>
+    <div class="mc-backbody">
+      <div class="mc-sig"><span>${esc(t("signature"))}</span></div>
+      <ul class="mc-perks">${perksFor(tier)}</ul>
+      ${codeSVG(tier+"-member")}
+    </div>
+    <div class="mc-foot"><span>${esc(t("backNote"))}</span><img class="mc-minilogo" src="elite-word.webp" alt="" draggable="false"></div>
+    <div class="mc-frame"></div>
+  </div>`;
+}
+const ST={rx:0,ry:0,base:0,drag:false,lx:0,ly:0,vx:0,faces:[]};
+function renderStage(){
+  const c=$("#card3d");if(!c)return;
+  c.className="card3d "+showTier;
+  c.style.setProperty("--edge",EDGE[showTier]);
+  $("#stage").style.setProperty("--glow",GLOWC[showTier]);
+  $("#c3front").innerHTML=cardHTML(showTier);
+  $("#c3back").innerHTML=cardBackHTML(showTier);
+  $("#flipBtn").textContent=t("flip");
+  $("#srHint").textContent=t("dragHint");
+  ST.faces=[...c.querySelectorAll(".mcard")];
+}
+function initStage(){
+  const st=$("#stage"),c=$("#card3d");
+  const reduced=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // stacked layers give the card a solid metal edge when it turns
+  for(let z=-2.5;z<=2.5;z+=0.5){const l=document.createElement("div");l.className="layer";l.style.transform=`translateZ(${z}px)`;c.insertBefore(l,$("#c3back"))}
+  st.addEventListener("pointerdown",e=>{if(e.target.closest("button"))return;ST.drag=true;ST.lx=e.clientX;ST.ly=e.clientY;ST.vx=0;try{st.setPointerCapture(e.pointerId)}catch(_){}});
+  st.addEventListener("pointermove",e=>{if(!ST.drag)return;const dx=e.clientX-ST.lx,dy=e.clientY-ST.ly;ST.lx=e.clientX;ST.ly=e.clientY;
+    ST.ry+=dx*0.5;ST.rx=Math.max(-32,Math.min(32,ST.rx-dy*0.35));ST.vx=dx*0.5});
+  const end=()=>{if(!ST.drag)return;ST.drag=false;ST.base=Math.round((ST.ry+ST.vx*8)/180)*180};
+  st.addEventListener("pointerup",end);st.addEventListener("pointercancel",end);st.addEventListener("lostpointercapture",end);
+  st.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"){ST.base-=180;e.preventDefault()}if(e.key==="ArrowRight"){ST.base+=180;e.preventDefault()}});
+  const shadow=$("#stageShadow");
+  function loop(now){
+    requestAnimationFrame(loop);
+    if($("#showroom").hidden)return;
+    let fl=0;
+    if(!ST.drag){
+      const wy=reduced?0:Math.sin(now/1500)*16, wx=reduced?0:Math.sin(now/2100)*6;
+      ST.ry+=(ST.base+wy-ST.ry)*0.07;ST.rx+=(wx-ST.rx)*0.07;
+      fl=reduced?0:Math.sin(now/1200)*8;
+    }
+    c.style.transform=`translateY(${fl.toFixed(2)}px) rotateX(${ST.rx.toFixed(2)}deg) rotateY(${ST.ry.toFixed(2)}deg)`;
+    if(shadow){const s=1-fl/60;shadow.style.transform=`translateX(-50%) scale(${s.toFixed(3)},1)`;shadow.style.opacity=(0.85-fl/40).toFixed(3)}
+    // the highlight slides across the metal as the card turns
+    const a=((ST.ry%360)+360)%360, off=a>270?a-360:a>90?a-180:a;
+    const mx=(50-off*2.4).toFixed(1)+"%", my=(42+ST.rx*2.4).toFixed(1)+"%";
+    ST.faces.forEach(f=>{f.style.setProperty("--mx",mx);f.style.setProperty("--my",my)});
+  }
+  requestAnimationFrame(loop);
+}
+
+/* ---------- Cards page (#cards) ---------- */
+const TK=["bronze","silver","gold"];
+const CX={built:false,cards:[],faces:[],texts:[],glows:[],rail:[],hh:0};
+function viewCards(){
+  return `<div class="section-head"><div><h2>${esc(t("cardsCta"))}</h2><p class="muted" style="margin-top:6px">${esc(t("draftNote"))}</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#join">${esc(t("joinLink"))}</a><a class="btn btn-ghost" href="#home" data-act="toplans">${esc(t("compareTitle"))}</a></div></div>`;
+}
+function renderCards(){
+  if(!CX.built){
+    const stage=$("#cxStage"),glow=$("#cxGlow");
+    TK.forEach(k=>{
+      const el=document.createElement("div");el.className="card3d cx-card "+k;el.style.setProperty("--edge",EDGE[k]);
+      for(let z=-2.5;z<=2.5;z+=0.5){const l=document.createElement("div");l.className="layer";l.style.transform=`translateZ(${z}px)`;el.appendChild(l)}
+      const f=document.createElement("div");f.className="face front";const b=document.createElement("div");b.className="face back";
+      el.append(f,b);stage.appendChild(el);CX.cards.push(el);
+      const g=document.createElement("div");g.className="cx-g "+k;glow.appendChild(g);CX.glows.push(g);
+    });
+    CX.built=true;
+  }
+  CX.cards.forEach((el,i)=>{el.querySelector(".front").innerHTML=cardHTML(TK[i]);el.querySelector(".back").innerHTML=cardBackHTML(TK[i])});
+  CX.faces=CX.cards.map(el=>[...el.querySelectorAll(".mcard")]);
+  $("#cxTexts").innerHTML=TK.map(k=>{const c=TIERS[k];return `<div class="cx-text" style="--tc:${ACC[k][0]}">
+    <span class="label">${esc(t("loyaltyCard"))} · ${money(c.price)} ${esc(t("perYear"))}</span>
+    <div class="cx-tier ${k}">${tn(k)}</div>
+    <p class="cx-tag">${esc(t("tag_"+k))}</p>
+    <ul class="cx-perks">${perksFor(k)}</ul>
+    <div class="sr-actions"><a class="btn btn-primary" href="#join" data-act="pick" data-tier="${k}">${esc(t("choose"))} ${tn(k)}</a></div></div>`}).join("");
+  CX.texts=[...$("#cxTexts").children];
+  $("#cxRail").innerHTML=TK.map((k,i)=>`<button data-act="cxgo" data-i="${i}" aria-label="${tn(k)}"><span>${tn(k)}</span><i></i></button>`).join("");
+  CX.rail=[...$("#cxRail").children];
+  $("#cxHint").textContent="↓  "+t("scrollHint");
+}
+function cxMetrics(){
+  const tr=$("#cxTrack"),hh=document.querySelector("header").offsetHeight;
+  if(hh!==CX.hh){CX.hh=hh;$("#cardsPage").style.setProperty("--hh",hh+"px")}
+  const total=Math.max(1,tr.offsetHeight-(window.innerHeight-hh));
+  const start=tr.getBoundingClientRect().top+window.scrollY-hh;
+  return {total,start};
+}
+function cxGo(i){const m=cxMetrics();window.scrollTo({top:m.start+m.total*i/2,behavior:reducedMotion?"auto":"smooth"})}
+function cxLoop(now){
+  requestAnimationFrame(cxLoop);
+  if($("#cardsPage").hidden||!CX.built)return;
+  const m=cxMetrics();
+  const p=Math.max(0,Math.min(1,(window.scrollY-m.start)/m.total)),f=p*2;
+  const spin=reducedMotion?0:now*0.045+f*360;
+  const a=((spin%360)+360)%360,off=a>270?a-360:a>90?a-180:a;
+  const mx=(50-off*2.4).toFixed(1)+"%";
+  CX.cards.forEach((el,i)=>{
+    const d=f-i,ad=Math.abs(d);
+    if(ad>1.3){el.style.visibility="hidden";return}
+    el.style.visibility="visible";
+    el.style.opacity=Math.max(0,1-ad*1.15).toFixed(3);
+    el.style.transform=reducedMotion?`scale(${(1-ad*0.1).toFixed(3)})`
+      :`translate3d(0,${(-d*48).toFixed(2)}vh,${(-ad*520).toFixed(1)}px) rotateX(${(d*38).toFixed(2)}deg) rotateZ(${(-d*14).toFixed(2)}deg) rotateY(${spin.toFixed(2)}deg) scale(${(1-ad*0.2).toFixed(3)})`;
+    const my=(42+d*30).toFixed(1)+"%";
+    CX.faces[i].forEach(fc=>{fc.style.setProperty("--mx",mx);fc.style.setProperty("--my",my)});
+    if(CX.glows[i])CX.glows[i].style.opacity=Math.max(0,1-ad).toFixed(3);
+  });
+  CX.texts.forEach((el,i)=>{
+    const d=f-i,op=Math.max(0,1-Math.abs(d)*2.2);
+    el.style.opacity=op.toFixed(3);el.style.transform=`translateY(${(-d*60).toFixed(1)}px)`;
+    el.style.pointerEvents=op>0.5?"auto":"none";el.style.visibility=op>0?"visible":"hidden";
+  });
+  const act=Math.round(f);CX.rail.forEach((b,i)=>b.classList.toggle("on",i===act));
+  $("#cxHint").style.opacity=p<0.03?"1":"0";
+}
+
+/* ---------- Phone app (#app) ---------- */
+const A={tab:"card",flipped:false,bk:{svc:"oil",date:null,time:null,pickup:false,courtesy:false}};
+const SV='viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+const IC={
+  card:`<svg ${SV}><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></svg>`,
+  book:`<svg ${SV}><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>`,
+  visits:`<svg ${SV}><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>`,
+  me:`<svg ${SV}><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>`
+};
+const SVC_IC={
+  oil:`<svg ${SV}><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>`,
+  tires:`<svg ${SV}><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v5.5M12 15.5V21M3 12h5.5M15.5 12H21"/></svg>`,
+  inspection:`<svg ${SV}><path d="M9 3.5h6v3H9z"/><path d="M7 5H5.5v16h13V5H17"/><path d="M9 14l2 2 4-4"/></svg>`,
+  other:IC.visits,
+  pickup:`<svg ${SV}><path d="M2.5 16V7.5h11V16M13.5 10.5h4l3 3V16h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>`
+};
+const ACC={bronze:["#e3ab76","#2a1405"],silver:["#d6dee9","#10151d"],gold:["#f2c94c","#1a1400"]};
+const initials=u=>(u.first[0]+(u.last[0]||"")).toUpperCase();
+function dateBox(isoStr){const [y,m,d]=isoStr.split("-").map(Number);const dt=new Date(y,m-1,d,12);return `<div class="a-date"><b>${d}</b><span>${dt.toLocaleDateString(loc(),{month:"short"})}</span></div>`}
+function ringSVG(a,b){const C=100.53;return `<svg class="a-ring" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--a-line)" stroke-width="4"/><circle cx="20" cy="20" r="16" fill="none" stroke="var(--a-accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(a/b*C).toFixed(1)} ${C}" transform="rotate(-90 20 20)"/></svg>`}
+function langSeg(){return `<div class="a-seg" role="group" aria-label="${esc(t("language"))}"><button data-lang="en" class="${S.lang==="en"?"on":""}">EN</button><button data-lang="fr" class="${S.lang==="fr"?"on":""}">FR</button></div>`}
+function apptRow(b,canCancel){
+  const [y,m,d]=b.date.split("-").map(Number),wd=new Date(y,m-1,d,12).toLocaleDateString(loc(),{weekday:"long"});
+  return `<div class="a-panel a-appt">${dateBox(b.date)}<div class="a-appt-main"><b>${esc(svcName(b.svc))}</b><span class="a-muted">${esc(wd)} · <span class="num">${b.time}</span> · ${esc(b.vehicle)}</span>${b.extras.length?`<div class="pills">${extrasPills(b.extras)}</div>`:""}</div>
+    ${canCancel?`<button class="a-link" data-act="a-cancel" data-id="${b.id}">${esc(t("cancel"))}</button>`:`<span class="pill">${esc(t({booked:"stBooked",in:"stIn",done:"stDone"}[b.status]))}</span>`}</div>`;
+}
+function appLogin(){
+  return `<div class="a-login">
+    <img class="a-logo-big" src="elite-logo.webp" alt="Elite Services — Bronze, Argent, Or">
+    <div class="a-login-cards">${cardHTML("bronze")}${cardHTML("silver")}${cardHTML("gold")}</div>
+    <h2 class="a-h">${esc(t("appWelcome"))}</h2>
+    <form id="appLogin" class="a-form">
+      <label class="a-field" for="al-email">${esc(t("fEmail"))}<input id="al-email" type="email" autocomplete="email" placeholder="${LIVE?"":"gold@demo.test"}"></label>
+      <label class="a-field" for="al-pass">${esc(t("fPass"))}<input id="al-pass" type="password" autocomplete="current-password" placeholder="${LIVE?"":"demo"}"></label>
+      ${formErr?`<p class="a-err">${esc(formErr)}</p>`:""}
+      <button class="a-btn" type="submit">${esc(t("loginBtn"))}</button>
+    </form>
+    ${LIVE?"":`<div class="a-sec"><span class="a-label">${esc(t("quickTitle"))}</span>
+      <div class="a-chips">${["gold","silver","bronze"].map(k=>{const u=S.users.find(x=>x.email===k+"@demo.test");return u?`<button data-act="a-quick" data-email="${esc(u.email)}"><span class="dot ${k}" style="width:18px;height:18px"></span>${esc(u.first)} · ${tn(k)}</button>`:""}).join("")}<button data-act="a-quick" data-email="${ADMIN.email}" class="x-bosschip">${XIC.dash}${esc(t("admQuick"))}</button></div></div>`}
+    <div class="a-loginfoot">${NATIVE?"<span></span>":`<a href="#join">${esc(t("joinLink"))}</a>`}${langSeg()}</div>
+  </div>`;
+}
+function appCard(u){
+  const c=TIERS[u.tier],next=myBookings(u)[0],oilLeft=Math.max(0,c.oil-u.oilUsed);
+  let nextHTML;
+  if(next){const [y,m,d]=next.date.split("-").map(Number),wd=new Date(y,m-1,d,12).toLocaleDateString(loc(),{weekday:"long"});
+    nextHTML=`<div class="a-panel"><span class="a-label">${esc(t("nextAppt"))}</span><div class="a-next-row">${dateBox(next.date)}<div class="a-appt-main"><b>${esc(svcName(next.svc))}</b><span class="a-muted">${esc(wd)} · <span class="num">${next.time}</span></span>${next.extras.length?`<div class="pills">${extrasPills(next.extras)}</div>`:""}</div></div></div>`}
+  else nextHTML=`<div class="a-panel"><span class="a-label">${esc(t("nextAppt"))}</span><p class="a-muted">${esc(t("noAppts"))}</p><button class="a-btn ghost" data-act="a-tab" data-tab="book">${esc(t("bookNow"))}</button></div>`;
+  return `<div class="a-top"><div><span class="a-label">${esc(t("hello",{name:u.first}))}</span><h2 class="a-h">${esc(t("tabCard"))}</h2></div><span class="a-avatar">${esc(initials(u))}</span></div>
+    <div class="a-flip ${A.flipped?"flipped":""}" data-act="a-flip" role="button" tabindex="0" aria-pressed="${A.flipped}" aria-label="${esc(t("tapFlip"))}"><div class="a-flip-in"><div class="a-face">${cardHTML(u.tier,u)}</div><div class="a-face a-backface">${cardBackHTML(u.tier)}</div></div></div>
+    <p class="a-hint">${esc(t("tapFlip"))}</p>
+    <div class="a-stats">
+      <div class="a-tile"><span class="a-label">${esc(t("statTrade"))}</span><b>${money(c.trade)}</b><small>${esc(u.cert)}</small></div>
+      <div class="a-tile row">${c.oil?ringSVG(oilLeft,c.oil):""}<div style="min-width:0"><span class="a-label">${esc(t("statOil"))}</span><b>${c.oil?oilLeft+"/"+c.oil:"—"}</b></div></div>
+    </div>
+    ${nextHTML}
+    <div class="a-sec"><span class="a-label">${esc(t("quickTitle2"))}</span><div class="a-actions">
+      ${["oil","tires","inspection"].map(s=>`<button data-act="a-quickbook" data-svc="${s}">${SVC_IC[s]}<span>${esc(svcName(s))}</span>${s==="oil"&&oilLeft>0?`<em>${esc(t("free"))}</em>`:""}</button>`).join("")}
+      ${c.pickup?`<button data-act="a-quickbook" data-svc="oil" data-pickup="1">${SVC_IC.pickup}<span>${esc(t("pickupQ"))}</span></button>`:`<button data-act="a-quickbook" data-svc="other">${SVC_IC.other}<span>${esc(svcName("other"))}</span></button>`}
+    </div></div>
+    ${u.tier!=="gold"?`<div class="a-upsell"><b>${esc(t("upgrade"))}</b><span>${esc(t("upgradeLead"))}</span><button data-act="a-upgrade">${esc(t("upgrade"))}</button></div>`:""}`;
+}
+function appBook(u){
+  const c=TIERS[u.tier],b=A.bk;
+  if(!b.date||!calBookable(b.date,true))b.date=firstBookable(true);
+  if(!A.cal){const [y,m]=b.date.split("-").map(Number);A.cal={y,m:m-1}}
+  if(b.time){const st=slotState(b.date,b.time,true);if(st!=="open"&&st!=="prio")b.time=null}
+  const full=courtesyUsed(b.date)>=COURTESY_FLEET;if(full)b.courtesy=false;
+  const freeOil=b.svc==="oil"&&c.oil-u.oilUsed>0;
+  return `<div class="a-top"><div><span class="a-label">${tn(u.tier)} · ${esc(u.vehicle)}</span><h2 class="a-h">${esc(t("bookTitle"))}</h2></div></div>
+    <section class="a-sec"><span class="a-label">${esc(t("stepSvc"))}</span><div class="a-chips scroll">${SERVICES.map(s=>`<button data-act="a-svc" data-svc="${s}" class="${b.svc===s?"on":""}">${SVC_IC[s]}${esc(svcName(s))}</button>`).join("")}</div></section>
+    <section class="a-sec"><span class="a-label">${esc(t("stepDay"))}</span>${appCal(u,b.date)}</section>
+    <section class="a-sec"><span class="a-label">${esc(t("stepTime"))}</span><div class="a-slots">${TIMES.map(tm=>{const st=slotState(b.date,tm,true);return `<button data-act="a-time" data-time="${tm}" class="${st==="prio"?"prio":""} ${b.time===tm?"on":""}" ${st==="taken"?"disabled":""}>${tm}<small>${st==="prio"?esc(t("prio")):st==="taken"?esc(t("taken")):"&nbsp;"}</small></button>`}).join("")}</div></section>
+    ${c.pickup?`<section class="a-sec"><span class="a-label">${esc(t("stepExtras"))}</span>
+      <label class="a-toggle" for="ap-pickup"><input type="checkbox" id="ap-pickup" data-act="a-pickup" ${b.pickup?"checked":""}><span><b>${esc(t("pickupT"))}</b><span class="a-muted">${esc(t("pickupD"))}</span></span></label>
+      <label class="a-toggle" for="ap-courtesy"><input type="checkbox" id="ap-courtesy" data-act="a-courtesy" ${b.courtesy?"checked":""} ${full?"disabled":""}><span><b>${esc(t("courtesyT"))}</b><span class="a-muted">${esc(full?t("noCourtesy"):t("courtesyD"))}</span></span></label></section>`:""}
+    <div class="a-panel"><dl class="a-summary">
+      <dt>${esc(t("sumSvc"))}</dt><dd>${esc(svcName(b.svc))}${freeOil?` <span class="pill ok">${esc(t("free"))}</span>`:""}</dd>
+      <dt>${esc(t("sumDate"))}</dt><dd>${fmtDate(b.date)}</dd>
+      <dt>${esc(t("sumTime"))}</dt><dd class="num">${b.time||"—"}</dd>
+    </dl></div>
+    <button class="a-btn" data-act="a-confirm" ${b.time?"":"disabled"}>${esc(t("confirm"))}</button>`;
+}
+/* Month calendar: starts from the phone's own date and month */
+const BOOK_AHEAD_DAYS=90;
+const CLOSED_DAYS=["12-25","12-26","01-01"]; // month-day the service department is closed every year (edit to match)
+function calBookable(isoStr,member){
+  if(!isoStr)return false;
+  const [y,m,d]=isoStr.split("-").map(Number),dt=new Date(y,m-1,d,12);
+  const diff=Math.round((dt-addDays(0))/864e5);
+  if(diff<1||diff>BOOK_AHEAD_DAYS||dt.getDay()===0||CLOSED_DAYS.includes(isoStr.slice(5)))return false;
+  if(!member&&diff<GUEST_WAIT_DAYS)return false;
+  return TIMES.some(tm=>{const s=slotState(isoStr,tm,member);return s==="open"||s==="prio"});
+}
+function firstBookable(member){for(let i=1;i<=BOOK_AHEAD_DAYS;i++){const s=iso(addDays(i));if(calBookable(s,member))return s}return iso(addDays(1))}
+const cap1=s=>s.charAt(0).toUpperCase()+s.slice(1);
+function appCal(u,sel){
+  const now=new Date(),{y,m}=A.cal,ym=y*12+m,lim=addDays(BOOK_AHEAD_DAYS);
+  const canPrev=ym>now.getFullYear()*12+now.getMonth(),canNext=ym<lim.getFullYear()*12+lim.getMonth();
+  const first=new Date(y,m,1,12),dim=new Date(y,m+1,0).getDate(),todayIso=iso(addDays(0));
+  const mine=new Set(myBookings(u).map(x=>x.date));
+  const wd=[0,1,2,3,4,5,6].map(i=>`<span class="a-cal-wd" aria-hidden="true">${esc(new Date(2023,0,1+i,12).toLocaleDateString(loc(),{weekday:"narrow"}))}</span>`).join("");
+  let cells="";for(let i=0;i<first.getDay();i++)cells+="<span></span>";
+  for(let d=1;d<=dim;d++){
+    const s=iso(new Date(y,m,d,12)),ok=calBookable(s,true),cls=[s===sel?"on":"",s===todayIso?"today":"",mine.has(s)?"has":""].join(" ").trim();
+    const lab=new Date(y,m,d,12).toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long"});
+    cells+=`<button data-act="a-day" data-date="${s}" class="${cls}" ${ok?"":"disabled"} ${s===sel?'aria-pressed="true"':""} aria-label="${esc(lab)}">${d}</button>`;
+  }
+  return `<div class="a-cal">
+    <div class="a-cal-head">
+      <button class="a-cal-nav" data-act="a-calmove" data-dir="-1" ${canPrev?"":"disabled"} aria-label="${esc(t("calPrev"))}"><svg ${SV}><path d="M15 6l-6 6 6 6"/></svg></button>
+      <b aria-live="polite">${esc(cap1(first.toLocaleDateString(loc(),{month:"long",year:"numeric"})))}</b>
+      <button class="a-cal-nav" data-act="a-calmove" data-dir="1" ${canNext?"":"disabled"} aria-label="${esc(t("calNext"))}"><svg ${SV}><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="a-cal-today">${esc(t("todayIs",{d:now.toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long",year:"numeric"})}))}</div>
+    <div class="a-cal-grid">${wd}${cells}</div>
+    <div class="a-cal-legend"><span><i class="lg-today"></i>${esc(t("calToday"))}</span><span><i class="lg-has"></i>${esc(t("calMine"))}</span><span><i class="lg-off"></i>${esc(t("calClosed"))}</span></div>
+  </div>`;
+}
+function appVisits(u){
+  const today=iso(addDays(0)),up=myBookings(u);
+  const past=S.bookings.filter(b=>b.email===u.email&&(b.status==="done"||b.date<today)).sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+  return `<div class="a-top"><div><span class="a-label">${esc(u.vehicle)}</span><h2 class="a-h">${esc(t("tabVisits"))}</h2></div></div>
+    <section class="a-sec"><span class="a-label">${esc(t("upcoming"))}</span>${up.length?up.map(b=>apptRow(b,b.status==="booked")).join(""):`<div class="a-panel"><p class="a-muted">${esc(t("noAppts"))}</p><button class="a-btn ghost" data-act="a-tab" data-tab="book">${esc(t("bookNow"))}</button></div>`}</section>
+    <section class="a-sec"><span class="a-label">${esc(t("past"))}</span>${past.length?past.map(b=>apptRow(b,false)).join(""):`<p class="a-muted">${esc(t("noPast"))}</p>`}</section>`;
+}
+function appMe(u){
+  const valid=fmtDate(plusYear(u.since),{year:"numeric",month:"long",day:"numeric"});
+  return `<div class="a-profile"><span class="a-avatar">${esc(initials(u))}</span><h2 class="a-h">${esc(u.first+" "+u.last)}</h2><span class="a-tierpill"><span class="dot ${u.tier}" style="width:14px;height:14px"></span>${tn(u.tier)} · ${esc(t("member"))}</span></div>
+    <div class="a-panel a-rows">
+      <div><span>${esc(t("fEmail"))}</span><b>${esc(u.email)}</b></div>
+      <div><span>${esc(t("vehicleL"))}</span><b>${esc(u.vehicle)}</b></div>
+      <div><span>${esc(t("cardNo"))}</span><b class="num">${esc(u.no)}</b></div>
+      <div><span>${esc(t("memberSince"))}</span><b>${fmtDate(u.since,{year:"numeric",month:"long",day:"numeric"})}</b></div>
+      <div><span>${esc(t("validUntil"))}</span><b>${valid}</b></div>
+    </div>
+    <div class="a-panel a-rows">
+      <div><span>${esc(t("language"))}</span>${langSeg()}</div>
+      ${NATIVE?"":`<div><span>${esc(t("openSite"))}</span><a class="a-link" href="#home">→</a></div>`}
+    </div>
+    ${u.tier!=="gold"?`<div class="a-upsell"><b>${esc(t("upgrade"))}</b><span>${esc(t("upgradeLead"))}</span><button data-act="a-upgrade">${esc(t("upgrade"))}</button></div>`:""}
+    <button class="a-btn ghost" data-act="a-logout">${esc(t("logout"))}</button>`;
+}
+function viewApp(){
+  if(LIVE&&!LV.ready)return `<div class="phone"><div class="a-body" id="aBody"><p class="a-muted" style="margin:auto">${esc(t("liveLoading"))}</p></div></div>`;
+  if(isAdmin())return adminView();
+  const u=me();
+  if(LIVE&&u&&!u.tier)return liveNoCard(u,true);
+  const acc=u?ACC[u.tier]:ACC.gold;
+  const body=!u?appLogin():{card:appCard,book:appBook,visits:appVisits,me:appMe}[A.tab](u);
+  const tabs=u?`<nav class="a-tabs" aria-label="App">${[["card","tabCard"],["book","tabBook"],["visits","tabVisits"],["me","tabMe"]].map(([k,l])=>`<button data-act="a-tab" data-tab="${k}" class="${A.tab===k?"on":""}" ${A.tab===k?'aria-current="page"':""}>${IC[k]}<span>${esc(t(l))}</span></button>`).join("")}</nav>`:"";
+  return `<div class="phone" style="--a-accent:${acc[0]};--a-accent-fg:${acc[1]}"><div class="a-body" id="aBody">${body}</div>${tabs}</div>`;
+}
+function appAction(a,el){
+  const u=me();
+  if(a==="a-tab"){A.tab=el.dataset.tab;formErr="";renderApp(true);return}
+  if(a==="a-quick"){S.current=el.dataset.email;save();A.tab="card";A.flipped=false;formErr="";renderApp(true);return}
+  if(!u)return;
+  if(a==="a-flip"){A.flipped=!A.flipped;el.classList.toggle("flipped",A.flipped);el.setAttribute("aria-pressed",A.flipped);return}
+  if(a==="a-quickbook"){A.tab="book";A.bk.svc=el.dataset.svc;A.bk.pickup=!!el.dataset.pickup;A.bk.time=null;renderApp(true);return}
+  if(a==="a-svc"){A.bk.svc=el.dataset.svc;renderApp();return}
+  if(a==="a-day"){A.bk.date=el.dataset.date;A.bk.time=null;renderApp();return}
+  if(a==="a-calmove"){const n=A.cal.y*12+A.cal.m+Number(el.dataset.dir);A.cal={y:Math.floor(n/12),m:n%12};renderApp();return}
+  if(a==="a-time"){A.bk.time=el.dataset.time;renderApp();return}
+  if(a==="a-confirm"){
+    const b=A.bk,c=TIERS[u.tier];if(!b.time)return;
+    const ex=[];if(c.pickup&&b.pickup)ex.push("pickup");if(c.courtesy&&b.courtesy)ex.push("courtesy");
+    if(b.svc==="oil"&&c.oil-u.oilUsed>0){ex.push("free");u.oilUsed++}
+    if(c.wash)ex.push("wash");
+    const nb={id:Math.random().toString(36).slice(2,9),email:u.email,name:u.first+" "+u.last,tier:u.tier,svc:b.svc,date:b.date,time:b.time,extras:ex,status:"booked",vehicle:u.vehicle};
+    S.bookings.push(nb);scheduleReminders(nb);
+    save();A.bk={svc:"oil",date:b.date,time:null,pickup:false,courtesy:false};A.tab="visits";renderApp(true);toast(t("booked"));return}
+  if(a==="a-cancel"){cancelReminders(el.dataset.id);S.bookings=S.bookings.filter(b=>b.id!==el.dataset.id);save();renderApp();toast(t("cancelled"));return}
+  if(a==="a-upgrade"){if(!u.origTier){u.origTier=u.tier;u.upgradedOn=iso(addDays(0))}u.tier="gold";u.cert="GLD-"+u.cert.slice(4);save();renderApp();toast(t("upgraded",{tier:tn("gold")}));return}
+  if(a==="a-logout"){S.current=null;save();A.tab="card";A.flipped=false;renderApp(true);return}
+}
+function renderApp(resetScroll){
+  const old=$("#aBody"),top=old?old.scrollTop:0;
+  $("#app").innerHTML=viewApp();
+  const nb=$("#aBody");if(nb)nb.scrollTop=resetScroll?0:top;
+}
+
+/* ---------- Owner / admin app: dashboard, members, service desk, accounting ---------- */
+const ADMIN={email:"boss@demo.test",pass:"demo",first:"Director"};
+// What each perk costs the dealership (edit to match real costs)
+const COSTS={oil:45,wash:8,pickup:25,courtesy:40,cardFee:0.024};
+// Sales taxes on memberships. Quebec: GST 5% + QST 9.975%. Change for another province.
+const TAXES=[{k:"gst",rate:0.05},{k:"qst",rate:0.09975}];
+const EXP_CATS=["marketing","cards","staff","software","rent","other"];
+// Chart colors per card (checked for colorblind separation on the app's dark background)
+const SERIES={bronze:"#b0602f",silver:"#5f86c8",gold:"#b98a12"};
+const isAdmin=()=>LIVE?isStaff():S.current===ADMIN.email;
+const A2={tab:"dash",month:null,q:"",tier:"all",more:40};
+const ymOf=s=>s.slice(0,7);
+function ymAdd(ym,n){const [y,m]=ym.split("-").map(Number);const k=y*12+m-1+n;return Math.floor(k/12)+"-"+String(k%12+1).padStart(2,"0")}
+function ymEnd(ym){const [y,m]=ym.split("-").map(Number);return iso(new Date(y,m,0,12))}
+function ymDiff(a,b){const [y1,m1]=a.split("-").map(Number),[y2,m2]=b.split("-").map(Number);return (y2*12+m2)-(y1*12+m1)}
+function ymLabel(ym,opts){const [y,m]=ym.split("-").map(Number);return cap1(new Date(y,m-1,1,12).toLocaleDateString(loc(),opts||{month:"long",year:"numeric"}))}
+const thisYM=()=>ymOf(iso(addDays(0)));
+const moneyC=n=>new Intl.NumberFormat(loc(),{style:"currency",currency:"CAD",minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+const moneyK=n=>new Intl.NumberFormat(loc(),{style:"currency",currency:"CAD",notation:"compact",maximumFractionDigits:1}).format(n);
+const r2=n=>Math.round(n*100)/100;
+function rng(seed){let a=seed>>>0;return()=>{a=(a+0x6D2B79F5)>>>0;let q=Math.imul(a^(a>>>15),1|a);q=(q+Math.imul(q^(q>>>7),61|q))^q;return((q^(q>>>14))>>>0)/4294967296}}
+
+/* Sample history so the owner screens show a realistic first year (demo only) */
+function ensureFinance(){
+  if(LIVE||S.finV===1)return;
+  const R=rng(20261120),pick=a=>a[Math.floor(R()*a.length)];
+  const FN=["Marc","Julie","Éric","Sophie","Mathieu","Isabelle","Patrick","Catherine","Sébastien","Valérie","Martin","Nathalie","Simon","Karine","Olivier","Mélanie","Jean","Annie","Guillaume","Caroline","David","Émilie","Alexandre","Geneviève","Maxime","Audrey","François","Chantal","Philippe","Josée"];
+  const LN=["Tremblay","Gagnon","Roy","Côté","Bouchard","Gauthier","Morin","Lavoie","Fortin","Gagné","Ouellet","Pelletier","Bélanger","Lévesque","Bergeron","Leblanc","Paquette","Girard","Simard","Boucher","Caron","Beaulieu","Cloutier","Dubé","Poirier"];
+  const VEH=["2023 RAV4","2022 Civic","2021 F-150","2024 CR-V","2020 Corolla","2022 Tucson","2023 Rogue","2019 Silverado","2024 Highlander","2021 Mazda3","2022 Escape","2023 Kona","2020 Tacoma","2024 Outback","2022 Sierra"];
+  const today=iso(addDays(0)),cur=thisYM(),now=addDays(0);
+  let idx=0;const exp=[];
+  for(let k=11;k>=0;k--){
+    const ym=ymAdd(cur,-k),[y,m]=ym.split("-").map(Number),dim=new Date(y,m,0).getDate();
+    const maxDay=k===0?now.getDate():dim,f=maxDay/dim,g=11-k;
+    const n={bronze:Math.round((9+g*1.1+R()*5)*f),silver:Math.round((5+g*0.8+R()*4)*f),gold:Math.round((2+g*0.45+R()*3)*f)};
+    for(const tier of ["bronze","silver","gold"])for(let i=0;i<n[tier];i++){
+      const since=ym+"-"+String(1+Math.floor(R()*maxDay)).padStart(2,"0");
+      const u={email:"m"+(idx++)+"@members.test",pass:null,first:pick(FN),last:pick(LN),phone:"555-"+(1000+Math.floor(R()*9000)),vehicle:pick(VEH),tier,since,
+        no:"4417 "+(1000+Math.floor(R()*9000))+" "+(1000+Math.floor(R()*9000)),oilUsed:0,cert:{bronze:"BRZ",silver:"SLV",gold:"GLD"}[tier]+"-"+Math.floor(R()*1e6).toString(36).toUpperCase()};
+      const span=Math.round((now-new Date(since+"T12:00"))/864e5);
+      if(tier!=="gold"&&span>25&&R()<0.07){const up=new Date(since+"T12:00");up.setDate(up.getDate()+10+Math.floor(R()*(span-12)));u.origTier=tier;u.tier=tier==="bronze"&&R()<0.6?"silver":"gold";u.upgradedOn=iso(up)}
+      S.users.push(u);
+    }
+    const add=(day,cat,amount,note)=>{const d=ym+"-"+String(Math.min(day,dim)).padStart(2,"0");if(d<=today)exp.push({id:"e"+exp.length,date:d,cat,amount:r2(amount),note})};
+    add(1,"software",49,"Booking app and hosting");
+    add(6,"marketing",250+Math.round(R()*450),k%2?"Facebook ads":"Flyers and showroom display");
+    if(k===11)add(3,"cards",650,"Metal card printing (500 cards)");
+    if(k===5)add(9,"cards",420,"Card reprint (300 cards)");
+  }
+  S.expenses=(S.expenses||[]).concat(exp);
+  S.finV=1;save();
+}
+function allSales(){
+  if(LIVE)return LV.sales.slice();
+  const today=iso(addDays(0)),out=[];
+  for(const u of S.users){
+    if(!u.since||!TIERS[u.tier])continue;
+    const orig=u.origTier||u.tier,nm=u.first+" "+u.last;
+    out.push({date:u.since,type:"new",tier:orig,amount:TIERS[orig].price,name:nm});
+    if(u.upgradedOn&&u.origTier)out.push({date:u.upgradedOn,type:"upgrade",tier:u.tier,amount:TIERS[u.tier].price-TIERS[u.origTier].price,name:nm});
+    let r=plusYear(u.since);while(r<=today){out.push({date:r,type:"renew",tier:u.tier,amount:TIERS[u.tier].price,name:nm});r=plusYear(r)}
+  }
+  return out;
+}
+function tierAt(u,day){return u.upgradedOn&&u.origTier&&u.upgradedOn>day?u.origTier:u.tier}
+function activeAt(day){const c={bronze:0,silver:0,gold:0};for(const u of S.users){if(u.since&&u.since<=day&&TIERS[u.tier])c[tierAt(u,day)]++}return c}
+function perkCosts(ym,gross){
+  const cnt=activeAt(ymEnd(ym)),[y,m]=ym.split("-").map(Number),dim=new Date(y,m,0).getDate(),cur=thisYM();
+  const f=ym===cur?new Date().getDate()/dim:ym>cur?0:1,j=c=>0.8+(hash(ym+c)%400)/1000;
+  const oilN=Math.round((cnt.silver*TIERS.silver.oil+cnt.gold*TIERS.gold.oil)/12*f*j("oil"));
+  const washN=Math.round((cnt.silver+cnt.gold)*0.35*f*j("wash"));
+  const pickN=Math.round(cnt.gold*0.3*f*j("pick"));
+  const tb=Math.round(cnt.bronze*0.012*f*j("tb")),ts=Math.round(cnt.silver*0.012*f*j("ts")),tg=Math.round(cnt.gold*0.012*f*j("tg"));
+  return [
+    {k:"perkOil",n:oilN,amount:oilN*COSTS.oil},
+    {k:"perkWash",n:washN,amount:washN*COSTS.wash},
+    {k:"perkPickup",n:pickN,amount:pickN*(COSTS.pickup+COSTS.courtesy)},
+    {k:"perkTrade",n:tb+ts+tg,amount:tb*TIERS.bronze.trade+ts*TIERS.silver.trade+tg*TIERS.gold.trade},
+    {k:"fees",n:0,amount:r2(gross*COSTS.cardFee)}
+  ];
+}
+function finance(){
+  const sales=allSales(),cache={};
+  const sum=a=>a.reduce((p,x)=>p+x.amount,0);
+  function month(ym){
+    if(cache[ym])return cache[ym];
+    const s=sales.filter(x=>ymOf(x.date)===ym),of=t=>s.filter(x=>x.type===t);
+    const gross=sum(s),tier={bronze:0,silver:0,gold:0};s.forEach(x=>tier[x.tier]+=x.amount);
+    const perks=perkCosts(ym,gross),manual=(S.expenses||[]).filter(e=>ymOf(e.date)===ym).sort((a,b)=>a.date.localeCompare(b.date));
+    const perkTotal=sum(perks),manTotal=sum(manual);
+    const tax=TAXES.map(tx=>({k:tx.k,collected:r2(gross*tx.rate),credit:r2(manTotal*tx.rate)}));
+    let earned=0,unearned=0;
+    for(const x of sales){const d=ymDiff(ymOf(x.date),ym);if(d>=0&&d<12){earned+=x.amount/12;unearned+=x.amount*(11-d)/12}}
+    return cache[ym]={ym,sales:s,gross,tier,newN:of("new").length,newAmt:sum(of("new")),renN:of("renew").length,renAmt:sum(of("renew")),upN:of("upgrade").length,upAmt:sum(of("upgrade")),
+      perks,manual,perkTotal,manTotal,expenses:perkTotal+manTotal,net:gross-perkTotal-manTotal,tax,earned:r2(earned),unearned:r2(unearned)};
+  }
+  return {sales,month};
+}
+function nextRenewal(u){const today=iso(addDays(0));let r=plusYear(u.since);while(r<today)r=plusYear(r);return r}
+function niceStep(x){const p=Math.pow(10,Math.floor(Math.log10(Math.max(x,1))));const n=x/p;return (n<=1?1:n<=2?2:n<=5?5:10)*p}
+
+function monthSwitch(){
+  const cur=thisYM(),m=A2.month;
+  return `<div class="x-month"><button class="a-cal-nav" data-act="x-month" data-dir="-1" ${ymDiff(m,cur)>=23?"disabled":""} aria-label="${esc(t("calPrev"))}"><svg ${SV}><path d="M15 6l-6 6 6 6"/></svg></button>
+    <b aria-live="polite">${esc(ymLabel(m))}</b>
+    <button class="a-cal-nav" data-act="x-month" data-dir="1" ${m>=cur?"disabled":""} aria-label="${esc(t("calNext"))}"><svg ${SV}><path d="M9 6l6 6-6 6"/></svg></button></div>`;
+}
+function salesChart(F){
+  const sel=A2.month,months=[...Array(12)].map((_,i)=>ymAdd(sel>=ymAdd(thisYM(),-11)?thisYM():ymAdd(sel,5),i-11));
+  const data=months.map(ym=>F.month(ym));
+  const W=340,H=176,pl=40,pr=4,pt=8,pb=22,iw=W-pl-pr,ih=H-pt-pb;
+  const max=Math.max(1,...data.map(d=>d.gross)),step=niceStep(max/3),top=Math.ceil(max/step)*step;
+  const y=v=>pt+ih-(v/top)*ih,bw=iw/12,barW=Math.min(18,bw*0.62);
+  let g="";
+  for(let v=0;v<=top+0.1;v+=step)g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" class="x-grid"/><text x="${pl-6}" y="${(y(v)+3).toFixed(1)}" text-anchor="end" class="x-axis">${esc(moneyK(v))}</text>`;
+  let bars="";
+  data.forEach((d,i)=>{
+    const x=pl+i*bw+(bw-barW)/2,on=d.ym===sel,segs=["bronze","silver","gold"].filter(k=>d.tier[k]>0);
+    let base=0;const parts=[];
+    segs.forEach((k,si)=>{
+      const y0=y(base),y1=y(base+d.tier[k]);base+=d.tier[k];
+      const yb=y0-(si>0?2:0),yt=y1;if(yb-yt<0.5)return;
+      const last=si===segs.length-1,r=Math.min(4,(yb-yt),barW/2);
+      parts.push(last?`<path d="M${x.toFixed(1)},${yb.toFixed(1)}V${(yt+r).toFixed(1)}Q${x.toFixed(1)},${yt.toFixed(1)} ${(x+r).toFixed(1)},${yt.toFixed(1)}H${(x+barW-r).toFixed(1)}Q${(x+barW).toFixed(1)},${yt.toFixed(1)} ${(x+barW).toFixed(1)},${(yt+r).toFixed(1)}V${yb.toFixed(1)}Z" fill="${SERIES[k]}"/>`
+        :`<rect x="${x.toFixed(1)}" y="${yt.toFixed(1)}" width="${barW.toFixed(1)}" height="${(yb-yt).toFixed(1)}" fill="${SERIES[k]}"/>`);
+    });
+    bars+=`<g class="x-bar ${on?"on":""}" opacity="${on?1:0.5}">${parts.join("")}</g>
+      <text x="${(x+barW/2).toFixed(1)}" y="${H-6}" text-anchor="middle" class="x-axis ${on?"on":""}">${esc(ymLabel(d.ym,{month:"short"}).replace(".",""))}</text>
+      <rect x="${(pl+i*bw).toFixed(1)}" y="0" width="${bw.toFixed(1)}" height="${H}" fill="transparent" class="x-hit" data-act="x-pickmonth" data-ym="${d.ym}"><title>${esc(ymLabel(d.ym)+": "+money(d.gross))}</title></rect>`;
+  });
+  const cur=F.month(sel);
+  return `<div class="a-panel x-chartbox">
+    <div class="x-chart-head"><div><span class="a-label">${esc(t("chartTitle"))}</span><p class="a-muted">${esc(t("chartSub"))}</p></div></div>
+    <svg class="x-chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t("chartTitle"))}">${g}<line x1="${pl}" x2="${W-pr}" y1="${y(0)}" y2="${y(0)}" class="x-base"/>${bars}</svg>
+    <div class="x-legend">${["bronze","silver","gold"].map(k=>`<span><i style="background:${SERIES[k]}"></i>${tn(k)} <b class="num">${money(cur.tier[k])}</b></span>`).join("")}</div>
+    <p class="x-tapnote">${esc(t("tapBar"))}</p>
+  </div>`;
+}
+function deltaPill(a,b,label){
+  if(!b)return "";const p=Math.round((a-b)/Math.abs(b)*100),up=p>=0;
+  return `<span class="x-delta ${up?"up":"down"}">${up?"▲":"▼"} ${Math.abs(p)}% <small>${esc(label)}</small></span>`;
+}
+function admDash(F){
+  const m=A2.month,c=F.month(m),pm=ymAdd(m,-1),p0=F.month(pm),pShort=ymLabel(pm,{month:"short"}).replace(".","");
+  // The current month is only partly done, so compare it with the same days of last month
+  let p={gross:p0.gross,net:p0.net,newN:p0.newN},pl=t("vsPrev",{m:pShort});
+  if(m===thisYM()){
+    const dd=new Date().getDate(),[py,pmo]=pm.split("-").map(Number),pdim=new Date(py,pmo,0).getDate(),lim=pm+"-"+String(Math.min(dd,pdim)).padStart(2,"0");
+    const ps=F.sales.filter(x=>ymOf(x.date)===pm&&x.date<=lim);
+    p={gross:ps.reduce((s,x)=>s+x.amount,0),newN:ps.filter(x=>x.type==="new").length,net:p0.net*Math.min(1,dd/pdim)};
+    pl=t("vsPrevTD",{m:pShort,d:Math.min(dd,pdim)});
+  }
+  const act=activeAt(m===thisYM()?iso(addDays(0)):ymEnd(m)),total=act.bronze+act.silver+act.gold;
+  const today=iso(addDays(0)),lim=iso(addDays(30));
+  const due=S.users.filter(u=>u.since&&TIERS[u.tier]&&plusYear(u.since)<=iso(addDays(400))).map(u=>({u,r:nextRenewal(u)})).filter(x=>x.r>=today&&x.r<=lim);
+  const dueAmt=due.reduce((s,x)=>s+TIERS[x.u.tier].price,0);
+  const yr=m.slice(0,4),ytd=[...Array(Number(m.slice(5)))].map((_,i)=>F.month(yr+"-"+String(i+1).padStart(2,"0")));
+  const ys=ytd.reduce((s,x)=>s+x.gross,0),yn=ytd.reduce((s,x)=>s+x.net,0);
+  return `<div class="a-top"><div><span class="a-label">${esc(t("adminHello",{name:ADMIN.first}))}</span><h2 class="a-h">${esc(t("tDash"))}</h2></div><span class="a-avatar">D</span></div>
+    ${monthSwitch()}
+    <div class="x-kpis">
+      <div class="a-tile"><span class="a-label">${esc(t("kSales"))}</span><b>${money(c.gross)}</b>${deltaPill(c.gross,p.gross,pl)}</div>
+      <div class="a-tile"><span class="a-label">${esc(t("kProfit"))}</span><b class="${c.net<0?"neg":""}">${money(c.net)}</b>${deltaPill(c.net,p.net,pl)}</div>
+      <div class="a-tile"><span class="a-label">${esc(t("kActive"))}</span><b>${total}</b><small>${tn("bronze")} ${act.bronze} · ${tn("silver")} ${act.silver} · ${tn("gold")} ${act.gold}</small></div>
+      <div class="a-tile"><span class="a-label">${esc(t("kNew"))}</span><b>${c.newN}</b>${deltaPill(c.newN,p.newN,pl)}</div>
+    </div>
+    ${salesChart(F)}
+    <div class="a-panel"><span class="a-label">${esc(t("mixTitle"))}</span>
+      <div class="x-mix" role="img" aria-label="${esc(t("mixTitle"))}">${["bronze","silver","gold"].map(k=>act[k]?`<i style="flex:${act[k]};background:${SERIES[k]}"></i>`:"").join("")}</div>
+      <div class="x-legend">${["bronze","silver","gold"].map(k=>`<span><i style="background:${SERIES[k]}"></i>${tn(k)} <b class="num">${act[k]}</b> <small class="a-muted">${total?Math.round(act[k]/total*100):0}%</small></span>`).join("")}</div>
+    </div>
+    <div class="a-panel x-renew"><div><span class="a-label">${esc(t("renewTitle"))}</span><p><b>${money(dueAmt)}</b> <span class="a-muted">${esc(t("renewLead",{n:due.length}))}</span></p></div>
+      <button class="a-btn ghost" data-act="x-renewlist">${esc(t("seeList"))}</button></div>
+    <div class="a-panel"><span class="a-label">${esc(t("ytdTitle",{y:yr}))}</span>
+      <dl class="x-ledger"><dt>${esc(t("kSales"))}</dt><dd>${money(ys)}</dd><dt>${esc(t("kProfit"))}</dt><dd class="${yn<0?"neg":""}">${money(yn)}</dd></dl></div>
+    <button class="a-btn ghost" data-act="x-logout">${esc(t("logout"))}</button>`;
+}
+function admMembersList(){
+  const q=A2.q.trim().toLowerCase(),today=iso(addDays(0)),soon=iso(addDays(30));
+  let list=S.users.filter(u=>u.since&&TIERS[u.tier]);
+  if(A2.tier==="due")list=list.filter(u=>{const r=nextRenewal(u);return r<=soon});
+  else if(A2.tier!=="all")list=list.filter(u=>u.tier===A2.tier);
+  if(q)list=list.filter(u=>(u.first+" "+u.last+" "+u.email+" "+u.vehicle+" "+(u.phone||"")+" "+(u.no||"")).toLowerCase().includes(q));
+  list.sort(A2.tier==="due"?(a,b)=>nextRenewal(a).localeCompare(nextRenewal(b)):(a,b)=>b.since.localeCompare(a.since));
+  const shown=list.slice(0,A2.more);
+  return `<p class="a-muted x-count">${esc(t("memCount",{n:list.length}))}</p>
+    ${shown.length?`<div class="a-panel x-list">${shown.map(u=>{const r=nextRenewal(u),isDue=r<=soon;return `<div class="x-mem">
+      <span class="a-avatar sm" style="background:${SERIES[u.tier]}">${esc(initials(u))}</span>
+      <div class="x-mem-main"><b>${esc(u.first+" "+u.last)}</b><span class="a-muted">${esc(u.vehicle)} · ${esc(u.phone||"")}</span></div>
+      <div class="x-mem-side"><span class="x-tier"><i style="background:${SERIES[u.tier]}"></i>${tn(u.tier)}</span><span class="${isDue?"pill warn":"a-muted"}">${esc(t(isDue?"renewSoon":"renews",{d:fmtDate(r,{month:"short",day:"numeric",year:"2-digit"})}))}</span></div>
+    </div>`}).join("")}</div>`:`<p class="a-muted">${esc(t("noMembers"))}</p>`}
+    ${list.length>shown.length?`<button class="a-btn ghost" data-act="x-more">${esc(t("showMore"))}</button>`:""}`;
+}
+function admMembers(){
+  const chips=[["all",t("all")],["bronze",tn("bronze")],["silver",tn("silver")],["gold",tn("gold")],["due",t("renewSoonF")]];
+  return `<div class="a-top"><div><span class="a-label">Elite Services</span><h2 class="a-h">${esc(t("tMembers"))}</h2></div></div>
+    <label class="a-field x-search" for="adm-search"><span class="sr">${esc(t("memSearch"))}</span><input id="adm-search" type="search" autocomplete="off" placeholder="${esc(t("memSearch"))}" value="${esc(A2.q)}"></label>
+    <div class="a-chips scroll">${chips.map(([k,l])=>`<button data-act="x-tier" data-tier="${k}" class="${A2.tier===k?"on":""}">${k!=="all"&&k!=="due"?`<span class="dot ${k}" style="width:14px;height:14px"></span>`:""}${esc(l)}</button>`).join("")}</div>
+    ${LIVE?livePendingList():""}<div id="admList">${admMembersList()}</div>`;
+}
+function admDesk(){
+  const today=iso(addDays(0)),end=iso(addDays(14));
+  const list=S.bookings.filter(b=>b.date>=today&&b.date<=end).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+  const tod=list.filter(b=>b.date===today);
+  const days=[...new Set(list.map(b=>b.date))];
+  return `<div class="a-top"><div><span class="a-label">${esc(fmtDate(today,{weekday:"long",month:"long",day:"numeric"}))}</span><h2 class="a-h">${esc(t("tDesk"))}</h2></div></div>
+    <div class="x-kpis three">
+      <div class="a-tile"><span class="a-label">${esc(t("deskToday"))}</span><b>${tod.length}</b></div>
+      <div class="a-tile"><span class="a-label">${esc(t("deskIn"))}</span><b>${tod.filter(b=>b.status==="in").length}</b></div>
+      <div class="a-tile"><span class="a-label">${esc(t("deskPick"))}</span><b>${list.filter(b=>b.extras.includes("pickup")).length}</b></div>
+    </div>
+    ${days.length?days.map(d=>`<section class="a-sec"><span class="a-label">${esc(d===today?t("deskToday"):fmtDate(d,{weekday:"long",month:"short",day:"numeric"}))}</span>
+      <div class="a-panel x-list">${list.filter(b=>b.date===d).map(b=>`<div class="x-appt">
+        <b class="num x-time">${b.time}</b>
+        <div class="x-mem-main"><b>${esc(b.name)}</b><span class="a-muted">${esc(svcName(b.svc))} · ${esc(b.vehicle)}</span>
+          <div class="pills">${b.tier?`<span class="x-tier"><i style="background:${SERIES[b.tier]}"></i>${tn(b.tier)}</span>`:`<span class="pill">${esc(t("guest"))}</span>`}${extrasPills(b.extras)}${liveSyncPill(b)}</div></div>
+        <select class="x-status" id="xs-${b.id}" data-act="status" data-id="${b.id}" aria-label="${esc(t("colStatus"))}">${["booked","in","done"].map(s=>`<option value="${s}" ${b.status===s?"selected":""}>${esc(t({booked:"stBooked",in:"stIn",done:"stDone"}[s]))}</option>`).join("")}</select>
+      </div>`).join("")}</div></section>`).join(""):`<div class="a-panel"><p class="a-muted">${esc(t("deskEmpty"))}</p></div>`}
+    ${LIVE&&LV.role==="staff"?`<button class="a-btn ghost" data-act="x-logout">${esc(t("logout"))}</button>`:""}`;
+}
+function admBooks(F){
+  const m=A2.month,c=F.month(m),mo=Number(m.slice(5)),q=Math.floor((mo-1)/3)+1,yr=m.slice(0,4);
+  const qMonths=[0,1,2].map(i=>yr+"-"+String((q-1)*3+1+i).padStart(2,"0")).filter(x=>x<=thisYM()).map(x=>F.month(x));
+  const taxRow=(k,c)=>`<dt>${esc(t(k))}</dt><dd>${moneyC(c)}</dd>`;
+  const remit=c.tax.reduce((s,x)=>s+x.collected-x.credit,0);
+  const qRemit=TAXES.map(tx=>{const col=qMonths.reduce((s,x)=>s+x.tax.find(y=>y.k===tx.k).collected,0),cr=qMonths.reduce((s,x)=>s+x.tax.find(y=>y.k===tx.k).credit,0);return {k:tx.k,col,cr,net:col-cr}});
+  const today=iso(addDays(0)),defDate=ymOf(today)===m?today:ymEnd(m);
+  return `<div class="a-top"><div><span class="a-label">Elite Services</span><h2 class="a-h">${esc(t("tBooks"))}</h2></div></div>
+    ${monthSwitch()}
+    <div class="a-panel x-sum">
+      <div><span class="a-label">${esc(t("kSales"))}</span><b>${moneyC(c.gross)}</b></div>
+      <div><span class="a-label">${esc(t("booksExp"))}</span><b>${moneyC(c.expenses)}</b></div>
+      <div class="x-sum-net"><span class="a-label">${esc(t("kProfit"))}</span><b class="${c.net<0?"neg":""}">${moneyC(c.net)}</b></div>
+    </div>
+    <section class="a-sec"><span class="a-label">${esc(t("income"))}</span><div class="a-panel"><dl class="x-ledger">
+      <dt>${esc(t("incNew"))} <small>${c.newN}×</small></dt><dd>${moneyC(c.newAmt)}</dd>
+      <dt>${esc(t("incRenew"))} <small>${c.renN}×</small></dt><dd>${moneyC(c.renAmt)}</dd>
+      <dt>${esc(t("incUp"))} <small>${c.upN}×</small></dt><dd>${moneyC(c.upAmt)}</dd>
+      <dt class="tot">${esc(t("kSales"))}</dt><dd class="tot">${moneyC(c.gross)}</dd></dl></div></section>
+    <section class="a-sec"><span class="a-label">${esc(t("booksExp"))}</span><div class="a-panel"><dl class="x-ledger">
+      ${c.perks.map(p=>`<dt>${esc(t(p.k))} ${p.n?`<small>${p.n}×</small>`:""} <span class="x-auto">${esc(t("expAuto"))}</span></dt><dd>${moneyC(p.amount)}</dd>`).join("")}
+      ${c.manual.map(e=>`<dt>${esc(t("cat_"+e.cat))} <small>${esc(fmtDate(e.date,{month:"short",day:"numeric"}))}${e.note?" · "+esc(e.note):""}</small></dt><dd>${moneyC(e.amount)} <button class="x-del" data-act="x-expdel" data-id="${esc(e.id)}" aria-label="${esc(t("expDelete"))}">×</button></dd>`).join("")}
+      <dt class="tot">${esc(t("booksExp"))}</dt><dd class="tot">${moneyC(c.expenses)}</dd></dl>
+      <details class="x-add"><summary>${esc(t("addExp"))}</summary>
+        <form id="expForm" class="a-form">
+          <label class="a-field" for="exp-cat">${esc(t("expCat"))}<select id="exp-cat">${EXP_CATS.map(k=>`<option value="${k}">${esc(t("cat_"+k))}</option>`).join("")}</select></label>
+          <div class="x-two"><label class="a-field" for="exp-amt">${esc(t("expAmt"))}<input id="exp-amt" type="text" inputmode="decimal" autocomplete="off" placeholder="0.00"></label>
+          <label class="a-field" for="exp-date">${esc(t("expDate"))}<input id="exp-date" type="date" value="${defDate}" max="${today}"></label></div>
+          <label class="a-field" for="exp-note">${esc(t("expNote"))}<input id="exp-note" type="text" autocomplete="off"></label>
+          <button class="a-btn" type="submit">${esc(t("expAdd"))}</button>
+        </form></details></div></section>
+    <section class="a-sec"><span class="a-label">${esc(t("taxes"))}</span><div class="a-panel"><dl class="x-ledger">
+      ${c.tax.map(x=>taxRow(x.k,x.collected)).join("")}
+      <dt>${esc(t("taxCredits"))}</dt><dd>−${moneyC(c.tax.reduce((s,x)=>s+x.credit,0))}</dd>
+      <dt class="tot">${esc(t("taxRemit"))}</dt><dd class="tot">${moneyC(remit)}</dd></dl>
+      <div class="x-quarter"><span class="a-label">${esc(t("quarterTitle",{q,y:yr}))}</span>
+        <dl class="x-ledger">${qRemit.map(x=>`<dt>${esc(t(x.k))}</dt><dd>${moneyC(x.net)}</dd>`).join("")}<dt class="tot">${esc(t("taxRemit"))}</dt><dd class="tot">${moneyC(qRemit.reduce((s,x)=>s+x.net,0))}</dd></dl></div></div></section>
+    <section class="a-sec"><span class="a-label">${esc(t("earnedTitle"))}</span><div class="a-panel"><dl class="x-ledger">
+      <dt>${esc(t("earned"))}</dt><dd>${moneyC(c.earned)}</dd><dt>${esc(t("unearned"))}</dt><dd>${moneyC(c.unearned)}</dd></dl>
+      <p class="a-muted x-small">${esc(t("earnedLead"))}</p></div></section>
+    <button class="a-btn" data-act="x-copy">${esc(t("copyX"))}</button>
+    <p class="a-muted x-small">${esc(t("booksNote"))}</p>`;
+}
+function monthTSV(F){
+  const c=F.month(A2.month),T="\t",L2=[],n=v=>v.toFixed(2);
+  L2.push([t("expDate"),t("colType"),t("expNote"),t("amount"),t("gst"),t("qst")].join(T));
+  c.sales.sort((a,b)=>a.date.localeCompare(b.date)).forEach(s=>L2.push([s.date,t({new:"incNew",renew:"incRenew",upgrade:"incUp"}[s.type]),s.name+" · "+tn(s.tier),n(s.amount),n(s.amount*TAXES[0].rate),n(s.amount*TAXES[1].rate)].join(T)));
+  c.perks.forEach(p=>L2.push([ymEnd(c.ym),t("booksExp"),t(p.k),n(-p.amount),"",""].join(T)));
+  c.manual.forEach(e=>L2.push([e.date,t("booksExp"),t("cat_"+e.cat)+(e.note?" · "+e.note:""),n(-e.amount),n(-e.amount*TAXES[0].rate),n(-e.amount*TAXES[1].rate)].join(T)));
+  L2.push("");L2.push([t("kSales"),"","",n(c.gross)].join(T));L2.push([t("booksExp"),"","",n(-c.expenses)].join(T));L2.push([t("kProfit"),"","",n(c.net)].join(T));
+  return L2.join("\n");
+}
+const XIC={
+  dash:`<svg ${SV}><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>`,
+  members:`<svg ${SV}><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>`,
+  desk:IC.visits,
+  books:`<svg ${SV}><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 7h8M8 11.5h2M12 11.5h4M8 15.5h2M12 15.5h4"/></svg>`
+};
+function adminView(){
+  if(LIVE&&LV.role==="staff"&&(A2.tab==="dash"||A2.tab==="books"))A2.tab="desk";
+  if(!A2.month)A2.month=thisYM();
+  const F=finance();
+  const body={dash:()=>admDash(F),members:admMembers,desk:admDesk,books:()=>admBooks(F)}[A2.tab]();
+  const tabs=`<nav class="a-tabs" aria-label="Admin">${(LIVE&&LV.role==="staff"?[["desk","tDeskS"],["members","tMembers"]]:[["dash","tDash"],["members","tMembers"],["desk","tDeskS"],["books","tBooks"]]).map(([k,l])=>`<button data-act="x-tab" data-tab="${k}" class="${A2.tab===k?"on":""}" ${A2.tab===k?'aria-current="page"':""}>${XIC[k]}<span>${esc(t(l))}</span></button>`).join("")}</nav>`;
+  return `<div class="phone admin" style="--a-accent:${ACC.gold[0]};--a-accent-fg:${ACC.gold[1]}"><div class="a-body" id="aBody">${body}</div>${tabs}</div>`;
+}
+function adminAction(a,el){
+  if(!isAdmin())return;
+  if(a==="x-tab"){A2.tab=el.dataset.tab;renderApp(true);return}
+  if(a==="x-month"){A2.month=ymAdd(A2.month,Number(el.dataset.dir));renderApp();return}
+  if(a==="x-pickmonth"){A2.month=el.dataset.ym;renderApp();return}
+  if(a==="x-tier"){A2.tier=el.dataset.tier;A2.more=40;renderApp();return}
+  if(a==="x-more"){A2.more+=40;const l=$("#admList");if(l)l.innerHTML=admMembersList();return}
+  if(a==="x-renewlist"){A2.tab="members";A2.tier="due";A2.q="";renderApp(true);return}
+  if(a==="x-expdel"){S.expenses=(S.expenses||[]).filter(e=>e.id!==el.dataset.id);save();renderApp();toast(t("expDeleted"));return}
+  if(a==="x-copy"){const txt=monthTSV(finance());try{navigator.clipboard.writeText(txt).then(()=>toast(t("copied")),()=>toast(t("copyFail")))}catch(_){toast(t("copyFail"))}return}
+  if(a==="x-logout"){S.current=null;save();A2.tab="dash";A2.month=null;renderApp(true);return}
+}
+function addExpense(){
+  const amt=parseFloat(($("#exp-amt").value||"").replace(/\s/g,"").replace(",",".")),date=$("#exp-date").value,cat=$("#exp-cat").value,note=$("#exp-note").value.trim();
+  if(!(amt>0)||!date){toast(t("expBad"));return}
+  if(LIVE){liveAddExpense(date,cat,r2(amt),note);return}
+  S.expenses=S.expenses||[];S.expenses.push({id:"e"+Date.now().toString(36),date,cat,amount:r2(amt),note});
+  save();A2.month=ymOf(date);renderApp();toast(t("expAdded"));
+}
+
+/* ---------- Installed app (iPhone / Android via Capacitor) ---------- */
+// Inside the store app, Capacitor injects window.Capacitor; the page then opens straight into the full-screen app.
+const CAP=window.Capacitor;
+const NATIVE=!!(CAP&&CAP.isNativePlatform&&CAP.isNativePlatform());
+const plug=n=>NATIVE&&CAP.Plugins?CAP.Plugins[n]:null;
+function notifIds(bid){let h=7;for(const ch of String(bid))h=(h*31+ch.charCodeAt(0))|0;h=Math.abs(h)%1000000000;return [h*2%2000000000,(h*2+1)%2000000000]}
+async function scheduleReminders(b){
+  const LN=plug("LocalNotifications");if(!LN)return;
+  try{
+    let p=await LN.checkPermissions();
+    if(p.display!=="granted")p=await LN.requestPermissions();
+    if(p.display!=="granted")return;
+    const [y,m,d]=b.date.split("-").map(Number),[hh,mm]=b.time.split(":").map(Number);
+    const at=new Date(y,m-1,d,hh,mm),eve=new Date(y,m-1,d-1,18,0),soon=new Date(at.getTime()-2*3600e3),now=Date.now();
+    const [i1,i2]=notifIds(b.id),svc=svcName(b.svc),list=[];
+    if(eve.getTime()>now)list.push({id:i1,title:t("brand"),body:t("remindEve",{svc,time:b.time}),schedule:{at:eve,allowWhileIdle:true}});
+    if(soon.getTime()>now)list.push({id:i2,title:t("brand"),body:t("remindSoon",{svc,time:b.time}),schedule:{at:soon,allowWhileIdle:true}});
+    if(list.length)await LN.schedule({notifications:list});
+  }catch(_){}
+}
+async function cancelReminders(bid){
+  const LN=plug("LocalNotifications");if(!LN)return;
+  try{const [i1,i2]=notifIds(bid);await LN.cancel({notifications:[{id:i1},{id:i2}]})}catch(_){}
+}
+function nativeSetup(){
+  if(!NATIVE)return;
+  document.body.classList.add("native");
+  const SB=plug("StatusBar");if(SB){try{SB.setStyle({style:"DARK"});SB.setOverlaysWebView&&SB.setOverlaysWebView({overlay:true})}catch(_){}}
+  const SP=plug("SplashScreen");if(SP){try{setTimeout(()=>SP.hide(),300)}catch(_){}}
+  const AP=plug("App");if(AP){try{AP.addListener("backButton",()=>{if(A.tab!=="card"&&me()){A.tab="card";renderApp(true)}else AP.minimizeApp()})}catch(_){}}
+}
+
+/* ---------- Router ---------- */
+const ROUTES={home:viewHome,join:viewJoin,login:viewLogin,account:viewAccount,book:viewBook,desk:viewDesk,app:viewApp,cards:viewCards};
+function route(){if(NATIVE)return "app";const h=(location.hash||"#home").slice(1);return ROUTES[h]?h:"home"}
+function render(keepScroll){
+  const r=route();
+  document.documentElement.lang=S.lang;
+  $("#brandName").textContent=t("brand");$("#brandSub").textContent=t("brandSub");
+  $("#demoText").textContent=t(LIVE?(LV.offline?"errNet":"liveBar"):"demo");$("#resetBtn").textContent=t("reset");$("#resetBtn").hidden=LIVE;
+  $("#lang-en").className=S.lang==="en"?"on":"";$("#lang-fr").className=S.lang==="fr"?"on":"";
+  const u=me();
+  const links=[["home",t("navPlans")],["cards",t("navCards")],["book",t("navBook")],[u?"account":"login",u?t("navAccount"):t("navLogin")],["desk",t("navDesk")],["app",t("navApp")]];
+  $("#nav").innerHTML=links.map(([h,l])=>`<a href="#${h}" class="${r===h||(h==="login"&&r==="join")?"on":""}">${esc(l)}</a>`).join("");
+  $("#showroom").hidden=r!=="home";
+  document.body.classList.toggle("in-app",r==="app");
+  $("#cardsPage").hidden=r!=="cards";
+  renderCards();
+  $("#srText").innerHTML=showroomText();
+  renderStage();
+  const y=window.scrollY;
+  $("#app").innerHTML=LIVE&&!LV.ready&&["account","desk","book"].includes(r)?liveLoadingHTML():ROUTES[r]();
+  if(keepScroll)window.scrollTo(0,y);
+}
+window.addEventListener("hashchange",()=>{formErr="";render();window.scrollTo(0,0)});
+
+/* ---------- Events ---------- */
+document.addEventListener("click",e=>{
+  const el=e.target.closest("[data-act],[data-lang]");if(!el)return;
+  if(el.dataset.lang){S.lang=el.dataset.lang;save();render(true);return}
+  const a=el.dataset.act;
+  if(LIVE&&liveClick(a,el))return;
+  if(a&&a.startsWith("x-")){adminAction(a,el);return}
+  if(a&&a.startsWith("a-")){appAction(a,el);return}
+  if(a==="reset"){S=seed();ensureFinance();A2.month=null;bk.date=null;bk.time=null;save();location.hash="home";render();toast(t("resetDone"))}
+  if(a==="pick"){pickedTier=el.dataset.tier}
+  if(a==="flip"){ST.base+=180}
+  if(a==="cxgo"){cxGo(Number(el.dataset.i))}
+  if(a==="paint"){if(el.dataset.tier!==showTier){showTier=el.dataset.tier;ST.base+=360;renderStage()}$("#srText").innerHTML=showroomText();const b=document.querySelector(`.sr-tiers [data-tier="${showTier}"]`);b&&b.focus()}
+  if(a==="toplans"){e.preventDefault();location.hash="home";setTimeout(()=>{const p=document.getElementById("plans");p&&p.scrollIntoView()},0)}
+  if(a==="quick"){S.current=el.dataset.email;save();location.hash="account"}
+  if(a==="logout"){S.current=null;save();location.hash="home"}
+  if(a==="upgrade"){const u=me();if(!u.origTier){u.origTier=u.tier;u.upgradedOn=iso(addDays(0))}u.tier="gold";u.cert="GLD-"+u.cert.slice(4);save();render(true);toast(t("upgraded",{tier:tn("gold")}))}
+  if(a==="cancel"){S.bookings=S.bookings.filter(b=>b.id!==el.dataset.id);save();render(true);toast(t("cancelled"))}
+  if(a==="day"){bk.date=el.dataset.date;bk.time=null;formErr="";render(true)}
+  if(a==="time"){bk.time=el.dataset.time;formErr="";render(true)}
+  if(a==="confirm"){
+    const u=me();
+    if(!bk.svc||!bk.date||!bk.time){formErr=t("pickAll");render(true);return}
+    if(!u){bk.gname=$("#g-name").value.trim();bk.gphone=$("#g-phone").value.trim();bk.gveh=$("#g-veh").value.trim();if(!bk.gname||!bk.gphone||!bk.gveh){formErr=t("missing");render(true);return}}
+    const c=u?TIERS[u.tier]:null, ex=[];
+    if(c&&c.pickup&&bk.pickup)ex.push("pickup");
+    if(c&&c.courtesy&&bk.courtesy)ex.push("courtesy");
+    if(bk.svc==="oil"&&c&&c.oil-u.oilUsed>0){ex.push("free");u.oilUsed++}
+    if(c&&c.wash)ex.push("wash");
+    S.bookings.push({id:Math.random().toString(36).slice(2,9),email:u?u.email:null,name:u?u.first+" "+u.last:bk.gname,tier:u?u.tier:null,svc:bk.svc,date:bk.date,time:bk.time,extras:ex,status:"booked",vehicle:u?u.vehicle:bk.gveh});
+    save();formErr="";bk={...bk,time:null,pickup:false,courtesy:false};
+    location.hash=u?"account":"desk";toast(t("booked"));
+  }
+});
+document.addEventListener("change",e=>{
+  const el=e.target;
+  if(el.name==="svc"){bk.svc=el.value;render(true)}
+  if(el.name==="tier"){pickedTier=el.value}
+  if(el.dataset.act==="pickup"){bk.pickup=el.checked;render(true)}
+  if(el.dataset.act==="courtesy"){bk.courtesy=el.checked;render(true)}
+  if(el.dataset.act==="a-pickup"){A.bk.pickup=el.checked;renderApp();return}
+  if(el.dataset.act==="a-courtesy"){A.bk.courtesy=el.checked;renderApp();return}
+  if(el.dataset.act==="status"&&LIVE){liveStatus(el.dataset.id,el.value);return}
+  if(el.dataset.act==="status"){const b=S.bookings.find(x=>x.id===el.dataset.id);if(b){b.status=el.value;save();toast(t("statusChanged"))}}
+});
+document.addEventListener("input",e=>{
+  if(e.target.id==="adm-search"){A2.q=e.target.value;A2.more=40;const l=$("#admList");if(l)l.innerHTML=admMembersList();return}
+  if(e.target.id==="x-addr")bk.address=e.target.value;
+  if(e.target.id==="g-name")bk.gname=e.target.value;
+  if(e.target.id==="g-phone")bk.gphone=e.target.value;
+  if(e.target.id==="g-veh")bk.gveh=e.target.value;
+});
+document.addEventListener("submit",e=>{
+  e.preventDefault();
+  if(LIVE&&liveSubmit(e.target))return;
+  if(e.target.id==="expForm"){addExpense();return}
+  if(e.target.id==="appLogin"){
+    const em=$("#al-email").value.trim().toLowerCase(),pw=$("#al-pass").value;
+    if(em===ADMIN.email&&pw===ADMIN.pass){S.current=em;save();formErr="";A2.tab="dash";A2.month=null;renderApp(true);return}
+    const u=S.users.find(x=>x.email===em&&x.pass===pw);
+    if(!u){formErr=t("badLogin");renderApp();return}
+    S.current=u.email;save();formErr="";A.tab="card";A.flipped=false;renderApp(true);return;
+  }
+  if(e.target.id==="joinForm"){
+    const v=id=>$(id).value.trim();
+    const d={first:v("#j-first"),last:v("#j-last"),email:v("#j-email").toLowerCase(),phone:v("#j-phone"),vehicle:v("#j-veh"),pass:$("#j-pass").value};
+    const tierEl=document.querySelector('input[name="tier"]:checked');
+    if(Object.values(d).some(x=>!x)||!tierEl){formErr=t("missing");render(true);return}
+    if(S.users.some(u=>u.email===d.email)){formErr=t("emailUsed");render(true);return}
+    const tier=tierEl.value, r=()=>Math.floor(1000+Math.random()*9000);
+    S.users.push({...d,tier,since:iso(addDays(0)),no:`4417 ${r()} ${r()}`,oilUsed:0,cert:{bronze:"BRZ",silver:"SLV",gold:"GLD"}[tier]+"-"+Math.random().toString(36).slice(2,6).toUpperCase()});
+    S.current=d.email;save();formErr="";location.hash="account";
+  }
+  if(e.target.id==="loginForm"){
+    const em=$("#l-email").value.trim().toLowerCase(),pw=$("#l-pass").value;
+    const u=S.users.find(x=>x.email===em&&x.pass===pw);
+    if(!u){formErr=t("badLogin");render(true);return}
+    S.current=u.email;save();formErr="";location.hash="account";
+  }
+});
+/* card tilt + shine follows the pointer */
+const reducedMotion=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+let tiltCard=null;
+function resetTilt(c){c.classList.remove("tilting");["--rx","--ry","--mx","--my"].forEach(p=>c.style.removeProperty(p))}
+document.addEventListener("pointermove",e=>{
+  const c=e.target.closest?e.target.closest(".mcard"):null;
+  if(tiltCard&&tiltCard!==c){resetTilt(tiltCard);tiltCard=null}
+  if(!c||c.closest(".card-fan,.card3d,.a-login-cards"))return;
+  tiltCard=c;
+  const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+  c.style.setProperty("--mx",(x*100).toFixed(1)+"%");c.style.setProperty("--my",(y*100).toFixed(1)+"%");
+  if(!reducedMotion){c.classList.add("tilting");c.style.setProperty("--rx",((0.5-y)*16).toFixed(2)+"deg");c.style.setProperty("--ry",((x-0.5)*20).toFixed(2)+"deg")}
+});
+document.addEventListener("keydown",e=>{if(e.target.matches&&e.target.matches('[data-act="a-flip"]')&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.target.click()}});
+document.addEventListener("pointerleave",()=>{if(tiltCard){resetTilt(tiltCard);tiltCard=null}});
+
+/* ---------- Live mode: real accounts, cards and bookings on the Elite Services server ---------- */
+// LIVE / CONFIG are defined at the top of the State section. Everything here only runs when LIVE is true.
+const LV={sb:null,ready:false,role:null,uid:null,slots:{},sales:[],chan:null,t:null,busy:false};
+Object.assign(L.en,{
+  liveBar:"Live. Bookings go to the service department.", liveLoading:"Loading…",
+  signInToBook:"Log in or create a free account to book.", staffOnly:"For service desk staff. Log in with a staff account.",
+  pendingTitle:"Your {tier} card is reserved", pendingLead:"Pay at the service desk to activate it. Show this screen to an advisor.",
+  noCardTitle:"Pick your card", noCardLead:"Choose a card. You pay at the service desk, then your perks start right away.", reqCard:"Reserve {tier}", reqDone:"Card reserved. Pay at the service desk to activate it.",
+  checkEmail:"Almost done: open the email we just sent to confirm your address, then log in.",
+  upgradeDesk:"Upgrades are done at the service desk so we can take payment. Show your card to an advisor.",
+  pendingCards:"Cards waiting for payment", activate:"Paid · activate", activated:"Card activated.", staffHello:"Service desk · {name}",
+  syncErr:"Not sent to the dealer system", syncOk:"Sent", liveInteg:"Live: every booking is sent to the dealership's calendar/system by the bridge and emailed to the service desk. A red label means the dealer system did not accept it yet; the booking is still saved here.",
+  err_slot_taken:"Someone just took that time. Pick another one.", err_members_only_time:"That time is held for card members.", err_members_only_date:"That date is for card members. Pick a later date.",
+  err_closed:"The service department is closed that day.", err_out_of_range:"Pick a date in the next 90 days.", err_no_courtesy_car:"No courtesy car left that day.",
+  err_too_late:"Same-day bookings can only be cancelled at the service desk.", err_cannot_cancel:"This booking can no longer be cancelled.", err_already_member:"You already have a card.",
+  err_not_signed_in:"Please log in again.", errNet:"Can't reach the server. Check the connection and try again."
+});
+Object.assign(L.fr,{
+  liveBar:"En direct. Les rendez-vous sont envoyés au service.", liveLoading:"Chargement…",
+  signInToBook:"Connectez-vous ou créez un compte gratuit pour réserver.", staffOnly:"Réservé au personnel du service. Connectez-vous avec un compte employé.",
+  pendingTitle:"Votre carte {tier} est réservée", pendingLead:"Payez au comptoir du service pour l'activer. Montrez cet écran à un conseiller.",
+  noCardTitle:"Choisissez votre carte", noCardLead:"Choisissez une carte. Vous payez au comptoir du service et vos avantages commencent tout de suite.", reqCard:"Réserver {tier}", reqDone:"Carte réservée. Payez au comptoir du service pour l'activer.",
+  checkEmail:"Presque fini : ouvrez le courriel qu'on vient d'envoyer pour confirmer votre adresse, puis connectez-vous.",
+  upgradeDesk:"Les surclassements se font au comptoir du service pour le paiement. Montrez votre carte à un conseiller.",
+  pendingCards:"Cartes en attente de paiement", activate:"Payé · activer", activated:"Carte activée.", staffHello:"Comptoir du service · {name}",
+  syncErr:"Non envoyé au système de la concession", syncOk:"Envoyé", liveInteg:"En direct : chaque rendez-vous est envoyé au calendrier ou au système de la concession par le pont, et par courriel au comptoir du service. Une étiquette rouge veut dire que le système de la concession ne l'a pas encore accepté; le rendez-vous reste enregistré ici.",
+  err_slot_taken:"Quelqu'un vient de prendre cette heure. Choisissez-en une autre.", err_members_only_time:"Cette heure est réservée aux membres.", err_members_only_date:"Cette date est réservée aux membres. Choisissez une date plus tard.",
+  err_closed:"Le service est fermé cette journée-là.", err_out_of_range:"Choisissez une date dans les 90 prochains jours.", err_no_courtesy_car:"Plus de véhicule de courtoisie cette journée-là.",
+  err_too_late:"Un rendez-vous du jour même s'annule seulement au comptoir du service.", err_cannot_cancel:"Ce rendez-vous ne peut plus être annulé.", err_already_member:"Vous avez déjà une carte.",
+  err_not_signed_in:"Veuillez vous reconnecter.", errNet:"Impossible de joindre le serveur. Vérifiez la connexion et réessayez."
+});
+const LIVE_ERRS=["slot_taken","members_only_time","members_only_date","closed","out_of_range","no_courtesy_car","too_late","cannot_cancel","already_member","not_signed_in"];
+function liveErrText(e){const m=String((e&&(e.message||e.error_description))||e||"");const k=LIVE_ERRS.find(x=>m.includes(x));return t(k?"err_"+k:"errNet")}
+function liveLib(){
+  return new Promise((res,rej)=>{
+    if(window.supabase&&window.supabase.createClient)return res();
+    const add=(src,next)=>{const s=document.createElement("script");s.src=src;s.onload=()=>window.supabase?res():next();s.onerror=next;document.head.appendChild(s)};
+    // the phone app ships its own copy; the website falls back to the CDN
+    add("supabase.js",()=>add("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js",()=>rej(new Error("lib"))));
+  });
+}
+const isStaff=()=>LIVE&&(LV.role==="staff"||LV.role==="owner");
+const liveLoadingHTML=()=>`<div class="panel" style="text-align:center;padding:40px"><p class="muted">${esc(t("liveLoading"))}</p></div>`;
+function liveUser(p,m){
+  const active=m&&m.status==="active";
+  return {id:p.id,email:(p.email||"").toLowerCase(),first:p.first_name||"",last:p.last_name||"",phone:p.phone||"",vehicle:p.vehicle||"",role:p.role,
+    tier:active?m.tier:null,pendingTier:m&&m.status==="pending"?m.tier:null,since:active?m.starts_on:null,ends:m?m.ends_on:null,
+    no:m?m.card_no:"",cert:m?m.cert:"",oilUsed:m?m.oil_used:0,
+    origTier:m&&m.orig_tier!==m.tier?m.orig_tier:undefined,upgradedOn:m&&m.upgraded_on||undefined};
+}
+function liveBooking(r,emailOf){
+  return {id:r.id,email:r.member_id?emailOf(r.member_id):null,name:r.customer_name,tier:r.tier,svc:r.service,date:r.day,time:String(r.slot).slice(0,5),
+    extras:r.extras||[],status:r.status,vehicle:r.vehicle,sync:r.sync_state,syncErr:r.sync_error,phone:r.customer_phone};
+}
+async function liveSlots(){
+  const {data,error}=await LV.sb.rpc("available_slots",{p_from:iso(addDays(1)),p_to:iso(addDays(BOOK_AHEAD_DAYS))});
+  if(error)throw error;
+  const map={};for(const r of data)map[r.day+" "+String(r.slot).slice(0,5)]=r.state;LV.slots=map;
+}
+async function livePull(){
+  const sb=LV.sb,{data:{session}}=await sb.auth.getSession();
+  if(!session){LV.uid=null;LV.role=null;S.current=null;S.users=[];S.bookings=[];S.expenses=[];LV.sales=[];await liveSlots().catch(()=>{});return}
+  LV.uid=session.user.id;
+  const must=r=>{if(r.error)throw r.error;return r.data};
+  const me_=must(await sb.from("profiles").select("*").eq("id",LV.uid).single());
+  LV.role=me_.role;
+  const staff=me_.role!=="member";
+  // a card picked at sign-up while the email was still unconfirmed
+  let joinTier=null;try{joinTier=localStorage.getItem("elite-join-tier")}catch(_){}
+  const [profs,mems,books]=await Promise.all([
+    staff?sb.from("profiles").select("*").then(must):[me_],
+    sb.from("memberships").select("*").neq("status","cancelled").then(must),
+    sb.from("bookings").select("*").not("status","in","(cancelled,no_show)").gte("day",iso(addDays(staff?-30:-365))).order("day").order("slot").then(must)
+  ]);
+  if(joinTier&&!staff&&!mems.some(m=>m.member_id===LV.uid)){
+    const r=await sb.rpc("request_membership",{p_tier:joinTier});
+    if(!r.error)mems.push(r.data);
+    try{localStorage.removeItem("elite-join-tier")}catch(_){}
+  }
+  const byId={};
+  S.users=profs.map(p=>{const u=liveUser(p,mems.find(m=>m.member_id===p.id));byId[p.id]=u;return u});
+  S.current=(me_.email||session.user.email||"").toLowerCase();
+  S.bookings=books.map(r=>liveBooking(r,id=>byId[id]?byId[id].email:null));
+  if(me_.role==="owner"){
+    const [sales,exp]=await Promise.all([sb.from("sales").select("*").order("sold_on").then(must),sb.from("expenses").select("*").order("spent_on").then(must)]);
+    LV.sales=sales.map(s=>({date:s.sold_on,type:s.kind,tier:s.tier,amount:Number(s.amount),name:byId[s.member_id]?byId[s.member_id].first+" "+byId[s.member_id].last:""}));
+    S.expenses=exp.map(e=>({id:e.id,date:e.spent_on,cat:e.category,amount:Number(e.amount),note:e.note||""}));
+  }else{LV.sales=[];S.expenses=[]}
+  await liveSlots();
+  if(!LV.chan){
+    LV.chan=sb.channel("elite-live")
+      .on("postgres_changes",{event:"*",schema:"public",table:"bookings"},liveSoon)
+      .on("postgres_changes",{event:"*",schema:"public",table:"memberships"},liveSoon)
+      .subscribe();
+  }
+}
+function liveRerender(){if(route()==="app")renderApp();else render(true)}
+function liveSoon(){clearTimeout(LV.t);LV.t=setTimeout(()=>livePull().then(liveRerender).catch(()=>{}),400)}
+async function liveDo(fn,okMsg,after){
+  if(LV.busy)return;LV.busy=true;
+  try{await fn();await livePull();if(after)after();liveRerender();if(okMsg)toast(t(okMsg))}
+  catch(e){formErr="";toast(liveErrText(e));liveSlots().then(liveRerender).catch(()=>{})}
+  finally{LV.busy=false}
+}
+async function liveRpc(name,args){const r=await LV.sb.rpc(name,args);if(r.error)throw r.error;return r.data}
+function liveBook(b,u,done){
+  liveDo(async()=>{
+    const nb=await liveRpc("book_service",{p_day:b.date,p_slot:b.time,p_service:b.svc,p_pickup:!!b.pickup,p_courtesy:!!b.courtesy,p_address:b.address||null});
+    scheduleReminders(liveBooking(nb,()=>u.email));
+  },"booked",done);
+}
+function liveLogout(){
+  LV.sb.auth.signOut().finally(()=>{if(LV.chan){LV.sb.removeChannel(LV.chan);LV.chan=null}livePull().then(()=>{A.tab="card";A2.tab="dash";A2.month=null;if(route()==="app")renderApp(true);else location.hash="home"})});
+}
+/* clicks that behave differently when live; returns true when handled */
+function liveClick(a,el){
+  const u=me();
+  if(a==="quick"||a==="a-quick"||a==="reset")return true;
+  if(a==="logout"||a==="a-logout"||a==="x-logout"){liveLogout();return true}
+  if(a==="upgrade"||a==="a-upgrade"){toast(t("upgradeDesk"));return true}
+  if(a==="live-req"){liveDo(()=>liveRpc("request_membership",{p_tier:el.dataset.tier}),"reqDone");return true}
+  if(a==="x-activate"){liveDo(()=>liveRpc("activate_membership",{p_member:el.dataset.id}),"activated");return true}
+  if(a==="x-expdel"){liveDo(async()=>{const r=await LV.sb.from("expenses").delete().eq("id",el.dataset.id);if(r.error)throw r.error},"expDeleted");return true}
+  if(a==="cancel"||a==="a-cancel"){const id=el.dataset.id;liveDo(async()=>{await liveRpc("cancel_booking",{p_id:id});cancelReminders(id)},"cancelled");return true}
+  if(a==="a-confirm"){if(!u||!u.tier||!A.bk.time)return true;const b=A.bk;liveBook(b,u,()=>{A.bk={svc:"oil",date:b.date,time:null,pickup:false,courtesy:false};A.tab="visits"});return true}
+  if(a==="confirm"){
+    if(!u){formErr=t("signInToBook");render(true);return true}
+    if(!bk.svc||!bk.date||!bk.time){formErr=t("pickAll");render(true);return true}
+    liveBook(bk,u,()=>{formErr="";bk={...bk,time:null,pickup:false,courtesy:false};location.hash="account"});return true}
+  return false;
+}
+function liveStatus(id,status){liveDo(async()=>{const r=await LV.sb.from("bookings").update({status}).eq("id",id);if(r.error)throw r.error},"statusChanged")}
+function liveAddExpense(date,cat,amount,note){liveDo(async()=>{const r=await LV.sb.from("expenses").insert({spent_on:date,category:cat,amount,note:note||null});if(r.error)throw r.error},"expAdded",()=>{A2.month=ymOf(date)})}
+/* forms; returns true when handled */
+function liveSubmit(form){
+  const id=form.id;
+  if(id==="appLogin"||id==="loginForm"){
+    const pre=id==="appLogin"?"#al-":"#l-",email=$(pre+"email").value.trim().toLowerCase(),password=$(pre+"pass").value;
+    LV.sb.auth.signInWithPassword({email,password}).then(async({error})=>{
+      if(error){formErr=error.message&&/confirm/i.test(error.message)?t("checkEmail"):(error.status===400||/invalid/i.test(error.message||"")?t("badLogin"):t("errNet"));id==="appLogin"?renderApp():render(true);return}
+      formErr="";await livePull().catch(e=>toast(liveErrText(e)));
+      if(id==="appLogin"){A.tab="card";A2.tab=LV.role==="staff"?"desk":"dash";A2.month=null;renderApp(true)}
+      else location.hash=isStaff()?"desk":"account";
+      render(true);
+    });
+    return true;
+  }
+  if(id==="joinForm"){
+    const v=s=>$(s).value.trim(),tierEl=document.querySelector('input[name="tier"]:checked');
+    const d={first_name:v("#j-first"),last_name:v("#j-last"),phone:v("#j-phone"),vehicle:v("#j-veh"),lang:S.lang};
+    const email=v("#j-email").toLowerCase(),password=$("#j-pass").value;
+    if(!d.first_name||!d.last_name||!email||!password||!tierEl){formErr=t("missing");render(true);return true}
+    try{localStorage.setItem("elite-join-tier",tierEl.value)}catch(_){}
+    LV.sb.auth.signUp({email,password,options:{data:d}}).then(async({data,error})=>{
+      if(error){formErr=/registered|exists/i.test(error.message)?t("emailUsed"):error.message;render(true);return}
+      if(!data.session){formErr="";toast(t("checkEmail"));location.hash="login";return}
+      await livePull().catch(e=>toast(liveErrText(e)));formErr="";location.hash="account";render(true);
+    });
+    return true;
+  }
+  return false;
+}
+/* screens for people with an account but no active card yet */
+function liveNoCard(u,inApp){
+  const p=u.pendingTier;
+  const card=p?`<div style="max-width:360px;margin:0 auto">${cardHTML(p,{...u,since:iso(addDays(0))})}</div>`:"";
+  const body=p
+    ?`<h2 class="${inApp?"a-h":""}">${esc(t("pendingTitle",{tier:tn(p)}))}</h2><p class="${inApp?"a-muted":"muted"}">${esc(t("pendingLead"))}</p>${card}<p class="num" style="text-align:center"><b>${esc(u.no)}</b> · ${esc(money(TIERS[p].price))} ${esc(t("perYear"))}</p>`
+    :`<h2 class="${inApp?"a-h":""}">${esc(t("noCardTitle"))}</h2><p class="${inApp?"a-muted":"muted"}">${esc(t("noCardLead"))}</p>
+      <div class="stack" style="gap:10px">${["bronze","silver","gold"].map(k=>`<button class="${inApp?"a-btn ghost":"btn btn-ghost"}" data-act="live-req" data-tier="${k}"><span class="dot ${k}"></span> ${esc(t("reqCard",{tier:tn(k)}))} · ${esc(money(TIERS[k].price))}</button>`).join("")}</div>`;
+  const out=`<button class="${inApp?"a-btn ghost":"btn btn-ghost"}" data-act="${inApp?"a-logout":"logout"}">${esc(t("logout"))}</button>`;
+  return inApp?`<div class="phone"><div class="a-body" id="aBody"><div class="stack" style="gap:16px;padding-top:8px">${body}${out}</div></div></div>`
+    :`<div class="panel stack" style="max-width:560px;margin:0 auto">${body}${out}</div>`;
+}
+function liveSignIn(key){return `<div class="panel stack" style="max-width:520px;margin:0 auto;text-align:center"><p>${esc(t(key))}</p><div><a class="btn btn-primary" href="#login">${esc(t("navLogin"))}</a> <a class="btn btn-ghost" href="#join">${esc(t("joinLink"))}</a></div></div>`}
+function livePendingList(){
+  const list=S.users.filter(u=>u.pendingTier);
+  if(!list.length)return "";
+  return `<section class="a-sec"><span class="a-label">${esc(t("pendingCards"))} · ${list.length}</span><div class="a-panel x-list">${list.map(u=>`<div class="x-mem">
+    <div class="x-mem-main"><b>${esc(u.first+" "+u.last)}</b><span class="a-muted">${esc(u.phone)} · ${esc(u.vehicle)}</span>
+    <span class="x-tier"><i style="background:${SERIES[u.pendingTier]}"></i>${tn(u.pendingTier)} · ${esc(money(TIERS[u.pendingTier].price))}</span></div>
+    <button class="a-btn" style="width:auto;padding:10px 14px" data-act="x-activate" data-id="${esc(u.id)}">${esc(t("activate"))}</button></div>`).join("")}</div></section>`;
+}
+const liveSyncPill=b=>LIVE&&b.sync==="error"?`<span class="pill warn" title="${esc(b.syncErr||"")}">⚠ ${esc(t("syncErr"))}</span>`:"";
+async function liveStart(){
+  try{
+    await liveLib();
+    LV.sb=window.supabase.createClient(CONFIG.supabaseUrl,CONFIG.supabaseKey,{auth:{persistSession:true,autoRefreshToken:true}});
+    await livePull();
+    // quick reachability check so the banner can say if the server cannot be reached
+    const ping=await LV.sb.from("tiers").select("key").limit(1);if(ping.error)throw ping.error;
+  }catch(e){LV.offline=true;toast(liveErrText(e))}
+  LV.ready=true;render();
+  LV.sb&&LV.sb.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_OUT"){S.current=null}});
+  // keep slots fresh while the page is open
+  setInterval(()=>{if(document.visibilityState==="visible"&&LV.sb)liveSlots().then(()=>{if(route()==="book"||(route()==="app"&&A.tab==="book"))liveRerender()}).catch(()=>{})},60000);
+}
+
+ensureFinance();
+nativeSetup();
+render();
+if(LIVE)liveStart();
+if(!NATIVE){initStage();requestAnimationFrame(cxLoop)}
+</script>
+
+</body>
+</html>
